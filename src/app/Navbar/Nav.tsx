@@ -7,18 +7,13 @@ import {
   HStack,
   Link,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
+  Image,
   useColorModeValue,
   useColorMode,
-  Stack,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-const Links = ["About Me", "Projects", "Skills"];
+const Links = ["Projects", "Skills", "About Me"];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
   <Link
@@ -46,7 +41,7 @@ export default function Nav() {
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={8} alignItems={"center"}>
-            <Box>Logo</Box>
+            <Box> <Image src="/name.png" alt="My Image" height={32} /> </Box>
             <HStack
               as={"nav"}
               spacing={4}
@@ -61,13 +56,6 @@ export default function Nav() {
             <Button onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
-            <Menu>
-              <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuItem>Link 3</MenuItem>
-              </MenuList>
-            </Menu>
           </Flex>
         </Flex>
       </Box>
