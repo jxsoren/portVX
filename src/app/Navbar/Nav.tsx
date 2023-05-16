@@ -41,7 +41,9 @@ export default function Nav() {
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <HStack spacing={8} alignItems={"center"}>
-            <Box> <Image src="/name.png" alt="My Image" height={32} /> </Box>
+            <Box>
+              <Image src="/name.png" alt="logo" height={32} />
+            </Box>
             <HStack
               as={"nav"}
               spacing={4}
