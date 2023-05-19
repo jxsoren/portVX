@@ -1,22 +1,25 @@
 "use client";
 
-import { Box, Image, keyframes } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { ReactNode } from "react"
+import Twinkling from "../Twinkling/Twinkling";
 
-const moveBackground = keyframes({
-  from: { transform: "translate3d(0px, 0px, 0px)" },
-  to: { transform: "translate3d(1000px, 0px, 0px)" },
-});
+interface StarsProps {
+  children: ReactNode;
+}
 
-const Stars = () => {
+const Stars = ({children}: StarsProps) => {
   return (
-    <Box>
-      <Box
-        className="stars"
-        background={`black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat`}
-        height={200}
-        width={200}
-        zIndex={-1}
-      />
+    <Box
+      width="100%"
+      height="80vh"
+      background={`black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat`}
+      zIndex={0}
+      overflow="hidden"
+      position="relative"
+    >
+    <Twinkling />
+    {children}
     </Box>
   );
 };
