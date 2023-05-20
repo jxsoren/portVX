@@ -12,7 +12,7 @@ const Stars = ({children}: StarsProps) => {
   return (
     <Box
       width="100%"
-      height="80vh"
+      height="100vh"
       background={`black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat`}
       zIndex={0}
       overflow="hidden"

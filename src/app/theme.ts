@@ -1,8 +1,8 @@
 import { extendTheme, type ThemeConfig } from '@chakra-ui/react'
 
 const config: ThemeConfig = {
-  initialColorMode: 'light',
-  useSystemColorMode: false,
+  initialColorMode: 'dark',
+  useSystemColorMode: true,
 }
 
 const theme = extendTheme({
@@ -19,9 +19,8 @@ const theme = extendTheme({
     dark: {
       text: "#ffffff",
       background: "#000000",
-    },
+    }
   },
-  // These styles will be used when the color mode is 'light'
   styles: {
     global: (props: Record<string, any>) => ({
       body: {

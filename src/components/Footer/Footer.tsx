@@ -14,12 +14,15 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { useAppColors } from "@/hooks/useAppColors";
 
 const Logo = () => {
   return <Image src="/name.png" alt="My Image" height={32} />;
 };
 
 const Footer = () => {
+  const { bgColor, textColor } = useAppColors();
+
   return (
     <Box as="footer" py="6" color="white" w="100%">
       <Box>
@@ -46,46 +49,54 @@ const Footer = () => {
       <Flex alignItems="center" justifyContent="center">
         <Flex flexDirection="column" alignItems="center">
           <Container display="flex" flexDirection="row" mx="auto">
-            <Tooltip label="GitHub">
+            <Tooltip label="jxsoren" hasArrow placement="top">
               <IconButton
                 as={Link}
                 href="https://github.com/jxsoren"
                 aria-label="Github"
                 icon={<FaGithub />}
                 mr="4"
-                colorScheme="whiteAlpha"
+                bgColor={bgColor}
+                color={textColor}
                 size="lg"
                 isRound
                 target="_blank"
               />
             </Tooltip>
-            <Tooltip label="LinkedIn" hasArrow placement="top">
+            <Tooltip label="josh-sorensen" hasArrow placement="top">
               <IconButton
                 as={Link}
                 href="https://www.linkedin.com/in/josh-sorensen/"
                 aria-label="LinkedIn"
                 icon={<FaLinkedin />}
                 mr="4"
-                colorScheme="whiteAlpha"
+                bgColor={bgColor}
+                color={textColor}
                 size="lg"
                 isRound
                 target="_blank"
               />
             </Tooltip>
-            <Tooltip label="Email" hasArrow placement="top">
+            <Tooltip label="jxsoren@gmail.com" hasArrow placement="top">
               <IconButton
                 as={Link}
                 href="mailto:jxsoren@gmail.com"
                 aria-label="Email"
                 icon={<FaEnvelope />}
-                colorScheme="whiteAlpha"
-                size="lg"
+                bgColor={bgColor}
+                color={textColor}
+                size="xl"
                 isRound
                 target="_blank"
               />
             </Tooltip>
           </Container>
-          <Text pt={6} fontSize={"sm"} textAlign={"center"}>
+          <Text
+            pt={6}
+            fontSize={"sm"}
+            textAlign={"center"}
+            color={textColor}
+          >
             © Josh Sorensen 2023
           </Text>
         </Flex>

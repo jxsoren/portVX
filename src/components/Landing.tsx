@@ -12,6 +12,7 @@ import Stars from "./Stars/Stars";
 
 export default function Landing() {
   const bgColor = useColorModeValue("light.background", "dark.background");
+  const textColor = useColorModeValue("light.text", "dark.text");
 
   return (
     <>
@@ -24,18 +25,18 @@ export default function Landing() {
             py={{ base: 20, md: 36 }}
           >
             <Heading
-              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              bgColor={"#ffffff"}
               bgClip="text"
-              fontSize={{ base: "4xl", md: "6xl" }} // Changed the fontSize to be responsive
+              fontSize={{ base: "4xl", md: "6xl" }}
               fontWeight="extrabold"
               zIndex={2}
             >
-              Hey There! 👋
+              Hey There!
             </Heading>
             <Heading
-              bgGradient="linear(to-l, #7928CA, #FF0080)"
+              bgColor={"#ffffff"}
               bgClip="text"
-              fontSize={{ base: "4xl", md: "6xl" }} // Changed the fontSize to be responsive
+              fontSize={{ base: "4xl", md: "6xl" }}
               fontWeight="extrabold"
               zIndex={2}
             >
