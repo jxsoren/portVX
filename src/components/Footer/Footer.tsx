@@ -28,6 +28,7 @@ const Footer = () => {
       <Box>
         <Flex
           align={"center"}
+          color={textColor}
           _before={{
             content: '""',
             borderBottom: "1px solid",

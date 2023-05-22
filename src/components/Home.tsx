@@ -5,6 +5,7 @@ import Nav from '../components/Navbar/Nav'
 import Footer from '../components/Footer/Footer'
 
 import { Box, useColorModeValue } from "@chakra-ui/react";
+import AboutMe from "./Pages/AboutMe";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
     <Box bgColor={bgColor}>
       <Nav />
       <Landing />
+      <AboutMe />
       <Footer />
     </Box>
   );
