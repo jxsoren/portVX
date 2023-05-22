@@ -85,18 +85,13 @@ const Footer = () => {
                 icon={<FaEnvelope />}
                 bgColor={bgColor}
                 color={textColor}
-                size="xl"
+                size="lg"
                 isRound
                 target="_blank"
               />
             </Tooltip>
           </Container>
-          <Text
-            pt={6}
-            fontSize={"sm"}
-            textAlign={"center"}
-            color={textColor}
-          >
+          <Text pt={6} fontSize={"sm"} textAlign={"center"} color={textColor}>
             © Josh Sorensen 2023
           </Text>
         </Flex>
