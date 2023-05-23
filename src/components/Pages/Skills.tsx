@@ -21,13 +21,13 @@ import {
   FaNodeJs,
   FaSass,
 } from "react-icons/fa";
-import { SiExpress, SiMongodb, SiNextdotjs } from "react-icons/si";
+import { SiExpress, SiMongodb, SiNextdotjs, SiTypescript } from "react-icons/si";
 import { TbBrandTypescript, TbBrandCss3, TbBrandNextjs } from "react-icons/tb";
 import { DiJavascript1 } from "react-icons/di";
 
 const skills: Skill[] = [
   { name: "Javascript", icon: DiJavascript1 },
-  { name: "Typescript", icon: TbBrandTypescript },
+  { name: "Typescript", icon: SiTypescript },
   { name: "React", icon: FaReact },
   { name: "HTML5", icon: FaHtml5 },
   { name: "CSS3", icon: FaCss3 },

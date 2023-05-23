@@ -9,8 +9,9 @@ import {
   Button,
   Image,
   useColorMode,
+  Icon
 } from "@chakra-ui/react";
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { BsMoonStars, BsSun } from 'react-icons/bs'
 import { useAppColors } from "@/hooks/useAppColors";
 
 const Links = ["Projects", "Skills", "About Me"];
@@ -49,7 +50,7 @@ export default function Nav() {
         </HStack>
         <Flex alignItems={"center"}>
           <Button variant="ghost" onClick={toggleColorMode}>
-            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            {colorMode === "light" ? <Icon as={BsMoonStars}/> : <Icon as={BsSun}/>}
           </Button>
         </Flex>
       </Flex>
