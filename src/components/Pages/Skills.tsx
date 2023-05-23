@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Container,
   Flex,
@@ -5,38 +7,28 @@ import {
   Text,
   ListItem,
   OrderedList,
-  Icon,
-  IconProps,
-  Box,
-  As,
 } from "@chakra-ui/react";
 
-import { FaReact, FaHtml5, FaCss3, FaLinux, FaNodeJs } from "react-icons/fa";
-import { SiJavascript, SiTypescript, SiCss3, SiExpress } from "react-icons/si";
-import { TbBrandTypescript, TbBrandCss3 } from "react-icons/tb";
-import { IoLogoJavascript } from "react-icons/io";
-import { DiJavascript1 } from "react-icons/di";
-import { ImHtmlFive } from "react-icons/im";
-import { GrCss3 } from "react-icons/gr";
-
 import { useAppColors } from "@/hooks/useAppColors";
-import React from "react";
+import IconSkill, { Skill } from "./IconSkill";
 
-interface IconSkillProps {
-  name: string;
-  icon: As;
-}
+// Icons
+import { FaReact, FaHtml5, FaCss3, FaLinux, FaNodeJs } from "react-icons/fa";
+import { SiExpress, SiMongodb, SiJavascript } from "react-icons/si";
+import { TbBrandTypescript, TbBrandCss3 } from "react-icons/tb";
+import { DiJavascript1 } from "react-icons/di";
 
-const IconSkill: React.FC<IconSkillProps> = ({ name, icon }) => {
-  return (
-    <ListItem>
-      <Box textAlign="center">
-        <Icon as={icon} w={40} h={40} />
-        <Text>{name}</Text>
-      </Box>
-    </ListItem>
-  );
-};
+const skills: Skill[] = [
+  { name: "Javascript", icon: DiJavascript1 },
+  { name: "Typescript", icon: TbBrandTypescript },
+  { name: "React", icon: FaReact },
+  { name: "HTML", icon: FaHtml5 },
+  { name: "CSS", icon: FaCss3 },
+  { name: "Linux", icon: FaLinux },
+  { name: "Node", icon: FaNodeJs },
+  { name: "Express", icon: SiExpress },
+  { name: "MongoDB", icon: SiMongodb },
+];
 
 const Skills = () => {
   const { textColor } = useAppColors();
@@ -59,14 +51,9 @@ const Skills = () => {
           color={textColor}
           listStyleType="none"
         >
-          <IconSkill name={"Javascript"} icon={DiJavascript1} />
-          <IconSkill name={"Typescript"} icon={TbBrandTypescript} />
-          <IconSkill name={"React"} icon={FaReact} />
-          <IconSkill name={"HTML"} icon={FaHtml5} />
-          <IconSkill name={"CSS"} icon={FaCss3} />
-          <IconSkill name={"Linux"} icon={FaLinux} />
-          <IconSkill name={"Node"} icon={FaNodeJs} />
-          <IconSkill name={"SiExpress"} icon={SiExpress} />
+          {skills.map((skill) => (
+            <IconSkill key={skill.name} name={skill.name} icon={skill.icon} />
+          ))}
         </Flex>
       </Flex>
     </Container>
