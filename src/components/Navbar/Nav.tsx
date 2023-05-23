@@ -8,9 +8,7 @@ import {
   Link,
   Button,
   Image,
-  useColorModeValue,
   useColorMode,
-  background,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import { useAppColors } from "@/hooks/useAppColors";
@@ -37,12 +35,7 @@ export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box
-      bg={bgColor}
-      px={4}
-      boxShadow="dark-lg"
-      textColor={textColor}
-    >
+    <Box bg={bgColor} px={4} boxShadow="dark-lg" textColor={textColor}>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <HStack spacing={8} alignItems={"center"}>
           <Box>
@@ -55,7 +48,7 @@ export default function Nav() {
           </HStack>
         </HStack>
         <Flex alignItems={"center"}>
-          <Button onClick={toggleColorMode}>
+          <Button variant="ghost" onClick={toggleColorMode}>
             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           </Button>
         </Flex>
