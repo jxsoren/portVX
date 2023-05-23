@@ -13,9 +13,10 @@ const AboutMe = () => {
         justify="center"
         padding={4}
         color={textColor}
+        maxW={{ base: "80%", md: "60%" }}
       >
         <Heading>About Me</Heading>
-        <Text fontSize="3xl" textColor={textColor}>
+        <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }} textColor={textColor}>
           {`Hey there! My name is Josh Sorensen. I'm a software developer based out
         of Salt Lake City, Utah with a passion for solving problems and
         constantly improving. When I'm not behind a keyboard, you can find me
