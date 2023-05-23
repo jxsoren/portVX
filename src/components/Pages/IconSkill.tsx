@@ -10,7 +10,7 @@ export interface Skill {
 
 const IconSkill: React.FC<Skill> = ({ name, icon }) => {
   return (
-    <ListItem>
+    <ListItem m={4}>
       <Box textAlign="center">
         <Icon as={icon} w={40} h={40} />
         <Text>{name}</Text>
