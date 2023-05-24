@@ -10,34 +10,8 @@ import {
 } from "@chakra-ui/react";
 
 import { useAppColors } from "@/hooks/useAppColors";
-import IconSkill, { Skill } from "./IconSkill";
-
-// Icons
-import {
-  FaReact,
-  FaHtml5,
-  FaCss3,
-  FaLinux,
-  FaNodeJs,
-  FaSass,
-} from "react-icons/fa";
-import { SiExpress, SiMongodb, SiNextdotjs, SiTypescript } from "react-icons/si";
-import { TbBrandTypescript, TbBrandCss3, TbBrandNextjs } from "react-icons/tb";
-import { DiJavascript1 } from "react-icons/di";
-
-const skills: Skill[] = [
-  { name: "Javascript", icon: DiJavascript1 },
-  { name: "Typescript", icon: SiTypescript },
-  { name: "React", icon: FaReact },
-  { name: "HTML5", icon: FaHtml5 },
-  { name: "CSS3", icon: FaCss3 },
-  { name: "Linux", icon: FaLinux },
-  { name: "Node", icon: FaNodeJs },
-  { name: "Express", icon: SiExpress },
-  { name: "MongoDB", icon: SiMongodb },
-  { name: "NextJS", icon: SiNextdotjs },
-  { name: "Sass", icon: FaSass },
-];
+import IconSkill from "./IconSkill";
+import { skillsDB } from "./SkillDB";
 
 const Skills = () => {
   const { textColor } = useAppColors();
@@ -61,7 +35,7 @@ const Skills = () => {
           listStyleType="none"
           flexWrap="wrap"
         >
-          {skills.map((skill) => (
+          {skillsDB.map((skill) => (
             <IconSkill key={skill.name} name={skill.name} icon={skill.icon} />
           ))}
         </Flex>

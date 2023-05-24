@@ -6,7 +6,7 @@ import Landing from "../components/Landing";
 import Nav from "../components/Navbar/Nav";
 import Footer from "../components/Footer/Footer";
 import AboutMe from "./Pages/AboutMe";
-import Skills from "./Pages/Skills";
+import Skills from "./Pages/Skills/Skills";
 import Projects from "./Pages/Projects";
 
 export default function Home() {

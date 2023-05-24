@@ -3,12 +3,9 @@
 import { Text, ListItem, Icon, Box, As } from "@chakra-ui/react";
 import React from "react";
 
-export interface Skill {
-  name: string;
-  icon: As;
-}
+import { TechSkill } from './SkillDB'
 
-const IconSkill: React.FC<Skill> = ({ name, icon }) => {
+const IconSkill: React.FC<TechSkill> = ({ name, icon }) => {
   return (
     <ListItem m={4}>
       <Box textAlign="center">
