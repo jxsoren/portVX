@@ -29,7 +29,7 @@ const Projects = () => {
       color={textColor}
       maxW={{ base: "90%", md: "70%" }}
     >
-      <Heading>Skills</Heading>
+      <Heading>Projects</Heading>
       <Project />
     </Flex>
   );
