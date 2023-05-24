@@ -7,6 +7,7 @@ import Nav from "../components/Navbar/Nav";
 import Footer from "../components/Footer/Footer";
 import AboutMe from "./Pages/AboutMe";
 import Skills from "./Pages/Skills";
+import Projects from "./Pages/Projects";
 
 export default function Home() {
   const bgColor = useColorModeValue("light.background", "dark.background");
@@ -17,6 +18,7 @@ export default function Home() {
       <Landing />
       <AboutMe />
       <Skills />
+      <Projects />
       <Footer />
     </Box>
   );
