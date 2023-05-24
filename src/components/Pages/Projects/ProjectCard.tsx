@@ -25,7 +25,6 @@ const Project = () => {
         <CardHeader>
           <Heading size="md">Quickcipie</Heading>
         </CardHeader>
-
         <CardBody>
           <Stack divider={<StackDivider />} spacing="4">
             <Box>

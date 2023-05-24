@@ -3,7 +3,7 @@
 import { Text, ListItem, Icon, Box, As } from "@chakra-ui/react";
 import React from "react";
 
-import { TechSkill } from './SkillDB'
+import { TechSkill } from "./skillDB";
 
 const IconSkill: React.FC<TechSkill> = ({ name, icon }) => {
   return (

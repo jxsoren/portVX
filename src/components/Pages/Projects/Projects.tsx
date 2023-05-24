@@ -1,13 +1,6 @@
 "use client";
 
 import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Container,
-  Stack,
-  StackDivider,
   Heading,
   Box,
   Text,
@@ -15,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 
 import { useAppColors } from "@/hooks/useAppColors";
-import Project from "./Project";
+import Project from "./ProjectCard";
 
 const Projects = () => {
   const { textColor } = useAppColors();

@@ -11,7 +11,7 @@ import {
 
 import { useAppColors } from "@/hooks/useAppColors";
 import IconSkill from "./IconSkill";
-import { skillsDB } from "./SkillDB";
+import { skillsDB } from "./skillDB";
 
 const Skills = () => {
   const { textColor } = useAppColors();

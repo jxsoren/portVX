@@ -7,7 +7,7 @@ import Nav from "../components/Navbar/Nav";
 import Footer from "../components/Footer/Footer";
 import AboutMe from "./Pages/AboutMe";
 import Skills from "./Pages/Skills/Skills";
-import Projects from "./Pages/Projects";
+import Projects from "./Pages/Projects/Projects";
 
 export default function Home() {
   const bgColor = useColorModeValue("light.background", "dark.background");
