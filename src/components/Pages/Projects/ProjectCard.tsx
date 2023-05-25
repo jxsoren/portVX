@@ -12,18 +12,30 @@ import {
   Box,
   Text,
   Flex,
+  Icon,
+  ListItem,
+  OrderedList,
 } from "@chakra-ui/react";
 
+import React from "react";
 import { useAppColors } from "@/hooks/useAppColors";
+import { ProjectRecipe } from "./projectDB";
+import ProjectTech from "./ProjectTech";
 
-const Project = () => {
+const Project: React.FC<ProjectRecipe> = ({
+  name,
+  about,
+  technologies,
+  thumbnail,
+  links,
+}) => {
   const { textColor } = useAppColors();
-
+  const { live, github } = links;
   return (
     <Container>
       <Card>
         <CardHeader>
-          <Heading size="md">Quickcipie</Heading>
+          <Heading size="md">{name}</Heading>
         </CardHeader>
         <CardBody>
           <Stack divider={<StackDivider />} spacing="4">
@@ -32,20 +44,24 @@ const Project = () => {
                 About
               </Heading>
               <Text pt="2" fontSize="sm">
-                Quickcipe is a sleek and user-friendly recipe creation
-                application that simplifies the recipe-making process by
-                delivering concise and easy-to-follow instructions. With
-                Quickcipe, users can create their own recipes with ease, using
-                only the necessary ingredients and steps.
+                {about}
               </Text>
             </Box>
             <Box>
               <Heading size="xs" textTransform="uppercase">
                 Technologies
               </Heading>
-              <Text pt="2" fontSize="sm">
-                Node, MongoDB, Mongoose, Express and React.
-              </Text>
+              <Flex
+                direction="row"
+                justifyContent="space-between"
+                color={textColor}
+                listStyleType="none"
+                flexWrap="wrap"
+              >
+                {technologies.map(({ name, icon }) => (
+                  <ProjectTech key={name} name={name} icon={icon} />
+                ))}
+              </Flex>
             </Box>
           </Stack>
         </CardBody>
