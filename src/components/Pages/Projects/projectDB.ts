@@ -34,6 +34,7 @@ export const projectDB: ProjectRecipe[] = [
     about:
       "Quickcipe is a sleek and user-friendly recipe creation application that simplifies the recipe-making process by delivering concise and easy-to-follow instructions. With Quickcipe, users can create their own recipes with ease, using only the necessary ingredients and steps.",
     technologies: [
+      { name: "Javascript", icon: DiJavascript1 },
       { name: "Mongo", icon: SiMongodb },
       { name: "Express", icon: SiExpress },
       { name: "React", icon: FaReact },
@@ -51,6 +52,7 @@ export const projectDB: ProjectRecipe[] = [
     about:
       "Hot Take HQ is a dynamic web app that provides a platform for users to share their views on diverse topics, from sports to politics. It offers secure posting of opinions, comparison with others, and the ability for lively debates through its agree/disagree feature, fostering new perspectives.",
     technologies: [
+      { name: "Javascript", icon: DiJavascript1 },
       { name: "Mongo", icon: SiMongodb },
       { name: "Express", icon: SiExpress },
       { name: "React", icon: FaReact },
