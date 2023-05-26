@@ -33,7 +33,7 @@ export const projectDB: ProjectRecipe[] = [
       "Quickcipe is a sleek and user-friendly recipe creation application that simplifies the recipe-making process by delivering concise and easy-to-follow instructions. With Quickcipe, users can create their own recipes with ease, using only the necessary ingredients and steps.",
     technologies: [
       { name: "React", icon: FaReact },
-      { name: "MongoDB", icon: SiMongodb },
+      { name: "Mongo", icon: SiMongodb },
       { name: "Sass", icon: SiSass },
       { name: "Express", icon: SiExpress },
     ],
@@ -46,10 +46,10 @@ export const projectDB: ProjectRecipe[] = [
   {
     name: "HOT TAKE HQ",
     about:
-      "Hot Take HQ is an engaging and interactive web application that lets users express their unique opinions on a variety of topics, from sports to politics to entertainment. With secure user authentication, users can post their 'hot takes' and see how they stack up against the opinions of others. Through the platform's agree/disagree feature, users can engage in lively debates and discussions, expanding their horizons and gaining new perspectives.",
+      "Hot Take HQ is a dynamic web app that provides a platform for users to share their views on diverse topics, from sports to politics. It offers secure posting of opinions, comparison with others, and the ability for lively debates through its agree/disagree feature, fostering new perspectives.",
     technologies: [
       { name: "React", icon: FaReact },
-      { name: "MongoDB", icon: SiMongodb },
+      { name: "Mongo", icon: SiMongodb },
       { name: "Sass", icon: SiSass },
       { name: "Express", icon: SiExpress },
     ],
@@ -65,7 +65,7 @@ export const projectDB: ProjectRecipe[] = [
       "Text-based role-playing game based on the popular video game series, Bioshock. This game is designed to be run inside the terminal using Node.js and JavaScript, and features a variety of gameplay mechanics, including combat, inventory management, and character progression.",
     technologies: [
       { name: "React", icon: FaReact },
-      { name: "MongoDB", icon: SiMongodb },
+      { name: "Mongo", icon: SiMongodb },
       { name: "Sass", icon: SiSass },
       { name: "Express", icon: SiExpress },
     ],

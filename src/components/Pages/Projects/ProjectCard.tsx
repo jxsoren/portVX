@@ -33,7 +33,7 @@ const Project: React.FC<ProjectRecipe> = ({
   const { live, github } = links;
   return (
     <Container>
-      <Card>
+      <Card maxW={["90%", "70%"]} maxH="700px">
         <CardHeader>
           <Heading size="md">{name}</Heading>
         </CardHeader>
@@ -47,22 +47,28 @@ const Project: React.FC<ProjectRecipe> = ({
                 {about}
               </Text>
             </Box>
-            <Box>
+            <Flex
+              direction="column"
+              align="center"
+              justify="center"
+              justifyContent="space-between"
+            >
               <Heading size="xs" textTransform="uppercase">
                 Technologies
               </Heading>
               <Flex
                 direction="row"
-                justifyContent="space-between"
+                justifyContent="flex-start"
                 color={textColor}
                 listStyleType="none"
                 flexWrap="wrap"
+                gap={4}
               >
                 {technologies.map(({ name, icon }) => (
                   <ProjectTech key={name} name={name} icon={icon} />
                 ))}
               </Flex>
-            </Box>
+            </Flex>
           </Stack>
         </CardBody>
       </Card>

@@ -24,7 +24,7 @@ const ProjectTech: React.FC<ProjectTechProps> = ({ name, icon }) => {
   return (
       <Box textAlign="center">
         <Icon as={icon} w={4} h={4} />
-        <Text fontSize={{ base: "sm" }}>{name}</Text>
+        <Text fontSize={10}>{name}</Text>
       </Box>
   );
 };
