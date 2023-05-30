@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 
 import { useAppColors } from "@/hooks/useAppColors";
-import Project from "./ProjectCard";
+import ProjectCard from "./ProjectCard";
 import { projectDB } from "./projectDB";
 
 const Projects = () => {
@@ -28,11 +28,11 @@ const Projects = () => {
         maxW={{ base: "90%", md: "70%" }}
       >
         <SimpleGrid
-          columns={{ base: 1, md: 2 }} // adjust as needed
+          columns={{ base: 1, md: 2 }}
           spacing="20px"
         >
           {projectDB.map((project) => (
-            <Project
+            <ProjectCard
               key={project.name}
               name={project.name}
               about={project.about}

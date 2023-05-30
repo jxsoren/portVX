@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+
 import {
   Card,
   CardHeader,
@@ -17,12 +19,12 @@ import {
   OrderedList,
 } from "@chakra-ui/react";
 
-import React from "react";
 import { useAppColors } from "@/hooks/useAppColors";
 import { ProjectRecipe } from "./projectDB";
-import ProjectTech from "./ProjectTech";
+import ProjectTechnologies from "./CardComponents/ProjectTech";
+import ProjectAbout from "./CardComponents/ProjectAbout";
 
-const Project: React.FC<ProjectRecipe> = ({
+const ProjectCard: React.FC<ProjectRecipe> = ({
   name,
   about,
   technologies,
@@ -30,7 +32,7 @@ const Project: React.FC<ProjectRecipe> = ({
   links,
 }) => {
   const { textColor } = useAppColors();
-  const { live, github } = links;
+  const { live, repo } = links;
   return (
     <Container>
       <Card maxW={["90%", "70%"]} maxH="700px">
@@ -39,36 +41,8 @@ const Project: React.FC<ProjectRecipe> = ({
         </CardHeader>
         <CardBody>
           <Stack divider={<StackDivider />} spacing="4">
-            <Box>
-              <Heading size="xs" textTransform="uppercase">
-                About
-              </Heading>
-              <Text pt="2" fontSize="sm">
-                {about}
-              </Text>
-            </Box>
-            <Flex
-              direction="column"
-              align="center"
-              justify="center"
-              justifyContent="space-between"
-            >
-              <Heading size="xs" textTransform="uppercase">
-                Technologies
-              </Heading>
-              <Flex
-                direction="row"
-                justifyContent="flex-start"
-                color={textColor}
-                listStyleType="none"
-                flexWrap="wrap"
-                gap={4}
-              >
-                {technologies.map(({ name, icon }) => (
-                  <ProjectTech key={name} name={name} icon={icon} />
-                ))}
-              </Flex>
-            </Flex>
+            <ProjectAbout about={about} />
+            <ProjectTechnologies technologies={technologies} />
           </Stack>
         </CardBody>
       </Card>
@@ -76,4 +50,4 @@ const Project: React.FC<ProjectRecipe> = ({
   );
 };
 
-export default Project;
+export default ProjectCard;

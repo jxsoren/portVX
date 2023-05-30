@@ -25,7 +25,7 @@ export interface ProjectRecipe {
   about: string;
   technologies: { name: string; icon: As }[];
   thumbnail: string;
-  links: { live: string; github: string };
+  links: { live: string; repo: string };
 }
 
 export const projectDB: ProjectRecipe[] = [
@@ -44,7 +44,7 @@ export const projectDB: ProjectRecipe[] = [
     thumbnail: "jk",
     links: {
       live: "https://quickcipe.herokuapp.com/",
-      github: "https://github.com/jxsoren/quickcipe",
+      repo: "https://github.com/jxsoren/quickcipe",
     },
   },
   {
@@ -61,7 +61,7 @@ export const projectDB: ProjectRecipe[] = [
     thumbnail: "jk",
     links: {
       live: "https://hot-take-app.herokuapp.com/profile",
-      github: "https://github.com/jxsoren/hot-take-app",
+      repo: "https://github.com/jxsoren/hot-take-app",
     },
   },
   {
@@ -75,7 +75,7 @@ export const projectDB: ProjectRecipe[] = [
     thumbnail: "jk",
     links: {
       live: "",
-      github: "https://github.com/jxsoren/terminal-rpg",
+      repo: "https://github.com/jxsoren/terminal-rpg",
     },
   },
   {
@@ -91,7 +91,7 @@ export const projectDB: ProjectRecipe[] = [
     thumbnail: "jk",
     links: {
       live: "",
-      github: "https://github.com/jxsoren/terminal-rpg",
+      repo: "https://github.com/jxsoren/terminal-rpg",
     },
   },
 ];
