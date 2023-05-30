@@ -17,6 +17,8 @@ import {
 } from "react-icons/si";
 
 import { DiJavascript1 } from "react-icons/di";
+import { VscGithubAlt } from "react-icons/vsc";
+import { CgWebsite } from "react-icons/cg";
 
 import { As } from "@chakra-ui/react";
 
@@ -25,7 +27,11 @@ export interface ProjectRecipe {
   about: string;
   technologies: { name: string; icon: As }[];
   thumbnail: string;
-  links: { live: string; repo: string };
+  links: {
+    name: string;
+    link: string;
+    icon: As;
+  }[];
 }
 
 export const projectDB: ProjectRecipe[] = [
@@ -42,10 +48,18 @@ export const projectDB: ProjectRecipe[] = [
       { name: "Sass", icon: SiSass },
     ],
     thumbnail: "jk",
-    links: {
-      live: "https://quickcipe.herokuapp.com/",
-      repo: "https://github.com/jxsoren/quickcipe",
-    },
+    links: [
+      {
+        name: "Live Site",
+        link: "https://quickcipe.herokuapp.com/",
+        icon: CgWebsite,
+      },
+      {
+        name: "Github Repo",
+        link: "https://github.com/jxsoren/quickcipe",
+        icon: VscGithubAlt,
+      },
+    ],
   },
   {
     name: "HOT TAKE HQ",
@@ -59,10 +73,18 @@ export const projectDB: ProjectRecipe[] = [
       { name: "NodeJS", icon: FaNodeJs },
     ],
     thumbnail: "jk",
-    links: {
-      live: "https://hot-take-app.herokuapp.com/profile",
-      repo: "https://github.com/jxsoren/hot-take-app",
-    },
+    links: [
+      {
+        name: "Live Site",
+        link: "https://hot-take-app.herokuapp.com/",
+        icon: CgWebsite,
+      },
+      {
+        name: "Github Repo",
+        link: "https://github.com/jxsoren/hot-take-app",
+        icon: VscGithubAlt,
+      },
+    ],
   },
   {
     name: "Retro Terminal RPG",
@@ -73,10 +95,18 @@ export const projectDB: ProjectRecipe[] = [
       { name: "NodeJS", icon: FaNodeJs },
     ],
     thumbnail: "jk",
-    links: {
-      live: "",
-      repo: "https://github.com/jxsoren/terminal-rpg",
-    },
+    links: [
+      {
+        name: "Live Site",
+        link: "",
+        icon: CgWebsite,
+      },
+      {
+        name: "Github Repo",
+        link: "https://github.com/jxsoren/terminal-rpg",
+        icon: VscGithubAlt,
+      },
+    ],
   },
   {
     name: "Portfolio Site",
@@ -89,9 +119,17 @@ export const projectDB: ProjectRecipe[] = [
       { name: "NodeJS", icon: FaNodeJs },
     ],
     thumbnail: "jk",
-    links: {
-      live: "",
-      repo: "https://github.com/jxsoren/terminal-rpg",
-    },
+    links: [
+      {
+        name: "Live Site",
+        link: "",
+        icon: CgWebsite,
+      },
+      {
+        name: "Github Repo",
+        link: "",
+        icon: VscGithubAlt,
+      },
+    ],
   },
 ];

@@ -20,9 +20,10 @@ import {
 } from "@chakra-ui/react";
 
 import { useAppColors } from "@/hooks/useAppColors";
-import { ProjectRecipe } from "./projectDB";
-import ProjectTechnologies from "./CardComponents/ProjectTech";
+import { ProjectRecipe } from "../projectDB";
+import ProjectTechnologies from "./CardComponents/ProjectTechnologies";
 import ProjectAbout from "./CardComponents/ProjectAbout";
+import ProjectLinks from "./CardComponents/ProjectLinks";
 
 const ProjectCard: React.FC<ProjectRecipe> = ({
   name,
@@ -32,7 +33,6 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   links,
 }) => {
   const { textColor } = useAppColors();
-  const { live, repo } = links;
   return (
     <Container>
       <Card maxW={["90%", "70%"]} maxH="700px">
@@ -43,6 +43,7 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
           <Stack divider={<StackDivider />} spacing="4">
             <ProjectAbout about={about} />
             <ProjectTechnologies technologies={technologies} />
+            <ProjectLinks links={links} />
           </Stack>
         </CardBody>
       </Card>

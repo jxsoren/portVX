@@ -1,6 +1,6 @@
 "use client";
 
-import { Text, ListItem, Icon, Box, As } from "@chakra-ui/react";
+import { Text, ListItem, Icon, Box } from "@chakra-ui/react";
 import React from "react";
 
 import { TechSkill } from "./skillDB";

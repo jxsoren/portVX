@@ -1,8 +1,7 @@
 "use client;";
 
-import { useAppColors } from "@/hooks/useAppColors";
 import React from "react";
-
+import { useAppColors } from "@/hooks/useAppColors";
 import { Box, Text, Flex, Icon, Heading, As } from "@chakra-ui/react";
 
 interface ProjectTechProps {
