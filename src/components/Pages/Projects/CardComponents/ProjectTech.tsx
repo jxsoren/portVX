@@ -14,18 +14,16 @@ import {
   As,
 } from "@chakra-ui/react";
 
-import { projectDB } from "../projectDB";
-
-interface Technology {
+interface ProjectTechProps {
   name: string;
   icon: As;
 }
 
 interface ProjectTechnologiesProps {
-  technologies: Array<Technology>;
+  technologies: Array<ProjectTechProps>;
 }
 
-const ProjectTech: React.FC<Technology> = ({ name, icon }) => {
+const ProjectTech: React.FC<ProjectTechProps> = ({ name, icon }) => {
   const { textColor } = useAppColors();
 
   return (
