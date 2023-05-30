@@ -3,16 +3,7 @@
 import { useAppColors } from "@/hooks/useAppColors";
 import React from "react";
 
-import {
-  Box,
-  Text,
-  Flex,
-  Icon,
-  Heading,
-  ListItem,
-  OrderedList,
-  As,
-} from "@chakra-ui/react";
+import { Box, Text, Flex, Icon, Heading, As } from "@chakra-ui/react";
 
 interface ProjectTechProps {
   name: string;
