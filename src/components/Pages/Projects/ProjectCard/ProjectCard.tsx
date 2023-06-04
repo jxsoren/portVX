@@ -17,10 +17,12 @@ import {
   Icon,
   ListItem,
   OrderedList,
+  Image,
 } from "@chakra-ui/react";
 
 import { useAppColors } from "@/hooks/useAppColors";
 import { ProjectRecipe } from "../projectDB";
+import ProjectThumbnail from "./CardComponents/ProjectThumbnail";
 import ProjectTechnologies from "./CardComponents/ProjectTechnologies";
 import ProjectAbout from "./CardComponents/ProjectAbout";
 import ProjectLinks from "./CardComponents/ProjectLinks";
@@ -41,6 +43,7 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
         </CardHeader>
         <CardBody>
           <Stack divider={<StackDivider />} spacing="4">
+            <ProjectThumbnail thumbnail={thumbnail} />
             <ProjectAbout about={about} />
             <ProjectTechnologies technologies={technologies} />
             <ProjectLinks links={links} />

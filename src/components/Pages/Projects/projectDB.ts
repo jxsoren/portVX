@@ -47,7 +47,7 @@ export const projectDB: ProjectRecipe[] = [
       { name: "NodeJS", icon: FaNodeJs },
       { name: "Sass", icon: SiSass },
     ],
-    thumbnail: "jk",
+    thumbnail: "./thumbnails/quickcipie.png",
     links: [
       {
         name: "Live Site",
@@ -72,7 +72,7 @@ export const projectDB: ProjectRecipe[] = [
       { name: "React", icon: FaReact },
       { name: "NodeJS", icon: FaNodeJs },
     ],
-    thumbnail: "jk",
+    thumbnail: "./thumbnails/hotTakeHQ.png",
     links: [
       {
         name: "Live Site",
@@ -94,7 +94,7 @@ export const projectDB: ProjectRecipe[] = [
       { name: "Javascript", icon: DiJavascript1 },
       { name: "NodeJS", icon: FaNodeJs },
     ],
-    thumbnail: "jk",
+    thumbnail: "./thumbnails/nodeRPG.png",
     links: [
       {
         name: "Live Site",
@@ -118,7 +118,7 @@ export const projectDB: ProjectRecipe[] = [
       { name: "ChakraUI", icon: SiChakraui },
       { name: "NodeJS", icon: FaNodeJs },
     ],
-    thumbnail: "jk",
+    thumbnail: "./thumbnails/portfolioVX.png",
     links: [
       {
         name: "Live Site",
