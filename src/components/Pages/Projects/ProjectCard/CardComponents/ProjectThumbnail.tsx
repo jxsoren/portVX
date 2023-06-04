@@ -9,14 +9,14 @@ interface ThumbnailProps {
 
 const ProjectThumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
   return (
-    <Box >
+    <Container>
       <Image
         boxSize="100px"
         objectFit="cover"
         src={thumbnail}
         alt="Project Thumbnail"
       />
-    </Box>
+    </Container>
   );
 };
 

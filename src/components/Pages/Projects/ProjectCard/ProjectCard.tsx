@@ -37,17 +37,19 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   const { textColor } = useAppColors();
   return (
     <Container>
-      <Card maxW={["90%", "70%"]} maxH="700px">
+      <Card width={["100%", "100%"]} minHeight="600px">
         <CardHeader>
           <Heading size="md">{name}</Heading>
         </CardHeader>
         <CardBody>
-          <Stack divider={<StackDivider />} spacing="4">
-            <ProjectThumbnail thumbnail={thumbnail} />
-            <ProjectAbout about={about} />
-            <ProjectTechnologies technologies={technologies} />
-            <ProjectLinks links={links} />
-          </Stack>
+          <Flex direction="column" justify="space-between" height="100%">
+            <Stack divider={<StackDivider />} spacing="4">
+              <ProjectThumbnail thumbnail={thumbnail} />
+              <ProjectAbout about={about} />
+              <ProjectTechnologies technologies={technologies} />
+              <ProjectLinks links={links} />
+            </Stack>
+          </Flex>
         </CardBody>
       </Card>
     </Container>

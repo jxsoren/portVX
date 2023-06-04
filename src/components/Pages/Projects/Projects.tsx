@@ -25,9 +25,9 @@ const Projects = () => {
         justify="center"
         padding={4}
         color={textColor}
-        maxW={{ base: "90%", md: "70%" }}
+        maxW={{ base: "100%", md: "100%" }}
       >
-        <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px">
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing="50px">
           {projectDB.map((project) => (
             <ProjectCard
               key={project.name}
