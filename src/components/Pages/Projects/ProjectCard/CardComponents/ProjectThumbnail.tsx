@@ -1,4 +1,4 @@
-"use client;"
+"use client;";
 
 import { Image, Box, Container } from "@chakra-ui/react";
 import React from "react";
@@ -11,7 +11,8 @@ const ProjectThumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
   return (
     <Container>
       <Image
-        boxSize="100px"
+        width={500}
+        height={250}
         objectFit="cover"
         src={thumbnail}
         alt="Project Thumbnail"
