@@ -21,7 +21,7 @@ const Links: React.FC<LinksProps> = ({ name, link, icon }) => {
     <Box>
       <Box textAlign="center">
         <Link href={link} isExternal>
-          <Icon as={icon} w={10} h={10} />
+          <Icon as={icon} w={8} h={6} />
           <Text fontSize="xs">{name}</Text>
         </Link>
       </Box>
@@ -39,7 +39,7 @@ const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => {
       justify="center"
       justifyContent="space-between"
     >
-      <Heading size="xs" textTransform="uppercase">
+      <Heading p={2} size="xs" textTransform="uppercase">
         Links
       </Heading>
       <Flex

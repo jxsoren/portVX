@@ -50,12 +50,12 @@ export const projectDB: ProjectRecipe[] = [
     thumbnail: "./thumbnails/quickcipie.png",
     links: [
       {
-        name: "Live Site",
+        name: "Live",
         link: "https://quickcipe.herokuapp.com/",
         icon: CgWebsite,
       },
       {
-        name: "Github Repo",
+        name: "Github",
         link: "https://github.com/jxsoren/quickcipe",
         icon: VscGithubAlt,
       },
@@ -75,12 +75,12 @@ export const projectDB: ProjectRecipe[] = [
     thumbnail: "./thumbnails/hotTakeHQ.png",
     links: [
       {
-        name: "Live Site",
+        name: "Live",
         link: "https://hot-take-app.herokuapp.com/",
         icon: CgWebsite,
       },
       {
-        name: "Github Repo",
+        name: "Github",
         link: "https://github.com/jxsoren/hot-take-app",
         icon: VscGithubAlt,
       },
@@ -97,12 +97,12 @@ export const projectDB: ProjectRecipe[] = [
     thumbnail: "./thumbnails/nodeRPG.png",
     links: [
       {
-        name: "Live Site",
+        name: "Live",
         link: "",
         icon: CgWebsite,
       },
       {
-        name: "Github Repo",
+        name: "Github",
         link: "https://github.com/jxsoren/terminal-rpg",
         icon: VscGithubAlt,
       },
@@ -121,12 +121,12 @@ export const projectDB: ProjectRecipe[] = [
     thumbnail: "./thumbnails/portfolioVX.png",
     links: [
       {
-        name: "Live Site",
+        name: "Live",
         link: "",
         icon: CgWebsite,
       },
       {
-        name: "Github Repo",
+        name: "Github",
         link: "",
         icon: VscGithubAlt,
       },

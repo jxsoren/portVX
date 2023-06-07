@@ -36,7 +36,7 @@ const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
       justify="center"
       justifyContent="space-between"
     >
-      <Heading size="xs" textTransform="uppercase">
+      <Heading p={2} size="xs" textTransform="uppercase">
         Technologies
       </Heading>
       <Flex

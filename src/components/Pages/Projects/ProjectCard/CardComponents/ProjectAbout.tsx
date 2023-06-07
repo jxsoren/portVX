@@ -9,8 +9,8 @@ interface ProjectAboutProps {
 
 const ProjectAbout: React.FC<ProjectAboutProps> = ({ about }) => {
   return (
-    <Box>
-      <Heading size="xs" textTransform="uppercase">
+    <Box display="flex" flexDirection="column" alignItems="center">
+      <Heading size="xs" textTransform="uppercase" textAlign="center">
         About
       </Heading>
       <Text pt="2" fontSize="sm">
@@ -20,4 +20,4 @@ const ProjectAbout: React.FC<ProjectAboutProps> = ({ about }) => {
   );
 };
 
-export default ProjectAbout
+export default ProjectAbout;

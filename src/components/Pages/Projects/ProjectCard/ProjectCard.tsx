@@ -37,8 +37,14 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   const { textColor } = useAppColors();
   return (
     <Container>
-      <Card width={["100%", "100%"]} minHeight="600px">
-        <CardHeader>
+      <Card
+        width={["100%", "100%"]}
+        minHeight="600px"
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+      >
+        <CardHeader textAlign="center" width="100%">
           <Heading size="md">{name}</Heading>
         </CardHeader>
         <CardBody>
