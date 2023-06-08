@@ -111,7 +111,7 @@ export const projectDB: ProjectRecipe[] = [
   {
     name: "Portfolio Site",
     about:
-      "An embodiment of innovative technology and a symbol of my dedication to continuous skill enhancement. Developed with Chakra UI for superior user interaction, crafted in TypeScript for optimum code reliability, and energized by Next.js for unparalleled performance. This project mirrors my voyage through tech exploration and my commitment to pushing the boundaries of my abilities",
+      "An embodiment of innovative technology and a symbol of my dedication to continuous skill enhancement. Developed with Chakra UI for superior user interaction, crafted in TypeScript for optimum code reliability, and energized by Next.js for unparalleled performance. This project mirrors my voyage through tech exploration and my commitment to pushing the boundaries of my abilities.",
     technologies: [
       { name: "NextJS", icon: SiNextdotjs },
       { name: "Typescript", icon: SiTypescript },
