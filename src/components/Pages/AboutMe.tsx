@@ -16,11 +16,18 @@ const AboutMe = () => {
         maxW={{ base: "80%", md: "60%" }}
       >
         <Heading>About Me</Heading>
-        <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }} textColor={textColor}>
-          {`Hey there! My name is Josh Sorensen. I'm a software developer based out
-        of Salt Lake City, Utah with a passion for solving problems and
-        constantly improving. When I'm not behind a keyboard, you can find me
-        enjoying the great outdoors, building PCs or working out.`}
+        <Text
+          fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
+          textColor={textColor}
+        >
+          {`Hello, I'm Josh Sorensen, a software developer from the beautiful Salt Lake City, Utah. I'm passionate about coding, problem-solving, and technology. From designing user interfaces to developing backend architectures, I strive to improve and innovate in all aspects of my work.`}
+        </Text>
+        <br />
+        <Text
+          fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
+          textColor={textColor}
+        >
+          {`Outside of coding, I love exploring Utah's great outdoors, building PCs, and staying active. These activities not only balance my life but also provide me with inspiration and motivation in my professional work`}
         </Text>
       </Flex>
     </Container>

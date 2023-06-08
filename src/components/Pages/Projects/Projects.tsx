@@ -17,14 +17,13 @@ const Projects = () => {
   const { textColor } = useAppColors();
 
   return (
-    <Container maxW="2x1" centerContent>
+    <Container maxW="2x1" color={textColor} centerContent>
       <Heading marginBottom={4}>Projects</Heading>
       <Flex
         direction={["column", "row"]}
         align="center"
         justify="center"
         padding={4}
-        color={textColor}
         maxW={{ base: "100%", md: "100%" }}
       >
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing="50px">

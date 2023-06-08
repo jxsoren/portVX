@@ -16,9 +16,15 @@ export default function Home() {
     <Box bgColor={bgColor}>
       <Nav />
       <Landing />
-      <AboutMe />
-      <Skills />
-      <Projects />
+      <Box id="about" mb="40vh">
+        <AboutMe />
+      </Box>
+      <Box id="skills" mb="40vh">
+        <Skills />
+      </Box>
+      <Box id="projects" mb="40vh">
+        <Projects />
+      </Box>
       <Footer />
     </Box>
   );
