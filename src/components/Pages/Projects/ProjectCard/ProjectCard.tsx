@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
     <Container>
       <Card
         width={["100%", "100%"]}
-        minHeight="600px"
+        minHeight="750px"
         display="flex"
         flexDirection="column"
         alignItems="center"

@@ -110,7 +110,8 @@ export const projectDB: ProjectRecipe[] = [
   },
   {
     name: "Portfolio Site",
-    about: "This Site :D",
+    about:
+      "A showcase of cutting-edge technology and a testament to lifelong learning. Built with Chakra UI for user-friendly navigation, implemented in TypeScript for enhanced code reliability, and powered by Next.js for high efficiency. This project reflects my journey through tech exploration and commitment to expanding my skillset.",
     technologies: [
       { name: "NextJS", icon: SiNextdotjs },
       { name: "Typescript", icon: SiTypescript },
