@@ -6,18 +6,11 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
   Container,
   Stack,
   StackDivider,
   Heading,
-  Box,
-  Text,
   Flex,
-  Icon,
-  ListItem,
-  OrderedList,
-  Image,
 } from "@chakra-ui/react";
 
 import { useAppColors } from "@/hooks/useAppColors";
