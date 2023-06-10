@@ -5,7 +5,6 @@ import {
   Box,
   Flex,
   HStack,
-  Link,
   Button,
   Image,
   useColorMode,

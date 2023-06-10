@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppColors } from "@/hooks/useAppColors";
-import { Box, Center, Text, Container, Heading, Flex } from "@chakra-ui/react";
+import { Text, Container, Heading, Flex } from "@chakra-ui/react";
 
 const AboutMe = () => {
   const { textColor } = useAppColors();
