@@ -1,12 +1,5 @@
 // Icon Imports
-import {
-  FaReact,
-  FaHtml5,
-  FaCss3,
-  FaLinux,
-  FaNodeJs,
-  FaSass,
-} from "react-icons/fa";
+import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
   SiExpress,
   SiMongodb,

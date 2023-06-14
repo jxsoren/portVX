@@ -7,8 +7,6 @@ import {
   IconButton,
   Link,
   Text,
-  Stack,
-  Button,
   Tooltip,
   Container,
   useColorModeValue,

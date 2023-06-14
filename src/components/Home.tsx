@@ -16,13 +16,13 @@ export default function Home() {
     <Box bgColor={bgColor}>
       <Nav />
       <Landing />
-      <Box id="about" mb="40vh">
+      <Box id="about" mb="30vh">
         <AboutMe />
       </Box>
-      <Box id="skills" mb="40vh">
+      <Box id="skills" mb="30vh">
         <Skills />
       </Box>
-      <Box id="projects" mb="40vh">
+      <Box id="projects" mb="30vh">
         <Projects />
       </Box>
       <Footer />
