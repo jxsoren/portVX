@@ -18,7 +18,7 @@ const Projects = () => {
   const { textColor } = useAppColors();
 
   return (
-    <Stars>
+    <>
       <Container maxW="2x1" color={textColor} centerContent>
         <Heading marginBottom={4} zIndex={2}>Projects</Heading>
         <Flex
@@ -43,7 +43,7 @@ const Projects = () => {
           </SimpleGrid>
         </Flex>
       </Container>
-    </Stars>
+    </>
   );
 };
 
