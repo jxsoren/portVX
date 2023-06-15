@@ -12,6 +12,8 @@ import {
   SiMongodb,
   SiNextdotjs,
   SiTypescript,
+  SiCsharp,
+  SiDotnet
 } from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
 
@@ -28,10 +30,12 @@ export const skillsDB: TechSkill[] = [
   { name: "React", icon: FaReact },
   { name: "HTML5", icon: FaHtml5 },
   { name: "CSS3", icon: FaCss3 },
-  { name: "Linux", icon: FaLinux },
   { name: "Node", icon: FaNodeJs },
   { name: "Express", icon: SiExpress },
   { name: "MongoDB", icon: SiMongodb },
+  { name: "C#", icon: SiCsharp },
+  { name: ".NET", icon: SiDotnet },
   { name: "NextJS", icon: SiNextdotjs },
   { name: "Sass", icon: FaSass },
+  { name: "Linux", icon: FaLinux },
 ];
