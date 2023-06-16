@@ -2,7 +2,6 @@
 
 import { useAppColors } from "@/hooks/useAppColors";
 import { Text, Container, Heading, Flex } from "@chakra-ui/react";
-import NorthernLights from "../NorthernLights/NorthernLights";
 import Stars from "../Stars/Stars";
 
 const AboutMe = () => {
