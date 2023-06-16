@@ -42,7 +42,15 @@ export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box bg={bgColor} px={4} boxShadow="dark-lg" textColor={textColor}>
+    <Box
+      bg={bgColor}
+      px={4}
+      boxShadow="dark-lg"
+      textColor={textColor}
+      position="sticky"
+      top={0}
+      zIndex={1}
+    >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <HStack spacing={8} alignItems={"center"}>
           <Box>

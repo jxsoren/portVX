@@ -18,16 +18,14 @@ const Projects = () => {
   const { textColor } = useAppColors();
 
   return (
-    <>
       <Container maxW="2x1" color={textColor} centerContent>
-        <Heading marginBottom={4} zIndex={2}>Projects</Heading>
+        <Heading marginBottom={4}>Projects</Heading>
         <Flex
           direction={["column", "row"]}
           align="center"
           justify="center"
           padding={4}
           maxW={{ base: "100%", md: "100%" }}
-          zIndex={2}
         >
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing="50px">
             {projectDB.map((project) => (
@@ -43,7 +41,6 @@ const Projects = () => {
           </SimpleGrid>
         </Flex>
       </Container>
-    </>
   );
 };
 
