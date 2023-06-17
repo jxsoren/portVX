@@ -9,13 +9,15 @@ interface ProjectAboutProps {
 
 const ProjectAbout: React.FC<ProjectAboutProps> = ({ about }) => {
   return (
-    <Box display="flex" flexDirection="column" alignItems="center">
-      <Heading size="xs" textTransform="uppercase" textAlign="center">
-        About
-      </Heading>
-      <Text pt="2" fontSize="sm">
-        {about}
-      </Text>
+    <Box >
+      <Box display="flex" flexDirection="column" alignItems="center">
+        <Heading size="xs" textTransform="uppercase" textAlign="center">
+          About
+        </Heading>
+        <Text pt="2" fontSize="sm">
+          {about}
+        </Text>
+      </Box>
     </Box>
   );
 };

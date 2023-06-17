@@ -8,6 +8,7 @@ import Footer from "../components/Footer/Footer";
 import AboutMe from "./Pages/AboutMe";
 import Skills from "./Pages/Skills/Skills";
 import Projects from "./Pages/Projects/Projects";
+import LayeredSVG from "./Pages/LayeredSVG";
 
 export default function Home() {
   const bgColor = useColorModeValue("light.background", "dark.background");
@@ -16,6 +17,15 @@ export default function Home() {
     <Box bgColor={bgColor}>
       <Nav />
       <Landing />
+      <LayeredSVG />
+      <Box
+        aspectRatio={960 / 540}
+        width="100%"
+        bgPosition="center"
+        bgRepeat="no-repeat"
+        bgSize="cover"
+        backgroundImage="url('/SVG/fadingNightSky.svg')"
+      ></Box>
       <Box id="about" mb="30vh">
         <AboutMe />
       </Box>

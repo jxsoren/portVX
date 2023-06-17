@@ -18,33 +18,31 @@ const Skills = () => {
   const { textColor } = useAppColors();
 
   return (
-    <Stars>
-      <Container maxW="2x1" centerContent>
+    <Container maxW="2x1" centerContent>
+      <Flex
+        direction="column"
+        align="center"
+        justify="center"
+        padding={4}
+        color="#ffffff"
+        maxW={{ base: "90%", md: "70%" }}
+        zIndex={2}
+      >
+        <Heading>Skills</Heading>
         <Flex
-          direction="column"
-          align="center"
-          justify="center"
-          padding={4}
-          color='#ffffff'
-          maxW={{ base: "90%", md: "70%" }}
-          zIndex={2}
+          as={OrderedList}
+          direction="row"
+          justifyContent="space-between"
+          color="#ffffff"
+          listStyleType="none"
+          flexWrap="wrap"
         >
-          <Heading>Skills</Heading>
-          <Flex
-            as={OrderedList}
-            direction="row"
-            justifyContent="space-between"
-            color='#ffffff'
-            listStyleType="none"
-            flexWrap="wrap"
-          >
-            {skillsDB.map((skill) => (
-              <IconSkill key={skill.name} name={skill.name} icon={skill.icon} />
-            ))}
-          </Flex>
+          {skillsDB.map((skill) => (
+            <IconSkill key={skill.name} name={skill.name} icon={skill.icon} />
+          ))}
         </Flex>
-      </Container>
-    </Stars>
+      </Flex>
+    </Container>
   );
 };
 

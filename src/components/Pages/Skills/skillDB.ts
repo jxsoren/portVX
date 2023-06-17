@@ -33,8 +33,6 @@ export const skillsDB: TechSkill[] = [
   { name: "Node", icon: FaNodeJs },
   { name: "Express", icon: SiExpress },
   { name: "MongoDB", icon: SiMongodb },
-  { name: "C#", icon: SiCsharp },
-  { name: ".NET", icon: SiDotnet },
   { name: "NextJS", icon: SiNextdotjs },
   { name: "Sass", icon: FaSass },
   { name: "Linux", icon: FaLinux },

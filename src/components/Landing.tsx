@@ -41,6 +41,15 @@ export default function Landing() {
           >
             {`I'm Josh.`}
           </Heading>
+          <Heading
+            bgColor={"#ffffff"}
+            bgClip="text"
+            fontSize={{ base: "2xl", md: "4xl" }}
+            fontWeight="bold"
+            zIndex={2}
+          >
+            {`A Full-Stack Developer with a knack for solving problems`}
+          </Heading>
         </Stack>
       </Container>
     </Stars>
