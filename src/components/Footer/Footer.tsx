@@ -22,7 +22,7 @@ const Footer = () => {
   const { bgColor, textColor } = useAppColors();
 
   return (
-    <Box as="footer" py="6" color="white" w="100%">
+    <Box as="footer" py="6" color="white" w="100%" backgroundColor="#183664">
       <Box>
         <Flex
           align={"center"}
