@@ -34,7 +34,6 @@ const Projects = () => {
           justify="center"
           padding={4}
           maxW={{ base: "100%", md: "100%" }}
-          zIndex={3}
         >
           <SimpleGrid columns={{ base: 1, md: 2 }} spacing="50px">
             {projectDB.map((project) => (

@@ -15,7 +15,7 @@ const AboutMe = () => {
       backgroundColor="#183664"
     >
       <Container maxW="2x1" centerContent>
-        <Heading mt={5} color="#ffffff" zIndex={2}>
+        <Heading mt={5} color="#ffffff">
           About Me
         </Heading>
         <Flex
@@ -25,7 +25,6 @@ const AboutMe = () => {
           padding={4}
           color="#ffffff"
           maxW={{ base: "90%", md: "70%" }}
-          zIndex={2}
         >
           <Text
             fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
