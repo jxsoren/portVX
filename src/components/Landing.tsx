@@ -48,7 +48,7 @@ export default function Landing() {
             fontWeight="bold"
             zIndex={2}
           >
-            {`A Full-Stack Developer with a knack for solving problems`}
+            {`A Full-Stack Developer with a knack for solving problems.`}
           </Heading>
         </Stack>
       </Container>
