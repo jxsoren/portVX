@@ -6,43 +6,52 @@ import {
   Heading,
   Text,
   ListItem,
+  Box,
   OrderedList,
 } from "@chakra-ui/react";
 
 import { useAppColors } from "@/hooks/useAppColors";
 import IconSkill from "./IconSkill";
 import { skillsDB } from "./skillDB";
-import Stars from "@/components/Stars/Stars";
 
 const Skills = () => {
   const { textColor } = useAppColors();
 
   return (
-    <Container maxW="2x1" centerContent>
-      <Flex
-        direction="column"
-        align="center"
-        justify="center"
-        padding={4}
-        color="#ffffff"
-        maxW={{ base: "90%", md: "70%" }}
-        zIndex={2}
-      >
-        <Heading>Skills</Heading>
+    <Box
+      aspectRatio={960 / 540}
+      width="100%"
+      bgPosition="center"
+      bgRepeat="no-repeat"
+      bgSize="cover"
+      backgroundColor="#183664"
+    >
+      <Container maxW="2x1" centerContent>
         <Flex
-          as={OrderedList}
-          direction="row"
-          justifyContent="space-between"
+          direction="column"
+          align="center"
+          justify="center"
+          padding={4}
           color="#ffffff"
-          listStyleType="none"
-          flexWrap="wrap"
+          maxW={{ base: "90%", md: "70%" }}
+          zIndex={2}
         >
-          {skillsDB.map((skill) => (
-            <IconSkill key={skill.name} name={skill.name} icon={skill.icon} />
-          ))}
+          <Heading>Skills</Heading>
+          <Flex
+            as={OrderedList}
+            direction="row"
+            justifyContent="space-between"
+            color="#ffffff"
+            listStyleType="none"
+            flexWrap="wrap"
+          >
+            {skillsDB.map((skill) => (
+              <IconSkill key={skill.name} name={skill.name} icon={skill.icon} />
+            ))}
+          </Flex>
         </Flex>
-      </Flex>
-    </Container>
+      </Container>
+    </Box>
   );
 };
 
