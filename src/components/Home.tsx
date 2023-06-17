@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <Box bgColor={bgColor}>
       <Nav />
-      <Box id="landing" mb="30vh">
-      <Landing />
+      <Box id="landing">
+        <Landing />
       </Box>
       <LayeredSVG />
       <Box
@@ -28,15 +28,39 @@ export default function Home() {
         bgSize="cover"
         backgroundImage="url('/SVG/fadingNightSky.svg')"
       ></Box>
-      <Box id="about" mb="30vh">
-        <AboutMe />
-      </Box>
-      <Box id="skills" mb="30vh">
+      <Box id="skills">
         <Skills />
       </Box>
-      <Box id="projects" mb="30vh">
+      <Box
+        aspectRatio={960 / 540}
+        width="100%"
+        bgPosition="center"
+        bgRepeat="no-repeat"
+        bgSize="cover"
+        backgroundImage="url('/SVG/fadingNightSky.svg')"
+      ></Box>
+      <Box id="projects">
         <Projects />
       </Box>
+      <Box
+        aspectRatio={960 / 540}
+        width="100%"
+        bgPosition="center"
+        bgRepeat="no-repeat"
+        bgSize="cover"
+        backgroundImage="url('/SVG/fadingNightSky.svg')"
+      ></Box>
+      <Box id="about">
+        <AboutMe />
+      </Box>
+      <Box
+        aspectRatio={960 / 540}
+        width="100%"
+        bgPosition="center"
+        bgRepeat="no-repeat"
+        bgSize="cover"
+        backgroundImage="url('/SVG/fadingNightSky.svg')"
+      ></Box>
       <Footer />
     </Box>
   );
