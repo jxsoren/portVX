@@ -53,9 +53,19 @@ export default function Nav() {
     >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <HStack spacing={8} alignItems={"center"}>
-          <Box>
+          <ChakraLink
+            as={ScrollLink}
+            to={"landing"}
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            px={2}
+            py={1}
+            rounded={"md"}
+          >
             <Image src="/name.png" alt="logo" height={32} />
-          </Box>
+          </ChakraLink>
           <HStack as={"nav"} spacing={4} display={{ base: "none", md: "flex" }}>
             {Links.map((link) => (
               <NavLink key={link} to={link.toLowerCase()}>

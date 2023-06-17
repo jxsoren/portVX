@@ -12,7 +12,7 @@ const AboutMe = () => {
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
-      backgroundImage="url('/SVG/blurry-gradient-haikei.svg')"
+      backgroundColor="#183664"
     >
       <Container maxW="2x1" centerContent>
         <Heading mt={5} color="#ffffff" zIndex={2}>

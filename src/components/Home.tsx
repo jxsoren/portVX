@@ -16,7 +16,9 @@ export default function Home() {
   return (
     <Box bgColor={bgColor}>
       <Nav />
+      <Box id="landing" mb="30vh">
       <Landing />
+      </Box>
       <LayeredSVG />
       <Box
         aspectRatio={960 / 540}
