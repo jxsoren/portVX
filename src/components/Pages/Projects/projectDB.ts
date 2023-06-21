@@ -55,7 +55,7 @@ export const projectDB: ProjectRecipe[] = [
     ],
   },
   {
-    name: "HOT TAKE HQ",
+    name: "Hot Take HQ",
     about:
       "Hot Take HQ is a dynamic web app that provides a platform for users to share their views on diverse topics, from sports to politics. It offers secure posting of opinions, comparison with others, and the ability for lively debates through its agree/disagree feature, fostering new perspectives.",
     technologies: [
@@ -102,7 +102,7 @@ export const projectDB: ProjectRecipe[] = [
     ],
   },
   {
-    name: "Portfolio Site",
+    name: "Portfolio Site v2",
     about:
       "A testament to innovation and continuous learning, this project uses Chakra UI for user interaction, TypeScript for reliable coding, and Next.js for optimal performance. It reflects my journey in tech and commitment to expanding my capabilities.",
     technologies: [

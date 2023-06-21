@@ -19,48 +19,20 @@ export default function Home() {
       <Box id="landing">
         <Landing />
       </Box>
-      <LayeredSVG />
-      <Box
-        aspectRatio={960 / 540}
-        width="100%"
-        bgPosition="center"
-        bgRepeat="no-repeat"
-        bgSize="cover"
-        backgroundImage="url('/SVG/fadingNightSky.svg')"
-      ></Box>
+      <LayeredSVG bgI="url('/SVG/stars-skills2.svg')" />
       <Box id="skills">
         <Skills />
       </Box>
-      <Box
-        aspectRatio={960 / 540}
-        width="100%"
-        bgPosition="center"
-        bgRepeat="no-repeat"
-        bgSize="cover"
-        backgroundImage="url('/SVG/fadingNightSky.svg')"
-      ></Box>
+      <LayeredSVG bgI="url('/SVG/skills-projects2.svg')" />
       <Box id="projects">
         <Projects />
       </Box>
-      <Box
-        aspectRatio={960 / 540}
-        width="100%"
-        bgPosition="center"
-        bgRepeat="no-repeat"
-        bgSize="cover"
-        backgroundImage="url('/SVG/fadingNightSky.svg')"
-      ></Box>
+      <LayeredSVG bgI="url('/SVG/fadingNightSky.svg')" />
       <Box id="about">
         <AboutMe />
       </Box>
-      <Box
-        aspectRatio={960 / 540}
-        width="100%"
-        bgPosition="center"
-        bgRepeat="no-repeat"
-        bgSize="cover"
-        backgroundImage="url('/SVG/fadingNightSky.svg')"
-      ></Box>
+      <LayeredSVG bgI="url('/SVG/fadingNightSky.svg')" />
+      <LayeredSVG bgI="url('/SVG/about-footer.svg')" />
       <Footer />
     </Box>
   );

@@ -31,11 +31,14 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   return (
     <Container>
       <Card
-        width={["100%", "100%"]}
+       // width={["100%", "100%"]}
         minHeight="750px"
         display="flex"
         flexDirection="column"
         alignItems="center"
+        variant='outline'
+        borderColor={textColor}
+        color={textColor}
       >
         <CardHeader textAlign="center" width="100%">
           <Heading size="md">{name}</Heading>

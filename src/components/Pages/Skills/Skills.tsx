@@ -24,7 +24,7 @@ const Skills = () => {
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
-      backgroundColor="#183664"
+      backgroundColor="#121216"
     >
       <Container maxW="2x1" centerContent>
         <Flex
@@ -34,7 +34,6 @@ const Skills = () => {
           padding={4}
           color="#ffffff"
           maxW={{ base: "90%", md: "70%" }}
-          zIndex={2}
         >
           <Heading>Skills</Heading>
           <Flex

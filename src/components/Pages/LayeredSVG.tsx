@@ -1,8 +1,8 @@
 "use client";
 
-import { Box, Heading, Text, Container } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
-const LayeredSVG = () => {
+const LayeredSVG = ({ bgI }: { bgI: string }) => {
   return (
     <Box
       aspectRatio={960 / 540}
@@ -10,7 +10,7 @@ const LayeredSVG = () => {
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
-      backgroundImage="url('/SVG/layered-waves-haikei (3).svg')"
+      backgroundImage={bgI}
     ></Box>
   );
 };

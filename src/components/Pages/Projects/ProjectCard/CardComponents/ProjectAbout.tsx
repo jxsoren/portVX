@@ -9,7 +9,7 @@ interface ProjectAboutProps {
 
 const ProjectAbout: React.FC<ProjectAboutProps> = ({ about }) => {
   return (
-    <Box >
+    <Box height="120" >
       <Box display="flex" flexDirection="column" alignItems="center">
         <Heading size="xs" textTransform="uppercase" textAlign="center">
           About
