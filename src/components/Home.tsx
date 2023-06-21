@@ -31,7 +31,6 @@ export default function Home() {
       <Box id="about">
         <AboutMe />
       </Box>
-      <LayeredSVG bgI="url('/SVG/fadingNightSky.svg')" />
       <LayeredSVG bgI="url('/SVG/about-footer.svg')" />
       <Footer />
     </Box>
