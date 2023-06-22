@@ -12,7 +12,7 @@ const AboutMe = () => {
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
-      backgroundColor="#183664"
+      backgroundColor="#01040e"
     >
       <Container maxW="2x1" centerContent>
         <Heading mt={5} color="#ffffff">
@@ -42,7 +42,7 @@ const AboutMe = () => {
             fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
             mt={10}
           >
-            {`Apart from developing software, my passions lie in exploring Utah's breathtaking landscapes, delving into self-help literature, and maintaining an active routine at the gym`}
+            {`Apart from developing software, my passions lie in exploring Utah's breathtaking landscapes, delving into self-help literature, and maintaining an active routine at the gym.`}
           </Text>
         </Flex>
       </Container>
