@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import {
   Box,
   Flex,
@@ -17,25 +17,42 @@ import { Link as ScrollLink } from "react-scroll";
 
 const Links = ["Skills", "Projects", "About"];
 
-const NavLink = ({ to, children }: { to: string; children: ReactNode }) => (
-  <ChakraLink
-    as={ScrollLink}
-    to={to}
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={500}
-    px={2}
-    py={1}
-    rounded={"md"}
-    _hover={{
-      textDecoration: "none",
-      bg: useAppColors().bgColor,
-    }}
-  >
-    {children}
-  </ChakraLink>
-);
+const NavLink = ({ to, children }: { to: string; children: ReactNode }) => {
+  const [activeSection, setActiveSection] = useState("");
+
+  const handleSetActive = (to: string) => {
+    setActiveSection(to);
+  };
+
+  const handleSetInactive = () => {
+    setActiveSection("");
+  };
+
+  return (
+    <ChakraLink
+      as={ScrollLink}
+      to={to}
+      spy={true}
+      smooth={true}
+      offset={-70}
+      duration={500}
+      px={2}
+      py={1}
+      rounded={"md"}
+      onSetActive={handleSetActive}
+      onSetInactive={handleSetInactive}
+      style={{
+        color: activeSection === to ? "red" : undefined,
+      }}
+      _hover={{
+        textDecoration: "none",
+        bg: useAppColors().bgColor,
+      }}
+    >
+      {children}
+    </ChakraLink>
+  );
+};
 
 export default function Nav() {
   const { bgColor, textColor } = useAppColors();
