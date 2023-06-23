@@ -11,6 +11,7 @@ import {
   StackDivider,
   Heading,
   Flex,
+  Icon,
 } from "@chakra-ui/react";
 
 import { useAppColors } from "@/hooks/useAppColors";
@@ -31,16 +32,21 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   return (
     <Container>
       <Card
-       // width={["100%", "100%"]}
+        // width={["100%", "100%"]}
         minHeight="750px"
         display="flex"
         flexDirection="column"
         alignItems="center"
-        variant='outline'
+        variant="outline"
+        boxShadow={"lg"}
         borderColor={textColor}
         color={textColor}
       >
-        <CardHeader textAlign="center" width="100%">
+        <CardHeader
+          textAlign="center"
+          width="100%"
+
+        >
           <Heading size="md">{name}</Heading>
         </CardHeader>
         <CardBody>

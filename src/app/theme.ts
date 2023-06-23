@@ -1,9 +1,10 @@
-import { extendTheme, type ThemeConfig } from '@chakra-ui/react'
+import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
+import "@fontsource/space-mono";
 
 const config: ThemeConfig = {
-  initialColorMode: 'dark',
+  initialColorMode: "dark",
   useSystemColorMode: true,
-}
+};
 
 const theme = extendTheme({
   ...config,
@@ -19,17 +20,21 @@ const theme = extendTheme({
     dark: {
       text: "#ffffff",
       background: "#000000",
-    }
+    },
+  },
+  fonts: {
+    heading: `'Space Mono', sans-serif`,
+    body: `'Space Mono', sans-serif`,
   },
   styles: {
     global: (props: Record<string, any>) => ({
       body: {
         color: props?.colorMode === "light" ? "light.text" : "dark.text",
-        bg: props?.colorMode === "light" ? "light.background" : "dark.background",
+        bg:
+          props?.colorMode === "light" ? "light.background" : "dark.background",
       },
     }),
   },
 });
 
-
-export default theme
+export default theme;

@@ -1,10 +1,18 @@
 "use client";
 
 import { useAppColors } from "@/hooks/useAppColors";
-import { Text, Container, Heading, Flex, Box } from "@chakra-ui/react";
-import Stars from "../Stars/Stars";
+import {
+  Text,
+  Container,
+  Heading,
+  Flex,
+  Box,
+  useTheme,
+} from "@chakra-ui/react";
 
 const AboutMe = () => {
+  const theme = useTheme();
+
   return (
     <Box
       aspectRatio={960 / 540}
@@ -12,7 +20,7 @@ const AboutMe = () => {
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
-      backgroundColor="#01040e"
+      backgroundColor="#01030b"
     >
       <Container maxW="2x1" centerContent>
         <Heading mt={5} color="#ffffff">
@@ -25,10 +33,12 @@ const AboutMe = () => {
           padding={4}
           color="#ffffff"
           maxW={{ base: "90%", md: "70%" }}
+          fontFamily={theme.fonts.body}
         >
           <Text
             fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
             mt={10}
+            fontFamily={theme.fonts.body}
           >
             {`Greetings! My name is Josh Sorensen, a determined problem solver based out of Salt Lake City, Utah.`}
           </Text>

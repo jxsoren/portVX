@@ -6,6 +6,7 @@ import {
   Container,
   Stack,
   useColorModeValue,
+  useTheme,
 } from "@chakra-ui/react";
 
 import Stars from "./Stars/Stars";
@@ -13,6 +14,8 @@ import Stars from "./Stars/Stars";
 export default function Landing() {
   const bgColor = useColorModeValue("light.background", "dark.background");
   const textColor = useColorModeValue("light.text", "dark.text");
+
+  const theme = useTheme();
 
   return (
     <Stars>
@@ -28,6 +31,7 @@ export default function Landing() {
             bgClip="text"
             fontSize={{ base: "4xl", md: "6xl" }}
             fontWeight="extrabold"
+            fontFamily={theme.fonts.heading}
             zIndex={2}
           >
             Hey There!

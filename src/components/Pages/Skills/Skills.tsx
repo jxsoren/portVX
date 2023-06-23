@@ -24,7 +24,7 @@ const Skills = () => {
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
-      backgroundColor="#121216"
+      background="linear-gradient(#16161d, #1f1f3a, #3b2f4a)"
     >
       <Container maxW="2x1" centerContent>
         <Flex
@@ -32,20 +32,23 @@ const Skills = () => {
           align="center"
           justify="center"
           padding={4}
-          color="#ffffff"
           maxW={{ base: "90%", md: "70%" }}
         >
-          <Heading>Skills</Heading>
+          <Heading color="#ffffff">Skills</Heading>
           <Flex
             as={OrderedList}
             direction="row"
             justifyContent="space-between"
-            color="#ffffff"
             listStyleType="none"
             flexWrap="wrap"
           >
             {skillsDB.map((skill) => (
-              <IconSkill key={skill.name} name={skill.name} icon={skill.icon} />
+              <IconSkill
+                key={skill.name}
+                name={skill.name}
+                icon={skill.icon}
+                color={skill.color}
+              />
             ))}
           </Flex>
         </Flex>
