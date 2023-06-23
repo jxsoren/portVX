@@ -57,7 +57,7 @@ export const projectDB: ProjectRecipe[] = [
   {
     name: "Hot Take HQ",
     about:
-      "Hot Take HQ is a dynamic web app that provides a platform for users to share their views on diverse topics, from sports to politics. It offers secure posting of opinions, comparison with others, and the ability for lively debates through its agree/disagree feature, fostering new perspectives.",
+      "Hot Take HQ is a versatile web app where users can securely post and compare opinions on topics ranging from sports to politics, engaging in vibrant debates via its agree/disagree feature to cultivate fresh perspectives.",
     technologies: [
       { name: "Javascript", icon: DiJavascript1 },
       { name: "Mongo", icon: SiMongodb },
