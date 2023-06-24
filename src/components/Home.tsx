@@ -8,6 +8,7 @@ import Footer from "../components/Footer/Footer";
 import AboutMe from "./Pages/AboutMe";
 import Skills from "./Pages/Skills/Skills";
 import Projects from "./Pages/Projects/Projects";
+import Contact from "./Pages/Contact";
 import LayeredSVG from "./Pages/LayeredSVG";
 
 export default function Home() {
@@ -30,6 +31,9 @@ export default function Home() {
       <LayeredSVG bgI="url('/SVG/projects-aboutMe.svg')" />
       <Box id="about">
         <AboutMe />
+      </Box>
+      <Box id="contact">
+        <Contact />
       </Box>
       <Footer />
     </Box>
