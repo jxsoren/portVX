@@ -34,7 +34,7 @@ export default function Landing() {
             fontFamily={theme.fonts.heading}
             zIndex={2}
           >
-            Hey There!
+            Hey there!
           </Heading>
           <Heading
             bgColor={"#ffffff"}
