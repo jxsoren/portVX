@@ -15,7 +15,7 @@ import { useAppColors } from "@/hooks/useAppColors";
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as ScrollLink } from "react-scroll";
 
-const Links = ["Skills", "Projects", "About", "Contact"];
+const Links = ["Skills", "Projects", "About"];
 
 const NavLink = ({ to, children }: { to: string; children: ReactNode }) => {
   const [activeSection, setActiveSection] = useState("");

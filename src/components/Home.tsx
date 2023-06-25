@@ -2,14 +2,13 @@
 
 import { Box, useColorModeValue } from "@chakra-ui/react";
 
-import Landing from "../components/Landing";
-import Nav from "../components/Navbar/Nav";
-import Footer from "../components/Footer/Footer";
-import AboutMe from "./Pages/AboutMe";
-import Skills from "./Pages/Skills/Skills";
-import Projects from "./Pages/Projects/Projects";
-import Contact from "./Pages/Contact";
-import LayeredSVG from "./Pages/LayeredSVG";
+import Landing from "./Landing";
+import Nav from "./Navbar/Nav";
+import Footer from "./Footer/Footer";
+import AboutMe from "./AboutMe";
+import Skills from "./Skills/Skills";
+import Projects from "./Projects/Projects";
+import LayeredSVG from "./LayeredSVG";
 
 export default function Home() {
   const bgColor = useColorModeValue("light.background", "dark.background");
@@ -31,9 +30,6 @@ export default function Home() {
       <Box id="about">
         <LayeredSVG bgI="url('/SVG/projects-aboutMe.svg')" />
         <AboutMe />
-      </Box>
-      <Box id="contact">
-        <Contact />
       </Box>
       <Footer />
     </Box>
