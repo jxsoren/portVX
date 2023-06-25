@@ -19,16 +19,16 @@ export default function Home() {
       <Box id="landing">
         <Landing />
       </Box>
+      <LayeredSVG bgI="url('/SVG/stacked-waves-haikei (6).svg')" />
       <Box id="skills">
-        <LayeredSVG bgI="url('/SVG/stacked-waves-haikei (6).svg')" />
         <Skills />
       </Box>
+      <LayeredSVG bgI="url('/SVG/skills-projects1.svg')" />
       <Box id="projects">
-        <LayeredSVG bgI="url('/SVG/skills-projects1.svg')" />
         <Projects />
       </Box>
+      <LayeredSVG bgI="url('/SVG/projects-aboutMe.svg')" />
       <Box id="about">
-        <LayeredSVG bgI="url('/SVG/projects-aboutMe.svg')" />
         <AboutMe />
       </Box>
       <Footer />
