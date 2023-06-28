@@ -52,7 +52,7 @@ const AboutMe = () => {
             fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
             mt={10}
           >
-            {`Apart from developing software, my passions lie in exploring Utah's breathtaking landscapes, delving into self-help literature, and maintaining an active routine at the gym.`}
+            {`Apart from developing software, my passions lie in exploring Utah's breathtaking landscapes, delving into literature and philosophy, and maintaining an active routine at the gym.`}
           </Text>
         </Flex>
       </Container>
