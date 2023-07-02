@@ -24,11 +24,9 @@ import { BiGitBranch } from "react-icons/bi";
 import { DiScrum } from "react-icons/di";
 import { MdApi, MdOutlineViewKanban } from "react-icons/md";
 import { AiFillApple } from "react-icons/ai";
-import { AiOutlineConsoleSql } from "react-icons/ai";
 import { BsWindows } from "react-icons/bs";
 
 import { As } from "@chakra-ui/react";
-
 
 export interface TechSkill {
   name: string;
@@ -66,7 +64,6 @@ export const skillsDB: Technologies = {
     { name: "Express", icon: SiExpress, color: "#000000" },
     { name: "Node", icon: FaNodeJs, color: "#68a063" },
     { name: "REST APIs", icon: MdApi, color: "#007acc" },
-    { name: "SQL", icon: AiOutlineConsoleSql, color: "#000000" },
   ],
   platforms: [
     { name: "Linux", icon: FaLinux, color: "#000000" },
@@ -83,6 +80,5 @@ export const skillsDB: Technologies = {
     { name: "Git", icon: BiGitBranch, color: "#f34f29" },
     { name: "Scrum", icon: DiScrum, color: "#000000" },
     { name: "Perforce", icon: SiPerforce, color: "#000000" },
-    { name: "Trello", icon: FaTrello, color: "#0079bf" },
   ],
 };
