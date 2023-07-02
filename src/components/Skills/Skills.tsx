@@ -54,7 +54,7 @@ const Skills = () => {
         >
           <GridItem rowSpan={1} colSpan={1} rowStart={1} colStart={1}>
             <Center height="full">
-              <Heading>Hard Skills</Heading>
+              <Heading>Technologies</Heading>
             </Center>
           </GridItem>
 
@@ -99,8 +99,8 @@ const Skills = () => {
               top={0}
               left={0}
             >
-              <Flex direction="row" justify="space-between" h="full">
-                <List spacing={3}>
+              <Flex direction="row" justify="flex-start" h="full">
+                <List spacing={3} pr={5}>
                   <VStack alignItems="start">
                     <SkillCategory title="Platforms" skills={platforms} />
                     <SkillCategory title="Cloud" skills={cloud} />
@@ -115,7 +115,7 @@ const Skills = () => {
 
           <GridItem rowSpan={1} colSpan={1} rowStart={2} colStart={4}>
             <Center height="full">
-              <Heading>Soft Skills</Heading>
+              <Heading>Systems</Heading>
             </Center>
           </GridItem>
         </Box>
