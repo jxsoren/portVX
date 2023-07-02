@@ -2,30 +2,29 @@
 
 import {
   Container,
-  Flex,
   Heading,
-  Text,
-  ListItem,
   Box,
-  SimpleGrid,
-  OrderedList,
-  Grid,
   GridItem,
-  HStack,
-  useColorModeValue,
+  Center,
   List,
+  Flex,
   VStack,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 import { useAppColors } from "@/hooks/useAppColors";
-import IconSkill from "./IconSkill";
 import { skillsDB } from "./skillDB";
-
 import SkillCategory from "./SkillCatagory";
 
-const Skills = () => {
-  const { textColor } = useAppColors();
+const skillBoxStyles = {
+  mb: 4,
+  shadow: "base",
+  borderWidth: "2px",
+  borderRadius: "x2",
+};
 
+const Skills = () => {
+  const borderColor = useColorModeValue("gray.200", "gray.500");
   const { languages, frontEnd, frameworks, backEnd, platforms, CCID, cloud } =
     skillsDB;
 
@@ -38,62 +37,88 @@ const Skills = () => {
       bgSize="cover"
       background="linear-gradient(#16161d, #1f1f3a, #3b2f4a)"
     >
-      <Container maxW="2x1" centerContent>
+      <Container maxW="100vw" centerContent>
         <Heading color="#ffffff" fontSize="6xl" mb={20}>
           Skills
         </Heading>
 
-        <Grid
-          templateRows="repeat(2, 2fr)"
-          templateColumns="repeat(2, 2fr)"
+        <Box
+          display="grid"
+          gridTemplateRows="repeat(2, 1fr)"
+          gridTemplateColumns="1fr 3fr"
           gap={4}
           padding={4}
-          maxW={{ base: "90%", md: "70%" }}
           position="relative"
-          gridRowGap={1} 
+          gridRowGap={1}
+          w="100%"
         >
-          <GridItem rowSpan={1} colSpan={1} rowStart={1} colStart={2}>
+          <GridItem rowSpan={1} colSpan={1} rowStart={1} colStart={1}>
+            <Center height="full">
+              <Heading>Hard Skills</Heading>
+            </Center>
+          </GridItem>
+
+          <GridItem rowSpan={1} colSpan={3} rowStart={1} colStart={2}>
             <Box
               mb={4}
               shadow="base"
               borderWidth="2px"
               borderColor={useColorModeValue("gray.200", "gray.500")}
               borderRadius={"x2"}
-              background="linear-gradient(#6600FF, #00CC99, #6600FF)"
               position="relative"
-              width={{ base: "100%", md: "100%" }}
-              top={0}
-              left={0}
             >
-              <List spacing={2} textAlign="start">
-                <SkillCategory title="Languages" skills={languages} />
-                <SkillCategory title="Frameworks" skills={frameworks} />
-                <SkillCategory title="Front-end" skills={frontEnd} />
-                <SkillCategory title="Back-end" skills={backEnd} />
-              </List>
+              <Flex direction="column" justify="center" h="full">
+                <Flex direction="row" justify="space-around">
+                  <List spacing={2}>
+                    <SkillCategory title="Languages" skills={languages} />
+                  </List>
+                  <List spacing={2}>
+                    <SkillCategory title="Frameworks" skills={frameworks} />
+                  </List>
+                </Flex>
+                <Flex direction="row" justify="space-around">
+                  <List spacing={1}>
+                    <SkillCategory title="Front-end" skills={frontEnd} />
+                  </List>
+                  <List spacing={2}>
+                    <SkillCategory title="Back-end" skills={backEnd} />
+                  </List>
+                </Flex>
+              </Flex>
             </Box>
           </GridItem>
 
-          <GridItem rowSpan={1} colSpan={1} rowStart={2} colStart={1}>
+          <GridItem rowSpan={1} colSpan={3} rowStart={2} colStart={1}>
             <Box
               mb={4}
               shadow="base"
               borderWidth="2px"
               borderColor={useColorModeValue("gray.200", "gray.500")}
               borderRadius={"x2"}
-              background="linear-gradient(#00CC99, #6600FF, #00CC99)"
               position="relative"
               top={0}
               left={0}
             >
-              <List spacing={3} textAlign="start">
-                <SkillCategory title="Platforms" skills={platforms} />
-                <SkillCategory title="Cloud" skills={cloud} />
-                <SkillCategory title="CCID" skills={CCID} />
-              </List>
+              <Flex direction="row" justify="space-between" h="full">
+                <List spacing={3}>
+                  <VStack alignItems="start">
+                    <SkillCategory title="Platforms" skills={platforms} />
+                    <SkillCategory title="Cloud" skills={cloud} />
+                  </VStack>
+                </List>
+                <List spacing={3}>
+                  <SkillCategory title="CCID" skills={CCID} />
+                </List>
+              </Flex>
             </Box>
           </GridItem>
-        </Grid>
+
+          <GridItem rowSpan={1} colSpan={1} rowStart={2} colStart={4}>
+            <Center height="full">
+              <Heading>Soft Skills</Heading>
+            </Center>
+          </GridItem>
+        </Box>
       </Container>
     </Box>
   );
