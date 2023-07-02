@@ -16,17 +16,17 @@ import { useAppColors } from "@/hooks/useAppColors";
 import { skillsDB } from "./skillDB";
 import SkillCategory from "./SkillCatagory";
 
-const skillBoxStyles = {
-  mb: 4,
-  shadow: "base",
-  borderWidth: "2px",
-  borderRadius: "x2",
-};
+import { motion } from "framer-motion";
+import { useScrollAnimation, getAnimations } from "@/hooks/useScroll";
+const MotionBox = motion(Box);
 
 const Skills = () => {
   const borderColor = useColorModeValue("gray.200", "gray.500");
   const { languages, frontEnd, frameworks, backEnd, platforms, CCID, cloud } =
     skillsDB;
+
+  const [ref, inView] = useScrollAnimation();
+  const { rightToLeft, leftToRight } = getAnimations();
 
   return (
     <Box
@@ -53,70 +53,94 @@ const Skills = () => {
           w="100%"
         >
           <GridItem rowSpan={1} colSpan={1} rowStart={1} colStart={1}>
-            <Center height="full">
-              <Heading>Technologies</Heading>
-            </Center>
+            <MotionBox
+              ref={ref}
+              variants={leftToRight}
+              animate={inView ? "show" : "hidden"}
+            >
+              <Center height="full">
+                <Heading>Technologies</Heading>
+              </Center>
+            </MotionBox>
           </GridItem>
 
           <GridItem rowSpan={1} colSpan={3} rowStart={1} colStart={2}>
-            <Box
-              mb={4}
-              shadow="base"
-              borderWidth="2px"
-              borderColor={useColorModeValue("gray.200", "gray.500")}
-              borderRadius={"x2"}
-              position="relative"
+            <MotionBox
+              ref={ref}
+              variants={leftToRight}
+              animate={inView ? "show" : "hidden"}
             >
-              <Flex direction="column" justify="center" h="full">
-                <Flex direction="row" justify="space-around">
-                  <List spacing={2}>
-                    <SkillCategory title="Languages" skills={languages} />
-                  </List>
-                  <List spacing={2}>
-                    <SkillCategory title="Frameworks" skills={frameworks} />
-                  </List>
+              <Box
+                mb={4}
+                shadow="base"
+                borderWidth="2px"
+                borderColor={useColorModeValue("gray.200", "gray.500")}
+                borderRadius={"x2"}
+                position="relative"
+              >
+                <Flex direction="column" justify="center" h="full">
+                  <Flex direction="row" justify="space-around">
+                    <List spacing={2}>
+                      <SkillCategory title="Languages" skills={languages} />
+                    </List>
+                    <List spacing={2}>
+                      <SkillCategory title="Frameworks" skills={frameworks} />
+                    </List>
+                  </Flex>
+                  <Flex direction="row" justify="space-around">
+                    <List spacing={1}>
+                      <SkillCategory title="Front-end" skills={frontEnd} />
+                    </List>
+                    <List spacing={2}>
+                      <SkillCategory title="Back-end" skills={backEnd} />
+                    </List>
+                  </Flex>
                 </Flex>
-                <Flex direction="row" justify="space-around">
-                  <List spacing={1}>
-                    <SkillCategory title="Front-end" skills={frontEnd} />
-                  </List>
-                  <List spacing={2}>
-                    <SkillCategory title="Back-end" skills={backEnd} />
-                  </List>
-                </Flex>
-              </Flex>
-            </Box>
+              </Box>
+            </MotionBox>
           </GridItem>
 
           <GridItem rowSpan={1} colSpan={3} rowStart={2} colStart={1}>
-            <Box
-              mb={4}
-              shadow="base"
-              borderWidth="2px"
-              borderColor={useColorModeValue("gray.200", "gray.500")}
-              borderRadius={"x2"}
-              position="relative"
-              top={0}
-              left={0}
+            <MotionBox
+              ref={ref}
+              variants={rightToLeft}
+              animate={inView ? "show" : "hidden"}
             >
-              <Flex direction="row" justify="flex-start" h="full">
-                <List spacing={3} pr={5}>
-                  <VStack alignItems="start">
-                    <SkillCategory title="Platforms" skills={platforms} />
-                    <SkillCategory title="Cloud" skills={cloud} />
-                  </VStack>
-                </List>
-                <List spacing={3}>
-                  <SkillCategory title="CCID" skills={CCID} />
-                </List>
-              </Flex>
-            </Box>
+              <Box
+                mb={4}
+                shadow="base"
+                borderWidth="2px"
+                borderColor={useColorModeValue("gray.200", "gray.500")}
+                borderRadius={"x2"}
+                position="relative"
+                top={0}
+                left={0}
+              >
+                <Flex direction="row" justify="flex-start" h="full">
+                  <List spacing={3} pr={5}>
+                    <VStack alignItems="start">
+                      <SkillCategory title="Platforms" skills={platforms} />
+                      <SkillCategory title="Cloud" skills={cloud} />
+                    </VStack>
+                  </List>
+                  <List spacing={3}>
+                    <SkillCategory title="CCID" skills={CCID} />
+                  </List>
+                </Flex>
+              </Box>
+            </MotionBox>
           </GridItem>
 
           <GridItem rowSpan={1} colSpan={1} rowStart={2} colStart={4}>
-            <Center height="full">
-              <Heading>Systems</Heading>
-            </Center>
+            <MotionBox
+              ref={ref}
+              variants={rightToLeft}
+              animate={inView ? "show" : "hidden"}
+            >
+              <Center height="full">
+                <Heading>System</Heading>
+              </Center>
+            </MotionBox>
           </GridItem>
         </Box>
       </Container>
