@@ -37,7 +37,12 @@ const Skills = () => {
       bgSize="cover"
       background="linear-gradient(#16161d, #1f1f3a, #3b2f4a)"
     >
-      <Container maxW="100vw" centerContent>
+      <Container
+        maxW="100vw"
+        centerContent
+        overflowX="hidden"
+        position="relative"
+      >
         <Heading color="#ffffff" fontSize="6xl" mb={20}>
           Skills
         </Heading>
@@ -54,6 +59,7 @@ const Skills = () => {
         >
           <GridItem rowSpan={1} colSpan={1} rowStart={1} colStart={1}>
             <MotionBox
+              maxWidth="100%"
               ref={ref}
               variants={leftToRight}
               animate={inView ? "show" : "hidden"}
@@ -66,6 +72,7 @@ const Skills = () => {
 
           <GridItem rowSpan={1} colSpan={3} rowStart={1} colStart={2}>
             <MotionBox
+              maxWidth="100%"
               ref={ref}
               variants={leftToRight}
               animate={inView ? "show" : "hidden"}
@@ -102,6 +109,7 @@ const Skills = () => {
 
           <GridItem rowSpan={1} colSpan={3} rowStart={2} colStart={1}>
             <MotionBox
+              maxWidth="100%"
               ref={ref}
               variants={rightToLeft}
               animate={inView ? "show" : "hidden"}
@@ -133,6 +141,7 @@ const Skills = () => {
 
           <GridItem rowSpan={1} colSpan={1} rowStart={2} colStart={4}>
             <MotionBox
+              maxWidth="100%"
               ref={ref}
               variants={rightToLeft}
               animate={inView ? "show" : "hidden"}

@@ -29,7 +29,12 @@ const AboutMe = () => {
       bgSize="cover"
       backgroundColor="#01030b"
     >
-      <Container maxW="2x1" centerContent>
+      <Container
+        maxW="2x1"
+        centerContent
+        overflowX="hidden"
+        position="relative"
+      >
         <Heading mt={5} color="#ffffff">
           About Me
         </Heading>
@@ -43,6 +48,7 @@ const AboutMe = () => {
           fontFamily={theme.fonts.body}
         >
           <MotionBox
+            maxWidth="100%"
             ref={ref}
             variants={leftToRight}
             animate={inView ? "show" : "hidden"}
@@ -56,6 +62,7 @@ const AboutMe = () => {
             </Text>
           </MotionBox>
           <MotionBox
+            maxWidth="100%"
             ref={ref}
             variants={rightToLeft}
             animate={inView ? "show" : "hidden"}
@@ -68,6 +75,7 @@ const AboutMe = () => {
             </Text>
           </MotionBox>
           <MotionBox
+            maxWidth="100%"
             ref={ref}
             variants={leftToRight}
             animate={inView ? "show" : "hidden"}

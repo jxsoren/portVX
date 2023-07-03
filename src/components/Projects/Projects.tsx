@@ -27,6 +27,7 @@ const Projects = () => {
       bgRepeat="no-repeat"
       bgSize="cover"
       backgroundColor="#183664"
+      overflowX="hidden"
     >
       <Container maxW="2x1" color={textColor} centerContent>
         <Heading marginBottom={4}>Projects</Heading>
@@ -36,6 +37,7 @@ const Projects = () => {
           justify="center"
           padding={4}
           maxW={{ base: "100%", md: "100%" }}
+          overflowX="hidden"
         >
           <Carousel>
             {projectDB.map((project, index) => (
