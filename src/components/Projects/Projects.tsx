@@ -12,7 +12,9 @@ import {
 import { useAppColors } from "@/hooks/useAppColors";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import { projectDB } from "./projectDB";
-import Stars from "@/components/Stars/Stars";
+
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Projects = () => {
   const { textColor } = useAppColors();
@@ -35,18 +37,19 @@ const Projects = () => {
           padding={4}
           maxW={{ base: "100%", md: "100%" }}
         >
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing="50px">
-            {projectDB.map((project) => (
-              <ProjectCard
-                key={project.name}
-                name={project.name}
-                about={project.about}
-                technologies={project.technologies}
-                thumbnail={project.thumbnail}
-                links={project.links}
-              />
+          <Carousel>
+            {projectDB.map((project, index) => (
+              <Box key={project.name}>
+                <ProjectCard
+                  name={project.name}
+                  about={project.about}
+                  technologies={project.technologies}
+                  thumbnail={project.thumbnail}
+                  links={project.links}
+                />
+              </Box>
             ))}
-          </SimpleGrid>
+          </Carousel>
         </Flex>
       </Container>
     </Box>
