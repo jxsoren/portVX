@@ -12,12 +12,13 @@ interface SkillCategoryProps {
 
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
   return (
-    <Box py={4} px={4}>
+    <Box py={1} px={1}>
       <HStack justifyContent="center">
         <Text
           fontSize="2xl"
           fontWeight="700"
           textDecoration="underline"
+          color="#ffffff"
         >
           {title}
         </Text>
