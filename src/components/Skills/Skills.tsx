@@ -9,6 +9,7 @@ import {
   List,
   Flex,
   VStack,
+  HStack,
   useColorModeValue,
 } from "@chakra-ui/react";
 
@@ -21,16 +22,15 @@ import { useScrollAnimation, getAnimations } from "@/hooks/useScroll";
 const MotionBox = motion(Box);
 
 const Skills = () => {
-  const borderColor = useColorModeValue("gray.200", "gray.500");
   const { languages, frontEnd, frameworks, backEnd, platforms, CCID, cloud } =
     skillsDB;
 
   const [ref, inView] = useScrollAnimation();
-  const { rightToLeft, leftToRight } = getAnimations();
+  const { rightToLeft, leftToRight, up } = getAnimations();
 
   return (
     <Box
-      aspectRatio={960 / 540}
+      aspectRatio={960 / 440}
       width="100%"
       bgPosition="center"
       bgRepeat="no-repeat"
@@ -38,26 +38,33 @@ const Skills = () => {
       background="linear-gradient(#16161d, #1f1f3a, #3b2f4a)"
     >
       <Container
-        maxW="100vw"
+        maxW="80vw"
         centerContent
         overflowX="hidden"
         position="relative"
       >
-        <Heading color="#ffffff" fontSize="6xl" mb={20}>
-          Skills
-        </Heading>
+        <MotionBox
+          maxWidth="100%"
+          ref={ref}
+          variants={up}
+          animate={inView ? "show" : "hidden"}
+        >
+          <Heading color="#ffffff" fontSize="6xl" mb={10}>
+            Skills
+          </Heading>
+        </MotionBox>
 
         <Box
           display="grid"
-          gridTemplateRows="repeat(2, 1fr)"
-          gridTemplateColumns="1fr 3fr"
-          gap={4}
+          gridTemplateRows="auto"
+          gridTemplateColumns="1fr 2fr"
           padding={4}
           position="relative"
-          gridRowGap={1}
-          w="100%"
+          gridGap={1}
+          w="80%"
+          h="80%"
         >
-          <GridItem rowSpan={1} colSpan={1} rowStart={1} colStart={1}>
+          <GridItem colSpan={1} colStart={1}>
             <MotionBox
               maxWidth="100%"
               ref={ref}
@@ -70,76 +77,66 @@ const Skills = () => {
             </MotionBox>
           </GridItem>
 
-          <GridItem rowSpan={1} colSpan={3} rowStart={1} colStart={2}>
+          <GridItem colSpan={3} colStart={2}>
             <MotionBox
               maxWidth="100%"
               ref={ref}
               variants={leftToRight}
               animate={inView ? "show" : "hidden"}
             >
-              <Box
-                mb={4}
-                shadow="base"
-                borderWidth="2px"
-                borderColor={useColorModeValue("gray.200", "gray.500")}
-                borderRadius={"x2"}
-                position="relative"
-              >
-                <Flex direction="column" justify="center" h="full">
-                  <Flex direction="row" justify="space-around">
-                    <List spacing={2}>
-                      <SkillCategory title="Languages" skills={languages} />
-                    </List>
-                    <List spacing={2}>
-                      <SkillCategory title="Frameworks" skills={frameworks} />
-                    </List>
-                  </Flex>
-                  <Flex direction="row" justify="space-around">
-                    <List spacing={1}>
-                      <SkillCategory title="Front-end" skills={frontEnd} />
-                    </List>
-                    <List spacing={2}>
-                      <SkillCategory title="Back-end" skills={backEnd} />
-                    </List>
-                  </Flex>
+              <Box mb={4} shadow="base" position="relative">
+                <Flex direction="row" justify="space-around">
+                  <List>
+                    <SkillCategory title="Languages" skills={languages} />
+                  </List>
+                  <List>
+                    <SkillCategory title="Frameworks" skills={frameworks} />
+                  </List>
+                </Flex>
+                <Flex direction="row" justify="space-around">
+                  <List>
+                    <SkillCategory title="Front-end" skills={frontEnd} />
+                  </List>
+                  <List>
+                    <SkillCategory title="Back-end" skills={backEnd} />
+                  </List>
                 </Flex>
               </Box>
             </MotionBox>
           </GridItem>
+        </Box>
 
-          <GridItem rowSpan={1} colSpan={3} rowStart={2} colStart={1}>
+        <Box
+          display="grid"
+          gridTemplateRows="1fr"
+          gridTemplateColumns="1fr 2fr"
+          padding={4}
+          position="relative"
+          w="80%"
+          h="80%"
+        >
+          <GridItem colSpan={3} colStart={2}>
             <MotionBox
               maxWidth="100%"
               ref={ref}
               variants={rightToLeft}
               animate={inView ? "show" : "hidden"}
             >
-              <Box
-                mb={4}
-                shadow="base"
-                borderWidth="2px"
-                borderColor={useColorModeValue("gray.200", "gray.500")}
-                borderRadius={"x2"}
-                position="relative"
-                top={0}
-                left={0}
-              >
-                <Flex direction="row" justify="flex-start" h="full">
-                  <List spacing={3} pr={5}>
-                    <VStack alignItems="start">
+              <Box mb={4} shadow="base" position="relative">
+                <Flex direction="row" justify="space-around" h="full">
+                  <List>
+                    <HStack alignItems="start">
                       <SkillCategory title="Platforms" skills={platforms} />
+                      <SkillCategory title="CCID" skills={CCID} />
                       <SkillCategory title="Cloud" skills={cloud} />
-                    </VStack>
-                  </List>
-                  <List spacing={3}>
-                    <SkillCategory title="CCID" skills={CCID} />
+                    </HStack>
                   </List>
                 </Flex>
               </Box>
             </MotionBox>
           </GridItem>
 
-          <GridItem rowSpan={1} colSpan={1} rowStart={2} colStart={4}>
+          <GridItem colSpan={1} rowStart={1} colStart={1}>
             <MotionBox
               maxWidth="100%"
               ref={ref}
