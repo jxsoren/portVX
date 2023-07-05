@@ -21,8 +21,8 @@ const Links: React.FC<LinksProps> = ({ name, link, icon }) => {
     <Box>
       <Box textAlign="center">
         <Link href={link} isExternal>
-          <Icon as={icon} w={3} h={3} />
-          <Text fontSize={8}>{name}</Text>
+          <Icon as={icon} w={8} h={8} />
+          <Text fontSize={10}>{name}</Text>
         </Link>
       </Box>
     </Box>
@@ -48,6 +48,7 @@ const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => {
         color={textColor}
         listStyleType="none"
         flexWrap="wrap"
+        pt={2}
         gap={4}
         mb={4}
       >

@@ -20,7 +20,7 @@ const ProjectTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
 
   return (
     <Box textAlign="center">
-      <Icon as={icon} w={4} h={4} color={color} />
+      <Icon as={icon} w={6} h={6} color={color} />
       <Text fontSize={10} color={color}>
         {name}
       </Text>
@@ -50,6 +50,7 @@ const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
         listStyleType="none"
         flexWrap="wrap"
         gap={4}
+        pt={2}
       >
         {technologies.map(({ name, icon, color }, index) => (
           <ProjectTech
