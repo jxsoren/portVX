@@ -21,8 +21,8 @@ const Links: React.FC<LinksProps> = ({ name, link, icon }) => {
     <Box>
       <Box textAlign="center">
         <Link href={link} isExternal>
-          <Icon as={icon} w={8} h={6} />
-          <Text fontSize="xs">{name}</Text>
+          <Icon as={icon} w={3} h={3} />
+          <Text fontSize={8}>{name}</Text>
         </Link>
       </Box>
     </Box>
@@ -49,6 +49,7 @@ const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => {
         listStyleType="none"
         flexWrap="wrap"
         gap={4}
+        mb={4}
       >
         <Flex justifyContent="center" alignItems="center" gap={4}>
           {links.map(({ name, link, icon }) => (

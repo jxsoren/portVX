@@ -21,22 +21,21 @@ const Projects = () => {
 
   return (
     <Box
-      aspectRatio={960 / 540}
-      width="100%"
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
       backgroundColor="#183664"
       overflowX="hidden"
     >
-      <Container maxW="2x1" color={textColor} centerContent>
-        <Heading marginBottom={4}>Projects</Heading>
+      <Container maxW={"100%"} color={textColor} centerContent>
+        <Heading color="#ffffff" fontSize="6xl" mb={10} mt={10}>
+          Projects
+        </Heading>
         <Flex
           direction={["column", "row"]}
           align="center"
           justify="center"
           padding={4}
-          maxW={{ base: "100%", md: "100%" }}
           overflowX="hidden"
         >
           <Carousel>

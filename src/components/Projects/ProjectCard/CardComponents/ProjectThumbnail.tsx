@@ -11,7 +11,7 @@ const ProjectThumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
   return (
     <Container>
       <Image
-        width={500}
+        width={400}
         height={250}
         objectFit="cover"
         src={thumbnail}
