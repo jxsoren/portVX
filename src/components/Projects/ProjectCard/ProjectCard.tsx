@@ -32,24 +32,20 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   return (
     <Container>
       <Card
-        // width={["100%", "100%"]}
-        minHeight="750px"
         display="flex"
         flexDirection="column"
         alignItems="center"
         variant="outline"
         boxShadow={"lg"}
+        height={"100%"}
+        maxHeight={"800px"}
         borderColor={textColor}
         color={textColor}
       >
-        <CardHeader
-          textAlign="center"
-          width="100%"
-
-        >
-          <Heading size="md">{name}</Heading>
+        <CardHeader textAlign="center" width="100%">
+          <Heading size="lg">{name}</Heading>
         </CardHeader>
-        <CardBody>
+        <CardBody overflowY="auto">
           <Flex direction="column" justify="space-between" height="100%">
             <Stack divider={<StackDivider />} spacing="4">
               <ProjectThumbnail thumbnail={thumbnail} />
