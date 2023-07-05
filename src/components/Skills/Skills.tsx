@@ -49,7 +49,7 @@ const Skills = () => {
           variants={up}
           animate={inView ? "show" : "hidden"}
         >
-          <Heading color="#ffffff" fontSize="6xl" mb={10}>
+          <Heading color="#ffffff" fontSize="6xl" mb={10} mt={10}>
             Skills
           </Heading>
         </MotionBox>
@@ -71,9 +71,20 @@ const Skills = () => {
               variants={leftToRight}
               animate={inView ? "show" : "hidden"}
             >
-              <Center height="full">
-                <Heading>Technologies</Heading>
-              </Center>
+              <Flex
+                direction="column"
+                align="center"
+                justify="center"
+                height="100%"
+                backgroundColor={useColorModeValue("gray.100", "gray.900")}
+                p={4}
+                borderRadius="md"
+                boxShadow="md"
+              >
+                <Heading fontSize="xl" fontWeight="semibold">
+                  Technologies:
+                </Heading>
+              </Flex>
             </MotionBox>
           </GridItem>
 
@@ -135,7 +146,6 @@ const Skills = () => {
               </Box>
             </MotionBox>
           </GridItem>
-
           <GridItem colSpan={1} rowStart={1} colStart={1}>
             <MotionBox
               maxWidth="100%"
@@ -143,9 +153,20 @@ const Skills = () => {
               variants={rightToLeft}
               animate={inView ? "show" : "hidden"}
             >
-              <Center height="full">
-                <Heading>System</Heading>
-              </Center>
+              <Flex
+                direction="column"
+                align="center"
+                justify="center"
+                height="100%"
+                backgroundColor={useColorModeValue("gray.100", "gray.900")}
+                p={4}
+                borderRadius="md"
+                boxShadow="md"
+              >
+                <Heading fontSize="xl" fontWeight="semibold">
+                  Systems:
+                </Heading>
+              </Flex>
             </MotionBox>
           </GridItem>
         </Box>

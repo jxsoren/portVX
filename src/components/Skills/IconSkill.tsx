@@ -10,7 +10,7 @@ const IconSkill: React.FC<TechSkill> = ({ name, icon, color }) => {
     <ListItem m={1}>
       <Box textAlign="center">
         <Icon as={icon} w={10} h={10} color={color} />
-        <Text fontSize="small" color="#ffffff">{name}</Text>
+        <Text fontSize="small" color={color}>{name}</Text>
       </Box>
     </ListItem>
   );

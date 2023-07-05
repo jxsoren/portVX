@@ -1,4 +1,4 @@
-import { Box, HStack, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box, HStack, SimpleGrid, Heading } from "@chakra-ui/react";
 
 import IconSkill from "./IconSkill";
 import { TechSkill } from "./skillDB";
@@ -13,16 +13,15 @@ interface SkillCategoryProps {
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
   return (
     <Box py={1} px={1}>
-      <HStack justifyContent="center">
-        <Text
-          fontSize="2xl"
-          fontWeight="700"
-          textDecoration="underline"
-          color="#ffffff"
-        >
-          {title}
-        </Text>
-      </HStack>
+  <HStack justifyContent="center">
+    <Heading
+      size="lg"
+      fontWeight="600"
+      textDecoration="underline"
+    >
+      {title}
+    </Heading>
+  </HStack>
       <SimpleGrid columns={2} spacing={4}>
         {skills.map((skill) => (
           <IconSkill
