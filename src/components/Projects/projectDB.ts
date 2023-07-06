@@ -25,6 +25,7 @@ export interface ProjectRecipe {
   links: {
     name: string;
     link: string;
+    color: string;
     icon: As;
   }[];
 }
@@ -47,11 +48,15 @@ export const projectDB: ProjectRecipe[] = [
       {
         name: "Live",
         link: "https://quickcipe.herokuapp.com/",
+        color: "#FF0000",
+
         icon: CgWebsite,
       },
       {
         name: "Github",
         link: "https://github.com/jxsoren/quickcipe",
+        color: "#181717",
+
         icon: VscGithubAlt,
       },
     ],
@@ -72,11 +77,15 @@ export const projectDB: ProjectRecipe[] = [
       {
         name: "Live",
         link: "https://hot-take-app.herokuapp.com/",
+        color: "#FF0000",
+
         icon: CgWebsite,
       },
       {
         name: "Github",
         link: "https://github.com/jxsoren/hot-take-app",
+        color: "#181717",
+
         icon: VscGithubAlt,
       },
     ],
@@ -94,11 +103,15 @@ export const projectDB: ProjectRecipe[] = [
       {
         name: "Live",
         link: "",
+        color: "#FF0000",
+
         icon: CgWebsite,
       },
       {
         name: "Github",
         link: "https://github.com/jxsoren/terminal-rpg",
+        color: "#181717",
+
         icon: VscGithubAlt,
       },
     ],
@@ -119,11 +132,13 @@ export const projectDB: ProjectRecipe[] = [
       {
         name: "Live",
         link: "",
+        color: "#FF0000",
         icon: CgWebsite,
       },
       {
         name: "Github",
         link: "",
+        color: "#181717",
         icon: VscGithubAlt,
       },
     ],
