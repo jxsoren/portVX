@@ -7,12 +7,12 @@ import { TechSkill } from "./skillDB";
 
 const IconSkill: React.FC<TechSkill> = ({ name, icon, color }) => {
   return (
-    <ListItem m={1}>
-      <Box textAlign="center">
-        <Icon as={icon} w={10} h={10} color={color} />
-        <Text fontSize="small" color={color}>{name}</Text>
-      </Box>
-    </ListItem>
+    <Box textAlign="center">
+      <Icon as={icon} w={10} h={10} color={color} />
+      <Text fontSize="small" color={color}>
+        {name}
+      </Text>
+    </Box>
   );
 };
 
