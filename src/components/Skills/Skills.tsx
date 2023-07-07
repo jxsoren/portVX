@@ -1,175 +1,149 @@
 "use client";
 
+import React from "react";
 import {
   Container,
   Heading,
   Box,
-  GridItem,
-  Center,
   List,
   Flex,
+  Spacer,
   VStack,
+  GridItem,
   HStack,
+  Grid,
+  SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react";
 
 import { useAppColors } from "@/hooks/useAppColors";
 import { skillsDB } from "./skillDB";
-import SkillCategory from "./SkillCatagory";
+import SkillCategory from "./SkillCategory";
 
 import { motion } from "framer-motion";
-import { useScrollAnimation, getAnimations } from "@/hooks/useScroll";
-const MotionBox = motion(Box);
+import { AnimatedBox, getAnimations } from "@/hooks/useScroll";
 
-const Skills = () => {
+
+interface SectionTitleProps {
+  children: string;
+}
+
+const SectionTitle: React.FC<SectionTitleProps> = ({ children }) => (
+  <Flex
+    direction="column"
+    align="center"
+    justify="center"
+    height="100%"
+    backgroundColor={useColorModeValue("gray.900", "gray.200")}
+    p={4}
+    borderRadius="2xl"
+    boxShadow="md"
+  >
+    <Heading
+      fontSize="xl"
+      fontWeight="bold"
+      color={useColorModeValue("gray.100", "gray.800")}
+      textTransform="uppercase"
+    >
+      {children}
+    </Heading>
+  </Flex>
+);
+
+const Skills: React.FC = () => {
   const { languages, frontEnd, frameworks, backEnd, platforms, CCID, cloud } =
     skillsDB;
-
-  const [ref, inView] = useScrollAnimation();
   const { rightToLeft, leftToRight, up } = getAnimations();
 
   return (
     <Box
-      aspectRatio={960 / 440}
+      aspectRatio={960 / 640}
       width="100%"
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
       background="linear-gradient(#16161d, #1f1f3a, #3b2f4a)"
+      overflowX="hidden"
     >
       <Container
         maxW="80vw"
         centerContent
-        overflowX="hidden"
+        overflowY="hidden"
         position="relative"
       >
-        <MotionBox
-          maxWidth="100%"
-          ref={ref}
-          variants={up}
-          animate={inView ? "show" : "hidden"}
-        >
+        <AnimatedBox animation={up}>
           <Heading color="#ffffff" fontSize="6xl" mb={10} mt={10}>
             Skills
           </Heading>
-        </MotionBox>
+        </AnimatedBox>
 
-        <Box
-          display="grid"
-          gridTemplateRows="auto"
-          gridTemplateColumns="1fr 2fr"
-          padding={4}
-          position="relative"
-          gridGap={1}
+        <Grid
+          templateColumns="repeat(2, 1fr)"
+          gap={10}
           w="80%"
           h="80%"
+          templateRows="auto"
         >
-          <GridItem colSpan={1} colStart={1}>
-            <MotionBox
-              maxWidth="100%"
-              ref={ref}
-              variants={leftToRight}
-              animate={inView ? "show" : "hidden"}
-            >
-              <Flex
-                direction="column"
-                align="center"
-                justify="center"
-                height="100%"
-                backgroundColor={useColorModeValue("gray.100", "gray.900")}
-                p={4}
-                borderRadius="md"
-                boxShadow="md"
-              >
-                <Heading fontSize="xl" fontWeight="semibold">
-                  Technologies:
-                </Heading>
-              </Flex>
-            </MotionBox>
-          </GridItem>
+          <AnimatedBox animation={leftToRight}>
+            <SectionTitle>Technologies:</SectionTitle>
+          </AnimatedBox>
 
-          <GridItem colSpan={3} colStart={2}>
-            <MotionBox
-              maxWidth="100%"
-              ref={ref}
-              variants={leftToRight}
-              animate={inView ? "show" : "hidden"}
+          <AnimatedBox animation={rightToLeft}>
+            <SectionTitle>Systems:</SectionTitle>
+          </AnimatedBox>
+          <AnimatedBox animation={leftToRight}>
+            <Grid
+              templateColumns="repeat(2, 1fr)"
+              gap={4}
+              height="100%"
+              width="100%"
+              templateRows="auto"
             >
-              <Box mb={4} shadow="base" position="relative">
+              <GridItem colSpan={2}>
                 <Flex direction="row" justify="space-around">
-                  <List>
-                    <SkillCategory title="Languages" skills={languages} />
-                  </List>
-                  <List>
-                    <SkillCategory title="Frameworks" skills={frameworks} />
-                  </List>
+                  <SkillCategory title="Front-end" skills={frontEnd} />
+                  <SkillCategory title="Back-end" skills={backEnd} />
                 </Flex>
+              </GridItem>
+              <GridItem colSpan={2}>
                 <Flex direction="row" justify="space-around">
-                  <List>
-                    <SkillCategory title="Front-end" skills={frontEnd} />
-                  </List>
-                  <List>
-                    <SkillCategory title="Back-end" skills={backEnd} />
-                  </List>
+                  <SkillCategory title="Languages" skills={languages} />
+                  <SkillCategory title="Frameworks" skills={frameworks} />
                 </Flex>
-              </Box>
-            </MotionBox>
-          </GridItem>
-        </Box>
+              </GridItem>
+            </Grid>
+          </AnimatedBox>
 
-        <Box
-          display="grid"
-          gridTemplateRows="1fr"
-          gridTemplateColumns="1fr 2fr"
-          padding={4}
-          position="relative"
-          w="80%"
-          h="80%"
-        >
-          <GridItem colSpan={3} colStart={2}>
-            <MotionBox
-              maxWidth="100%"
-              ref={ref}
-              variants={rightToLeft}
-              animate={inView ? "show" : "hidden"}
+          <AnimatedBox animation={rightToLeft}>
+            <Grid
+              templateColumns="repeat(2, 1fr)"
+              gap={4}
+              minHeight="2xs"
+              templateRows="auto 2fr"
             >
-              <Box mb={4} shadow="base" position="relative">
-                <Flex direction="row" justify="space-around" h="full">
-                  <List>
-                    <HStack alignItems="start">
-                      <SkillCategory title="Platforms" skills={platforms} />
-                      <SkillCategory title="CCID" skills={CCID} />
-                      <SkillCategory title="Cloud" skills={cloud} />
-                    </HStack>
-                  </List>
+              <GridItem rowSpan={1} colSpan={1}>
+                <Flex direction="column" justify="space-around" height="100%">
+                  <SkillCategory title="Platforms" skills={platforms} />
                 </Flex>
-              </Box>
-            </MotionBox>
-          </GridItem>
-          <GridItem colSpan={1} rowStart={1} colStart={1}>
-            <MotionBox
-              maxWidth="100%"
-              ref={ref}
-              variants={rightToLeft}
-              animate={inView ? "show" : "hidden"}
-            >
-              <Flex
-                direction="column"
-                align="center"
-                justify="center"
-                height="100%"
-                backgroundColor={useColorModeValue("gray.100", "gray.900")}
-                p={4}
-                borderRadius="md"
-                boxShadow="md"
+              </GridItem>
+              <GridItem rowSpan={2} colSpan={1} gridColumnStart={2}>
+                <Flex direction="column" justify="space-around" height="100%">
+                  <SkillCategory title="CCID" skills={CCID} />
+                </Flex>
+              </GridItem>
+              <GridItem
+                rowSpan={1}
+                colSpan={1}
+                gridColumnStart={1}
+                gridRowStart={2}
               >
-                <Heading fontSize="xl" fontWeight="semibold">
-                  Systems:
-                </Heading>
-              </Flex>
-            </MotionBox>
-          </GridItem>
-        </Box>
+                <Flex direction="column" justify="space-around" height="100%">
+                  <SkillCategory title="Cloud" skills={cloud} />
+                </Flex>
+              </GridItem>
+            </Grid>
+          </AnimatedBox>
+        </Grid>
       </Container>
     </Box>
   );
