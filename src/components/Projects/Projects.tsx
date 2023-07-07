@@ -16,8 +16,11 @@ import { projectDB } from "./projectDB";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+import { AnimatedBox, getAnimations } from "@/hooks/useScroll";
+
 const Projects = () => {
   const { textColor } = useAppColors();
+  const { rightToLeft, leftToRight, up, down, flip, scaleIn, scaleOut, skew, slideFade } = getAnimations();
 
   return (
     <Box
@@ -25,12 +28,13 @@ const Projects = () => {
       bgRepeat="no-repeat"
       bgSize="cover"
       backgroundColor="#183664"
-      overflowX="hidden"
     >
       <Container maxW={"100%"} color={textColor} centerContent>
-        <Heading color="#ffffff" fontSize="6xl" mb={10} mt={10}>
-          Projects
-        </Heading>
+        <AnimatedBox animation={scaleIn}>
+          <Heading color="#ffffff" fontSize="6xl" mb={10} mt={10}>
+            Projects
+          </Heading>
+        </AnimatedBox>
         <Flex
           direction={["column", "row"]}
           align="center"
