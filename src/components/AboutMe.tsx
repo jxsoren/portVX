@@ -22,7 +22,7 @@ const AboutMe = () => {
 
   return (
     <Box
-      aspectRatio={960 / 540}
+      aspectRatio={960 / 340}
       width="100%"
       bgPosition="center"
       bgRepeat="no-repeat"
@@ -53,13 +53,6 @@ const AboutMe = () => {
             variants={leftToRight}
             animate={inView ? "show" : "hidden"}
           >
-            <Text
-              fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
-              mt={10}
-              fontFamily={theme.fonts.body}
-            >
-              {`Greetings! My name is Josh Sorensen, a determined problem solver based out of Salt Lake City, Utah.`}
-            </Text>
           </MotionBox>
           <MotionBox
             maxWidth="100%"
