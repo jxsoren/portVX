@@ -14,6 +14,8 @@ import { motion } from "framer-motion";
 import { useScrollAnimation, getAnimations } from "@/hooks/useScroll";
 const MotionBox = motion(Box);
 
+import Storybook from "./Storybook";
+
 const AboutMe = () => {
   const theme = useTheme();
 
@@ -52,8 +54,7 @@ const AboutMe = () => {
             ref={ref}
             variants={leftToRight}
             animate={inView ? "show" : "hidden"}
-          >
-          </MotionBox>
+          ></MotionBox>
           <MotionBox
             maxWidth="100%"
             ref={ref}
@@ -81,6 +82,7 @@ const AboutMe = () => {
             </Text>
           </MotionBox>
         </Flex>
+        <Storybook />
       </Container>
     </Box>
   );

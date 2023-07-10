@@ -5,7 +5,7 @@ import { Box, useColorModeValue } from "@chakra-ui/react";
 import Landing from "./Landing";
 import Nav from "./Navbar/Nav";
 import Footer from "./Footer/Footer";
-import AboutMe from "./AboutMe";
+import AboutMe from "./AboutMe/AboutMe";
 import Skills from "./Skills/Skills";
 import Projects from "./Projects/Projects";
 import LayeredSVG from "./LayeredSVG";
