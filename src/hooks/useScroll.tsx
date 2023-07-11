@@ -82,56 +82,12 @@ const animations = {
       },
     },
   },
-  skew: {
-    hidden: { skewX: 10, opacity: 0 },
-    show: {
-      skewX: 0,
-      opacity: 1,
-      transition: { duration: 0.5, ease: "easeInOut" },
-    },
-  },
-  scaleIn: {
-    hidden: { opacity: 0, scale: 0 },
-    show: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 1,
-      },
-    },
-  },
-  scaleOut: {
-    hidden: { opacity: 0, scale: 2 },
-    show: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 1,
-      },
-    },
-  },
   slideFade: {
     hidden: { x: 100, opacity: 0 },
     show: {
       x: 0,
       opacity: 1,
       transition: { duration: 1.5, ease: "easeInOut" },
-    },
-  },
-  flip3D: {
-    hidden: { rotateY: 90, opacity: 0 },
-    show: {
-      rotateY: 0,
-      opacity: 1,
-      transition: { duration: 0.5, perspective: 400, ease: "easeInOut" },
-    },
-  },
-  rotateX: {
-    hidden: { rotateX: 90, opacity: 0 },
-    show: {
-      rotateX: 0,
-      opacity: 1,
-      transition: { duration: 0.5, ease: "easeInOut" },
     },
   },
   spring: {
@@ -156,20 +112,6 @@ const animations = {
       transition: { duration: 1, ease: "easeInOut" },
     },
   },
-  bounce: {
-    hidden: { scale: 1, y: 0 },
-    show: {
-      scale: [1, 1.1, 1],
-      y: [0, -10, 0],
-      transition: { duration: 0.5 },
-    },
-  },
-  wobble: {
-    hover: {
-      rotateZ: [-5, 5, -5, 5, 0],
-      transition: { duration: 0.5 },
-    },
-  }
 };
 const getAnimations = () => animations;
 
