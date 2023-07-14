@@ -23,7 +23,6 @@ import SkillCategory from "./SkillCategory";
 import { motion } from "framer-motion";
 import { AnimatedBox, getAnimations } from "@/hooks/useScroll";
 
-
 interface SectionTitleProps {
   children: string;
 }
@@ -34,7 +33,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ children }) => (
     align="center"
     justify="center"
     height="100%"
-    backgroundColor={useColorModeValue("gray.900", "gray.200")}
+    backgroundColor="blackAlpha.400"
     p={4}
     borderRadius="2xl"
     boxShadow="md"
@@ -42,7 +41,7 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ children }) => (
     <Heading
       fontSize="xl"
       fontWeight="bold"
-      color={useColorModeValue("gray.100", "gray.800")}
+      color="white"
       textTransform="uppercase"
     >
       {children}
@@ -57,8 +56,8 @@ const Skills: React.FC = () => {
 
   return (
     <Box
-      aspectRatio={960 / 640}
       width="100%"
+      height="100vh"
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
@@ -67,12 +66,21 @@ const Skills: React.FC = () => {
     >
       <Container
         maxW="80vw"
+        height="80vh"
         centerContent
         overflowY="hidden"
         position="relative"
       >
         <AnimatedBox animation={up}>
-          <Heading color="#ffffff" fontSize="6xl" mb={10} mt={10}>
+          <Heading
+            color="#ffffff"
+            fontSize="6xl"
+            mb={10}
+            mt={10}
+            textShadow="2px 2px #111"
+            fontWeight="extrabold"
+            borderBottom="4px solid #FFFFFF"
+          >
             Skills
           </Heading>
         </AnimatedBox>
@@ -85,51 +93,48 @@ const Skills: React.FC = () => {
           templateRows="auto"
         >
           <AnimatedBox animation={leftToRight}>
-            <SectionTitle>Technologies:</SectionTitle>
+            <SectionTitle>Technologies</SectionTitle>
           </AnimatedBox>
 
           <AnimatedBox animation={rightToLeft}>
-            <SectionTitle>Systems:</SectionTitle>
+            <SectionTitle>Systems</SectionTitle>
           </AnimatedBox>
           <AnimatedBox animation={leftToRight}>
             <Grid
-              templateColumns="repeat(2, 1fr)"
+              templateRows="auto"
+              templateColumns="repeat(4, 1fr)"
               gap={4}
               height="100%"
               width="100%"
-              templateRows="auto"
             >
-              <GridItem colSpan={2}>
-                <Flex direction="row" justify="space-around">
-                  <SkillCategory title="Front-end" skills={frontEnd} />
-                  <SkillCategory title="Back-end" skills={backEnd} />
-                </Flex>
+              <GridItem rowSpan={1} colSpan={2}>
+                <SkillCategory title="Front-end" skills={frontEnd} />
               </GridItem>
-              <GridItem colSpan={2}>
-                <Flex direction="row" justify="space-around">
-                  <SkillCategory title="Languages" skills={languages} />
-                  <SkillCategory title="Frameworks" skills={frameworks} />
-                </Flex>
+              <GridItem rowSpan={1} colSpan={2}>
+                <SkillCategory title="Back-end" skills={backEnd} />
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={2}>
+                <SkillCategory title="Languages" skills={languages} />
+              </GridItem>
+              <GridItem rowSpan={1} colSpan={2}>
+                <SkillCategory title="Frameworks" skills={frameworks} />
               </GridItem>
             </Grid>
           </AnimatedBox>
 
           <AnimatedBox animation={rightToLeft}>
             <Grid
+              templateRows="auto"
               templateColumns="repeat(2, 1fr)"
               gap={4}
-              minHeight="2xs"
-              templateRows="auto 2fr"
+              height="100%"
+              width="100%"
             >
               <GridItem rowSpan={1} colSpan={1}>
-                <Flex direction="column" justify="space-around" height="100%">
-                  <SkillCategory title="Platforms" skills={platforms} />
-                </Flex>
+                <SkillCategory title="Platforms" skills={platforms} />
               </GridItem>
               <GridItem rowSpan={2} colSpan={1} gridColumnStart={2}>
-                <Flex direction="column" justify="space-around" height="100%">
-                  <SkillCategory title="CCID" skills={CCID} />
-                </Flex>
+                <SkillCategory title="CCID" skills={CCID} />
               </GridItem>
               <GridItem
                 rowSpan={1}
@@ -137,9 +142,7 @@ const Skills: React.FC = () => {
                 gridColumnStart={1}
                 gridRowStart={2}
               >
-                <Flex direction="column" justify="space-around" height="100%">
-                  <SkillCategory title="Cloud" skills={cloud} />
-                </Flex>
+                <SkillCategory title="Cloud" skills={cloud} />
               </GridItem>
             </Grid>
           </AnimatedBox>
