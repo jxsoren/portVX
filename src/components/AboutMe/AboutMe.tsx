@@ -20,7 +20,7 @@ const AboutMe = () => {
   const theme = useTheme();
 
   const [ref, inView] = useScrollAnimation();
-  const { rightToLeft, leftToRight } = getAnimations();
+  const { rightToLeft, leftToRight, up } = getAnimations();
 
   return (
     <Box
@@ -37,9 +37,24 @@ const AboutMe = () => {
         overflowX="hidden"
         position="relative"
       >
-        <Heading mt={5} color="#ffffff">
-          About Me
-        </Heading>
+        <MotionBox
+          maxWidth="100%"
+          ref={ref}
+          variants={up}
+          animate={inView ? "show" : "hidden"}
+        >
+          <Heading
+            color="#ffffff"
+            fontSize="5xl"
+            mb={10}
+            mt={10}
+            textShadow="2px 2px #111"
+            fontWeight="extrabold"
+            borderBottom="4px solid #FFFFFF"
+          >
+            About Me
+          </Heading>
+        </MotionBox>
         <Flex
           direction="column"
           align="center"
@@ -49,12 +64,6 @@ const AboutMe = () => {
           maxW={{ base: "90%", md: "70%" }}
           fontFamily={theme.fonts.body}
         >
-          <MotionBox
-            maxWidth="100%"
-            ref={ref}
-            variants={leftToRight}
-            animate={inView ? "show" : "hidden"}
-          ></MotionBox>
           <MotionBox
             maxWidth="100%"
             ref={ref}
@@ -81,8 +90,7 @@ const AboutMe = () => {
               {`Apart from developing software, my passions lie in exploring Utah's breathtaking landscapes, delving into literature and philosophy, and maintaining an active routine at the gym.`}
             </Text>
           </MotionBox>
-        </Flex>
-        <Storybook />
+        </Flex>{" "}
       </Container>
     </Box>
   );
