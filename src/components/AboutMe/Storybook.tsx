@@ -9,6 +9,7 @@ import {
   ModalHeader,
   ModalBody,
   ModalCloseButton,
+  Text,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
@@ -25,7 +26,7 @@ const Storybook: FC<StorybookProps> = ({ onOpen }) => {
       position="relative"
       w="300px"
       h="400px"
-      bg="brown"
+      bg="black"
       borderRadius={10}
       color="black"
       boxShadow="2xl"
@@ -36,7 +37,7 @@ const Storybook: FC<StorybookProps> = ({ onOpen }) => {
       <MotionImage
         w="100%"
         h="100%"
-        src="/path/to/your/book/cover/image.png" // <-- Replace this with your image path
+        src="/path/to/your/book/cover/image.png"
         borderRadius={8}
       />
     </MotionBox>
@@ -68,7 +69,6 @@ const BookModal: FC<BookModalProps> = ({ isOpen, onClose }) => {
     >
       <ModalOverlay />
       <ModalContent>
-        <ModalHeader>My Journal</ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <MotionBox
@@ -95,7 +95,9 @@ const BookModal: FC<BookModalProps> = ({ isOpen, onClose }) => {
               p={4}
               overflowY="auto"
             >
-              {/* Your book content goes here */}
+              <Text>
+                {`Intrigued by the world of coding and technology, I've dedicated my career to creating efficient and user-friendly solutions. I have a strong knack for problem-solving and enjoy the challenge of breaking down complex issues into manageable tasks. From meticulously crafting user interfaces to structuring robust backend architectures, my goal is to continuously grow, learn, and push the boundaries of what I can achieve.`}
+              </Text>
             </MotionBox>
           </MotionBox>
         </ModalBody>
