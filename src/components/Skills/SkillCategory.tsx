@@ -4,12 +4,14 @@ import {
   VStack,
   SimpleGrid,
   Heading,
+  GridItem,
+  Grid,
   useColorModeValue,
 } from "@chakra-ui/react";
 
+import React from "react";
 import IconSkill from "./IconSkill";
 import { TechSkill } from "./skillDB";
-import React from "react";
 
 interface SkillCategoryProps {
   title: string;
@@ -26,36 +28,43 @@ const fadeIn = keyframes`
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
   return (
     <Box
-      py={2}
-      px={2}
-      backgroundColor={useColorModeValue("gray.200", "gray.700")}
+      backgroundColor="blackAlpha.400"
       borderRadius="2xl"
       boxShadow="md"
       p={4}
       height="100%"
+      width="100%"
     >
       <VStack justifyContent="center">
         <Heading
-          size="lg"
-          fontWeight="500"
-          textDecoration="underline"
-          textDecorationThickness="2px"
-          textShadow="1px 1px #000"
+          size="md"
+          fontWeight="700"
           animation={`${fadeIn} 1s ease-in`}
+          color="white"
+          mb={4}
+          bg="blackAlpha.400"
+          borderRadius="2xl"
+          boxShadow="md"
         >
           {title}
         </Heading>
       </VStack>
-      <SimpleGrid columns={[1, 2]} spacing={2} height="100%">
-        {skills.map((skill) => (
-          <IconSkill
-            key={skill.name}
-            name={skill.name}
-            icon={skill.icon}
-            color={skill.color}
-          />
+      <Grid
+        templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}
+        gap={4}
+        mt={4}
+      >
+        {skills.map((skill, index) => (
+          <GridItem key={skill.name}>
+            <IconSkill
+              key={skill.name}
+              name={skill.name}
+              icon={skill.icon}
+              color={skill.color}
+            />
+          </GridItem>
         ))}
-      </SimpleGrid>
+      </Grid>
     </Box>
   );
 };
