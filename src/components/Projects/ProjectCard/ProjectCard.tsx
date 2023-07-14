@@ -38,9 +38,6 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
     down,
     flip,
     slideFade,
-    skew,
-    wobble,
-    bounce,
     slideBlur
   } = getAnimations();
 
