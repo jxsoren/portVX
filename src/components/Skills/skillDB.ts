@@ -8,6 +8,8 @@ import {
   FaUbuntu,
   FaAws,
   FaTrello,
+  FaGithubAlt,
+  FaGitlab
 } from "react-icons/fa";
 import {
   SiExpress,
@@ -19,8 +21,10 @@ import {
   SiPerforce,
 } from "react-icons/si";
 
+
+import { AiOutlineGitlab } from "react-icons/ai";
+
 import { DiJavascript1 } from "react-icons/di";
-import { BiGitBranch } from "react-icons/bi";
 import { DiScrum } from "react-icons/di";
 import { MdApi, MdOutlineViewKanban } from "react-icons/md";
 import { AiFillApple } from "react-icons/ai";
@@ -68,17 +72,18 @@ export const skillsDB: Technologies = {
   platforms: [
     { name: "Linux", icon: FaLinux, color: "#000000" },
     { name: "Ubuntu", icon: FaUbuntu, color: "#e95420" },
-    { name: "macOS", icon: AiFillApple, color: "#000000" },
+    { name: "macOS", icon: AiFillApple, color: "#fffff" },
     { name: "Windows", icon: BsWindows, color: "#0078d6" },
   ],
   cloud: [
     { name: "AWS", icon: FaAws, color: "#FF9900" },
-    { name: "Heroku", icon: SiHeroku, color: "#000000" },
+    { name: "Heroku", icon: SiHeroku, color: "#430098" },
   ],
   CCID: [
-    { name: "Kanban", icon: MdOutlineViewKanban, color: "#000000" },
-    { name: "Git", icon: BiGitBranch, color: "#f34f29" },
-    { name: "Scrum", icon: DiScrum, color: "#000000" },
+    { name: "Kanban", icon: MdOutlineViewKanban, color: "#430098" },
+    { name: "Github", icon: FaGithubAlt, color: "#181717" },
+    { name: "Gitlab", icon: AiOutlineGitlab, color: "#fca121" },
+    { name: "Scrum", icon: DiScrum, color: "#189ab6" },
     { name: "Perforce", icon: SiPerforce, color: "#000000" },
   ],
 };
