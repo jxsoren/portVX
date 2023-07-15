@@ -14,6 +14,7 @@ const ProjectThumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
         width={400}
         height={250}
         objectFit="cover"
+        borderRadius={20}
         src={thumbnail}
         alt="Project Thumbnail"
       />
