@@ -93,7 +93,7 @@ export const projectDB: ProjectRecipe[] = [
   {
     name: "Retro Terminal RPG",
     about:
-      "Text-based role-playing game based on the popular video game series, Bioshock. This game is designed to be run inside the terminal using Node.js and JavaScript, and features a variety of gameplay mechanics, including combat, inventory management, and character progression.",
+      "Text-based role-playing game based on the popular video game series, Bioshock. Designed to be run inside the terminal using Node.js and JavaScript, and features a variety of gameplay mechanics, including combat, inventory management, and character progression.",
     technologies: [
       { name: "Javascript", icon: DiJavascript1, color: "#f7df1e" },
       { name: "NodeJS", icon: FaNodeJs, color: "#68a063" },
