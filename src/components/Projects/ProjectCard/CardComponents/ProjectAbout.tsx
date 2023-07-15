@@ -1,24 +1,27 @@
 "use client";
 
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
 interface ProjectAboutProps {
   about: string;
 }
-
 const ProjectAbout: React.FC<ProjectAboutProps> = ({ about }) => {
   return (
-    <Box height="120" >
-      <Box display="flex" flexDirection="column" alignItems="center">
-        <Heading size="xs" textTransform="uppercase" textAlign="center">
-          About
-        </Heading>
-        <Text pt="2" fontSize="sm">
-          {about}
-        </Text>
-      </Box>
-    </Box>
+    <Flex
+      flex="1"
+      direction="column"
+      alignItems="center"
+      justifyContent="center"
+      p={4}
+    >
+      <Heading size="xs" textTransform="uppercase" textAlign="center">
+        About
+      </Heading>
+      <Text pt="2" fontSize="12">
+        {about}
+      </Text>
+    </Flex>
   );
 };
 

@@ -31,45 +31,39 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   links,
 }) => {
   const { textColor } = useAppColors();
-  const {
-    rightToLeft,
-    leftToRight,
-    up,
-    down,
-    flip,
-    slideFade,
-    slideBlur
-  } = getAnimations();
+  const { rightToLeft, leftToRight, up, down, flip, slideFade, slideBlur } =
+    getAnimations();
 
   return (
     <AnimatedBox animation={slideFade}>
-      <Container>
-        <Card
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          variant="outline"
-          boxShadow={"lg"}
-          height={"100%"}
-          maxHeight={"800px"}
-          borderColor={textColor}
-          color={textColor}
-        >
-          <CardHeader textAlign="center" width="100%">
-            <Heading size="lg">{name}</Heading>
-          </CardHeader>
-          <CardBody overflowY="auto">
-            <Flex direction="column" justify="space-between" height="100%">
-              <Stack divider={<StackDivider />} spacing="4">
-                <ProjectThumbnail thumbnail={thumbnail} />
-                <ProjectAbout about={about} />
-                <ProjectTechnologies technologies={technologies} />
-                <ProjectLinks links={links} />
-              </Stack>
-            </Flex>
-          </CardBody>
-        </Card>
-      </Container>
+      <Card
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        variant="outline"
+        boxShadow={"lg"}
+        borderColor="red"
+        color={textColor}
+        maxW={["95vw", "40vw", "30vw", "20vw"]}
+        maxH={"95vh"}
+      >
+        <CardHeader textAlign="center" width="100%">
+          <Heading size="lg">{name}</Heading>
+        </CardHeader>
+        <CardBody flex="1">
+          <Stack
+            direction="column"
+            justify="space-between"
+            divider={<StackDivider />}
+            spacing="4"
+          >
+            <ProjectThumbnail thumbnail={thumbnail} />
+            <ProjectAbout about={about} />
+            <ProjectTechnologies technologies={technologies} />
+            <ProjectLinks links={links} />
+          </Stack>
+        </CardBody>
+      </Card>
     </AnimatedBox>
   );
 };
