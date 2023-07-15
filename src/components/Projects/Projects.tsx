@@ -13,51 +13,55 @@ import { useAppColors } from "@/hooks/useAppColors";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import { projectDB } from "./projectDB";
 
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-
 import { AnimatedBox, getAnimations } from "@/hooks/useScroll";
+
+import ProjectCarousel from "./ProjectCarousel";
 
 const Projects = () => {
   const { textColor } = useAppColors();
-  const { rightToLeft, leftToRight, up, down, flip, scaleIn, scaleOut, skew, slideFade } = getAnimations();
+  const { rightToLeft, leftToRight, up, down, flip } = getAnimations();
 
   return (
-    <Box
-      bgPosition="center"
-      bgRepeat="no-repeat"
-      bgSize="cover"
+    <Container
+      maxW={"100%"}
+      color={textColor}
       backgroundColor="#183664"
+      centerContent
     >
-      <Container maxW={"100%"} color={textColor} centerContent>
-        <AnimatedBox animation={scaleIn}>
-          <Heading color="#ffffff" fontSize="6xl" mb={10} mt={10}>
-            Projects
-          </Heading>
-        </AnimatedBox>
-        <Flex
-          direction={["column", "row"]}
-          align="center"
-          justify="center"
-          padding={4}
-          overflowX="hidden"
+      <AnimatedBox animation={flip}>
+        <Heading
+          color="#ffffff"
+          fontSize="5xl"
+          mb={10}
+          mt={10}
+          textShadow="2px 2px #111"
+          fontWeight="extrabold"
+          borderBottom="4px solid #FFFFFF"
         >
-          <Carousel>
-            {projectDB.map((project, index) => (
-              <Box key={project.name}>
-                <ProjectCard
-                  name={project.name}
-                  about={project.about}
-                  technologies={project.technologies}
-                  thumbnail={project.thumbnail}
-                  links={project.links}
-                />
-              </Box>
-            ))}
-          </Carousel>
-        </Flex>
-      </Container>
-    </Box>
+          Projects
+        </Heading>
+      </AnimatedBox>
+      <Flex
+        direction={["column", "row"]}
+        align="center"
+        justify="center"
+        padding={4}
+        overflowX="hidden"
+        overflowY="hidden"
+      >
+        {projectDB.map((project, index) => (
+          <Box key={project.name}>
+            <ProjectCard
+              name={project.name}
+              about={project.about}
+              technologies={project.technologies}
+              thumbnail={project.thumbnail}
+              links={project.links}
+            />
+          </Box>
+        ))}
+      </Flex>
+    </Container>
   );
 };
 
