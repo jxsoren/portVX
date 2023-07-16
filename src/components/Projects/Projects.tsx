@@ -19,7 +19,18 @@ import ProjectCarousel from "./ProjectCarousel";
 
 const Projects = () => {
   const { textColor } = useAppColors();
-  const { rightToLeft, leftToRight, up, down, flip } = getAnimations();
+  const {
+    rightToLeft,
+    leftToRight,
+    up,
+    down,
+    flip,
+    slideFade,
+    slideBlur,
+    rotate,
+    bounce,
+    scale,
+  } = getAnimations();
 
   return (
     <Container
@@ -28,7 +39,7 @@ const Projects = () => {
       backgroundColor="#183664"
       centerContent
     >
-      <AnimatedBox animation={flip}>
+      <AnimatedBox animation={rightToLeft}>
         <Heading
           color="#ffffff"
           fontSize="5xl"
@@ -48,6 +59,7 @@ const Projects = () => {
         padding={4}
         overflowX="hidden"
         overflowY="hidden"
+        gap={4}
       >
         {projectDB.map((project, index) => (
           <Box key={project.name}>
