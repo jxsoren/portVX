@@ -31,18 +31,31 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   links,
 }) => {
   const { textColor } = useAppColors();
-  const { rightToLeft, leftToRight, up, down, flip, slideFade, slideBlur } =
-    getAnimations();
+  const {
+    rightToLeft,
+    leftToRight,
+    up,
+    down,
+    flip,
+    slideFade,
+    slideBlur,
+    rotate,
+    bounce,
+    scale,
+  } = getAnimations();
 
   return (
-    <AnimatedBox animation={slideFade}>
+    <AnimatedBox animation={scale}>
       <Card
         display="flex"
         flexDirection="column"
         alignItems="center"
         variant="outline"
         boxShadow={"lg"}
-        borderColor="red"
+        bgColor="#242423"
+        borderColor="#9A9A98"
+        borderWidth={4}
+        borderRadius={20}
         color={textColor}
         maxW={["95vw", "40vw", "30vw", "20vw"]}
         maxH={"95vh"}
