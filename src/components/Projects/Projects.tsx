@@ -19,18 +19,8 @@ import ProjectCarousel from "./ProjectCarousel";
 
 const Projects = () => {
   const { textColor } = useAppColors();
-  const {
-    rightToLeft,
-    leftToRight,
-    up,
-    down,
-    flip,
-    slideFade,
-    slideBlur,
-    rotate,
-    bounce,
-    scale,
-  } = getAnimations();
+  const { rightToLeft, leftToRight, up, down, flip, slideFade, slideBlur } =
+    getAnimations();
 
   return (
     <Container
@@ -52,6 +42,7 @@ const Projects = () => {
           Projects
         </Heading>
       </AnimatedBox>
+      <ProjectCarousel />
       <Flex
         direction={["column", "row"]}
         align="center"

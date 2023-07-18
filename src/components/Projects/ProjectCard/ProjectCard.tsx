@@ -31,21 +31,11 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   links,
 }) => {
   const { textColor } = useAppColors();
-  const {
-    rightToLeft,
-    leftToRight,
-    up,
-    down,
-    flip,
-    slideFade,
-    slideBlur,
-    rotate,
-    bounce,
-    scale,
-  } = getAnimations();
+  const { rightToLeft, leftToRight, up, down, flip, slideFade, slideBlur } =
+    getAnimations();
 
   return (
-    <AnimatedBox animation={scale}>
+    <AnimatedBox animation={leftToRight}>
       <Card
         display="flex"
         flexDirection="column"
