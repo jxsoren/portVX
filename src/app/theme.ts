@@ -36,7 +36,7 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    heading: `'Roboto', sans-serif`,
+    heading: `'Space Mono', sans-serif`,
     body: `'Space Mono', sans-serif`,
   },
   styles: {
