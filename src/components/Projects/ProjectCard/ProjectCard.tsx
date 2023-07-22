@@ -42,13 +42,13 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
         alignItems="center"
         variant="outline"
         boxShadow={"lg"}
-        bgColor="#242423"
-        borderColor="#9A9A98"
+        bgColor="#1A202C"
+        borderColor="#383784"
         borderWidth={4}
         borderRadius={20}
         color={textColor}
-        maxW={["95vw", "40vw", "30vw", "20vw"]}
-        maxH={"95vh"}
+        maxW={["95vw", "40vw", "40vw", "30vw"]}
+        h={"75vh"}
       >
         <CardHeader textAlign="center" width="100%">
           <Heading size="lg">{name}</Heading>

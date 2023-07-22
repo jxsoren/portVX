@@ -25,6 +25,7 @@ const Projects = () => {
   return (
     <Container
       maxW={"100%"}
+      minH={"120vh"}
       color={textColor}
       backgroundColor="#183664"
       centerContent
@@ -43,27 +44,6 @@ const Projects = () => {
         </Heading>
       </AnimatedBox>
       <ProjectCarousel />
-      <Flex
-        direction={["column", "row"]}
-        align="center"
-        justify="center"
-        padding={4}
-        overflowX="hidden"
-        overflowY="hidden"
-        gap={4}
-      >
-        {projectDB.map((project, index) => (
-          <Box key={project.name}>
-            <ProjectCard
-              name={project.name}
-              about={project.about}
-              technologies={project.technologies}
-              thumbnail={project.thumbnail}
-              links={project.links}
-            />
-          </Box>
-        ))}
-      </Flex>
     </Container>
   );
 };
