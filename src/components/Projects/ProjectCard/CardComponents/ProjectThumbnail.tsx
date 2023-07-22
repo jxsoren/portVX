@@ -9,9 +9,9 @@ interface ThumbnailProps {
 
 const ProjectThumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
   return (
-    <Container>
+    <Container display="flex" justifyContent="center">
       <Image
-        width={400}
+        width={600}
         height={250}
         objectFit="cover"
         borderRadius={20}

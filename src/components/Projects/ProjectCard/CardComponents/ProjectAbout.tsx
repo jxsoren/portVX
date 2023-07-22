@@ -18,7 +18,7 @@ const ProjectAbout: React.FC<ProjectAboutProps> = ({ about }) => {
       <Heading size="xs" textTransform="uppercase" textAlign="center">
         About
       </Heading>
-      <Text pt="2" fontSize="12">
+      <Text pt="2" fontSize="17">
         {about}
       </Text>
     </Flex>
