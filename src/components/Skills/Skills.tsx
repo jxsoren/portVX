@@ -55,8 +55,13 @@ const Skills: React.FC = () => {
     skillsDB;
   const { rightToLeft, leftToRight, up } = getAnimations();
 
+  const isExtraLargeSreen = useBreakpointValue({ base: false, xl: true });
   const isLargeScreen = useBreakpointValue({ base: false, lg: true });
-  const isMediumScreen = useBreakpointValue({ base: false, md: true, sm: false });
+  const isMediumScreen = useBreakpointValue({
+    base: false,
+    md: true,
+    sm: false,
+  });
 
   return (
     <Box
@@ -74,6 +79,7 @@ const Skills: React.FC = () => {
         height="100%"
         centerContent
         overflowY="hidden"
+        overflowX="hidden"
         position="relative"
       >
         <AnimatedBox animation={up}>
@@ -90,7 +96,7 @@ const Skills: React.FC = () => {
           </Heading>
         </AnimatedBox>
 
-        {isLargeScreen ? (
+        {isExtraLargeSreen ? (
           <Grid
             templateColumns="repeat(2, 1fr)"
             gap={10}
@@ -126,6 +132,70 @@ const Skills: React.FC = () => {
                   <SkillCategory title="Frameworks" skills={frameworks} />
                 </GridItem>
               </Grid>
+            </AnimatedBox>
+
+            <AnimatedBox animation={rightToLeft}>
+              <Grid
+                templateRows="auto"
+                templateColumns="repeat(2, 1fr)"
+                gap={4}
+                height="100%"
+                width="100%"
+              >
+                <GridItem rowSpan={1} colSpan={1}>
+                  <SkillCategory title="Platforms" skills={platforms} />
+                </GridItem>
+                <GridItem rowSpan={2} colSpan={1} gridColumnStart={2}>
+                  <SkillCategory title="CCID" skills={CCID} />
+                </GridItem>
+                <GridItem
+                  rowSpan={1}
+                  colSpan={1}
+                  gridColumnStart={1}
+                  gridRowStart={2}
+                >
+                  <SkillCategory title="Cloud" skills={cloud} />
+                </GridItem>
+              </Grid>
+            </AnimatedBox>
+          </Grid>
+        ) : isLargeScreen ? (
+          <Grid
+            templateColumns="repeat(1, 1fr)"
+            gap={10}
+            w="80%"
+            h="70%"
+            templateRows="auto"
+          >
+            <AnimatedBox animation={leftToRight}>
+              <SectionTitle>Technologies</SectionTitle>
+            </AnimatedBox>
+
+            <AnimatedBox animation={leftToRight}>
+              <Grid
+                templateRows="auto"
+                templateColumns="repeat(4, 1fr)"
+                gap={4}
+                height="100%"
+                width="100%"
+              >
+                <GridItem rowSpan={1} colSpan={2}>
+                  <SkillCategory title="Front-end" skills={frontEnd} />
+                </GridItem>
+                <GridItem rowSpan={1} colSpan={2}>
+                  <SkillCategory title="Back-end" skills={backEnd} />
+                </GridItem>
+                <GridItem rowSpan={1} colSpan={2}>
+                  <SkillCategory title="Languages" skills={languages} />
+                </GridItem>
+                <GridItem rowSpan={1} colSpan={2}>
+                  <SkillCategory title="Frameworks" skills={frameworks} />
+                </GridItem>
+              </Grid>
+            </AnimatedBox>
+
+            <AnimatedBox animation={rightToLeft}>
+              <SectionTitle>Systems</SectionTitle>
             </AnimatedBox>
 
             <AnimatedBox animation={rightToLeft}>
@@ -193,7 +263,7 @@ const Skills: React.FC = () => {
               <GridItem rowSpan={1} colSpan={1}>
                 <SkillCategory title="CCID" skills={CCID} />
               </GridItem>
-              <GridItem rowSpan={1} colSpan={1}>
+              <GridItem rowSpan={1} colSpan={1} mb={80}>
                 <SkillCategory title="Cloud" skills={cloud} />
               </GridItem>
             </Grid>
@@ -238,7 +308,7 @@ const Skills: React.FC = () => {
               <GridItem rowSpan={1} colSpan={1}>
                 <SkillCategory title="CCID" skills={CCID} />
               </GridItem>
-              <GridItem rowSpan={1} colSpan={1}>
+              <GridItem rowSpan={1} colSpan={1} mb={8}>
                 <SkillCategory title="Cloud" skills={cloud} />
               </GridItem>
             </Grid>
