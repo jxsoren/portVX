@@ -48,7 +48,7 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
         borderRadius={20}
         color={textColor}
         maxW={["95vw", "40vw", "40vw", "30vw"]}
-        h={"75vh"}
+        h={"85vh"}
       >
         <CardHeader textAlign="center" width="100%">
           <Heading size="lg">{name}</Heading>
