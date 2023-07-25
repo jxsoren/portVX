@@ -49,7 +49,14 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
           {title}
         </Heading>
       </VStack>
-      <Grid templateColumns="repeat(2, 1fr)" gap={[2, 2, 4]} mt={4}>
+      <Grid
+        templateColumns="repeat(2, 1fr)"
+        gap={[4, 6, 4]}
+        mt={4}
+        width="60%"
+        height="60%"
+        margin="auto"
+      >
         {skills.map((skill, index) => (
           <GridItem key={skill.name}>
             <IconSkill
