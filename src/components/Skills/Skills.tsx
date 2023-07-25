@@ -60,8 +60,8 @@ const Skills: React.FC = () => {
   const isMediumScreen = useBreakpointValue({
     base: false,
     md: true,
-    sm: false,
   });
+  const isSmallScreen = useBreakpointValue({ base: true, sm: true });
 
   return (
     <Box
@@ -224,26 +224,90 @@ const Skills: React.FC = () => {
             </AnimatedBox>
           </Grid>
         ) : isMediumScreen ? (
+          <Grid
+            templateColumns="repeat(1, 1fr)"
+            gap={10}
+            w="80%"
+            h="70%"
+            templateRows="auto"
+          >
+            <AnimatedBox animation={leftToRight}>
+              <SectionTitle>Technologies</SectionTitle>
+            </AnimatedBox>
+
+            <AnimatedBox animation={leftToRight}>
+              <Grid
+                templateRows="auto"
+                templateColumns="repeat(4, 1fr)"
+                gap={4}
+                height="100%"
+                width="100%"
+              >
+                <GridItem rowSpan={1} colSpan={2}>
+                  <SkillCategory title="Front-end" skills={frontEnd} />
+                </GridItem>
+                <GridItem rowSpan={1} colSpan={2}>
+                  <SkillCategory title="Back-end" skills={backEnd} />
+                </GridItem>
+                <GridItem rowSpan={1} colSpan={2}>
+                  <SkillCategory title="Languages" skills={languages} />
+                </GridItem>
+                <GridItem rowSpan={1} colSpan={2}>
+                  <SkillCategory title="Frameworks" skills={frameworks} />
+                </GridItem>
+              </Grid>
+            </AnimatedBox>
+
+            <AnimatedBox animation={rightToLeft}>
+              <SectionTitle>Systems</SectionTitle>
+            </AnimatedBox>
+
+            <AnimatedBox animation={rightToLeft}>
+              <Grid
+                templateRows="auto"
+                templateColumns="repeat(2, 1fr)"
+                gap={4}
+                height="100%"
+                width="100%"
+              >
+                <GridItem rowSpan={1} colSpan={1}>
+                  <SkillCategory title="Platforms" skills={platforms} />
+                </GridItem>
+                <GridItem rowSpan={2} colSpan={1} gridColumnStart={2}>
+                  <SkillCategory title="CCID" skills={CCID} />
+                </GridItem>
+                <GridItem
+                  rowSpan={1}
+                  colSpan={1}
+                  gridColumnStart={1}
+                  gridRowStart={2}
+                >
+                  <SkillCategory title="Cloud" skills={cloud} />
+                </GridItem>
+              </Grid>
+            </AnimatedBox>
+          </Grid>
+        ) : isSmallScreen ? (
           <VStack spacing={8} w="100%">
             <AnimatedBox animation={leftToRight}>
               <SectionTitle>Technologies</SectionTitle>
             </AnimatedBox>
             <Grid
-              templateColumns="repeat(2, 1fr)"
+              templateColumns="repeat(1, 1fr)"
               gap={4}
               width="100%"
               height="auto"
             >
-              <GridItem rowSpan={1} colSpan={2}>
+              <GridItem rowSpan={1} colSpan={1}>
                 <SkillCategory title="Front-end" skills={frontEnd} />
               </GridItem>
-              <GridItem rowSpan={1} colSpan={2}>
+              <GridItem rowSpan={1} colSpan={1}>
                 <SkillCategory title="Back-end" skills={backEnd} />
               </GridItem>
-              <GridItem rowSpan={1} colSpan={2}>
+              <GridItem rowSpan={1} colSpan={1}>
                 <SkillCategory title="Languages" skills={languages} />
               </GridItem>
-              <GridItem rowSpan={1} colSpan={2}>
+              <GridItem rowSpan={1} colSpan={1}>
                 <SkillCategory title="Frameworks" skills={frameworks} />
               </GridItem>
             </Grid>
@@ -252,7 +316,7 @@ const Skills: React.FC = () => {
               <SectionTitle>Systems</SectionTitle>
             </AnimatedBox>
             <Grid
-              templateColumns="repeat(2, 1fr)"
+              templateColumns="repeat(1, 1fr)"
               gap={4}
               width="100%"
               height="auto"
@@ -263,7 +327,7 @@ const Skills: React.FC = () => {
               <GridItem rowSpan={1} colSpan={1}>
                 <SkillCategory title="CCID" skills={CCID} />
               </GridItem>
-              <GridItem rowSpan={1} colSpan={1} mb={80}>
+              <GridItem rowSpan={1} colSpan={1} mb={8}>
                 <SkillCategory title="Cloud" skills={cloud} />
               </GridItem>
             </Grid>
