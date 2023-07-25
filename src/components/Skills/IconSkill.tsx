@@ -13,14 +13,14 @@ import { TechSkill } from "./skillDB";
 const IconSkill: React.FC<TechSkill> = ({ name, icon, color }) => {
   const iconHeight = useBreakpointValue({
     xs: "60px",
-    sm: "50px",
+    sm: "60px",
     md: "50px",
     lg: "50px",
   });
 
   const iconWidth = useBreakpointValue({
     xs: "60px",
-    sm: "50px",
+    sm: "60px",
     md: "50px",
     lg: "60px",
   });
@@ -33,7 +33,7 @@ const IconSkill: React.FC<TechSkill> = ({ name, icon, color }) => {
   });
 
   return (
-    <Box textAlign="center">
+    <Box textAlign="center" >
       <Icon as={icon} w={iconWidth} h={iconHeight} color={color} />
       <Text fontSize={fontSize} color={color} fontWeight="bold">
         {name}
