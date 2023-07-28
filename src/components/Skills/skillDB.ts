@@ -9,7 +9,7 @@ import {
   FaAws,
   FaTrello,
   FaGithubAlt,
-  FaGitlab
+  FaGitlab,
 } from "react-icons/fa";
 import {
   SiExpress,
@@ -20,7 +20,6 @@ import {
   SiHeroku,
   SiPerforce,
 } from "react-icons/si";
-
 
 import { AiOutlineGitlab } from "react-icons/ai";
 
@@ -81,7 +80,7 @@ export const skillsDB: Technologies = {
   ],
   CCID: [
     { name: "Kanban", icon: MdOutlineViewKanban, color: "#430098" },
-    { name: "Github", icon: FaGithubAlt, color: "#181717" },
+    { name: "Github", icon: FaGithubAlt, color: "#000000." },
     { name: "Gitlab", icon: AiOutlineGitlab, color: "#fca121" },
     { name: "Scrum", icon: DiScrum, color: "#189ab6" },
     { name: "Perforce", icon: SiPerforce, color: "#000000" },
