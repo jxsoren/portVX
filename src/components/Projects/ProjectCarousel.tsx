@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, useBreakpointValue } from "@chakra-ui/react";
 import Carousel, { ReactElasticCarouselProps } from "react-elastic-carousel";
 
 import ProjectCard from "./ProjectCard/ProjectCard";
@@ -24,14 +24,25 @@ const ProjectCarousel = () => {
     outerSpacing: 0,
   };
 
+  const width = useBreakpointValue({
+    base: "50vw",
+    xs: "95vw",
+    sm: "95vw",
+    md: "90vw",
+    lg: "90vw",
+    xl: "70vw",
+    xxl: "60vw",
+  });
+
   return (
-    <Box height="40vh" width="40vw">
+    <Box height="100%" width={width}>
       <Carousel {...carouselProps}>
         {projectDB.map((project, index) => (
           <Box key={project.name}>
             <ProjectCard
               name={project.name}
               about={project.about}
+              shortAbout={project.shortAbout}
               technologies={project.technologies}
               thumbnail={project.thumbnail}
               links={project.links}
