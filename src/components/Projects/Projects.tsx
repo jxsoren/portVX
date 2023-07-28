@@ -7,9 +7,11 @@ import {
   Flex,
   Container,
   SimpleGrid,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 
 import { useAppColors } from "@/hooks/useAppColors";
+
 import ProjectCard from "./ProjectCard/ProjectCard";
 import { projectDB } from "./projectDB";
 
@@ -21,6 +23,14 @@ const Projects = () => {
   const { textColor } = useAppColors();
   const { rightToLeft, leftToRight, up, down, flip, slideFade, slideBlur } =
     getAnimations();
+
+  const isExtraLargeSreen = useBreakpointValue({ base: false, xl: true });
+  const isLargeScreen = useBreakpointValue({ base: false, lg: true });
+  const isMediumScreen = useBreakpointValue({
+    base: false,
+    md: true,
+  });
+  const isSmallScreen = useBreakpointValue({ base: false, sm: true });
 
   return (
     <Container
@@ -43,7 +53,25 @@ const Projects = () => {
           Projects
         </Heading>
       </AnimatedBox>
-      <ProjectCarousel />
+
+      {!isSmallScreen ? (
+        <Box>
+          {projectDB.map((project) => (
+            <Box key={project.name}>
+              <ProjectCard
+                name={project.name}
+                about={project.about}
+                shortAbout={project.shortAbout}
+                technologies={project.technologies}
+                thumbnail={project.thumbnail}
+                links={project.links}
+              />
+            </Box>
+          ))}
+        </Box>
+      ) : (
+        <ProjectCarousel />
+      )}
     </Container>
   );
 };
