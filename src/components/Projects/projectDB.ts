@@ -20,6 +20,7 @@ import { TechSkill } from "../Skills/skillDB";
 export interface ProjectRecipe {
   name: string;
   about: string;
+  shortAbout: string;
   technologies: TechSkill[];
   thumbnail: string;
   links: {
@@ -35,6 +36,8 @@ export const projectDB: ProjectRecipe[] = [
     name: "Quickcipie",
     about:
       "Quickcipe is a sleek and user-friendly recipe creation application that simplifies the recipe-making process by delivering concise and easy-to-follow instructions. With Quickcipe, users can create their own recipes with ease, using only the necessary ingredients and steps.",
+    shortAbout:
+      "Quickcipe simplifies recipe creation with concise instructions, enabling users to create their own recipes with ease.",
     technologies: [
       { name: "Javascript", icon: DiJavascript1, color: "#f7df1e" },
       { name: "Mongo", icon: SiMongodb, color: "#4db33d" },
@@ -65,6 +68,8 @@ export const projectDB: ProjectRecipe[] = [
     name: "Hot Take HQ",
     about:
       "Hot Take HQ is a dynamic online platform that offers a secure environment for users to share and contrast their viewpoints on a wide range of subjects. Users can engage in vibrant debates via its agree/disagree feature to cultivate fresh perspectives.",
+    shortAbout:
+      "Hot Take HQ is an online platform for users to share viewpoints and engage in debates to cultivate fresh perspectives.",
     technologies: [
       { name: "Javascript", icon: DiJavascript1, color: "#f7df1e" },
       { name: "Mongo", icon: SiMongodb, color: "#4db33d" },
@@ -94,6 +99,8 @@ export const projectDB: ProjectRecipe[] = [
     name: "Retro Terminal RPG",
     about:
       "Text-based role-playing game based on the popular video game series, Bioshock. Designed to be run inside the terminal using Node.js and JavaScript, and features a variety of gameplay mechanics, including combat, inventory management, and character progression.",
+    shortAbout:
+      "A text-based RPG based on Bioshock, designed for terminal use, featuring combat, inventory management, and character progression.",
     technologies: [
       { name: "Javascript", icon: DiJavascript1, color: "#f7df1e" },
       { name: "NodeJS", icon: FaNodeJs, color: "#68a063" },
@@ -120,6 +127,8 @@ export const projectDB: ProjectRecipe[] = [
     name: "Portfolio Site v2",
     about:
       "A testament to innovation and continuous learning, this project uses Chakra UI for user interaction, TypeScript for reliable coding, and Next.js for optimal performance. It reflects my journey in tech and commitment to expanding my capabilities.",
+    shortAbout:
+      "A showcase of innovation and learning, using Chakra UI, TypeScript, and Next.js for optimal performance.",
     technologies: [
       { name: "Next", icon: SiNextdotjs, color: "#000000" },
       { name: "Typescript", icon: SiTypescript, color: "#007acc" },
