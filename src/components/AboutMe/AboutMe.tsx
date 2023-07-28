@@ -67,6 +67,20 @@ const AboutMe = () => {
           <MotionBox
             maxWidth="100%"
             ref={ref}
+            variants={leftToRight}
+            animate={inView ? "show" : "hidden"}
+          >
+            <Text
+              fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
+              mt={10}
+            >
+              {`Intrigued by the world of coding and technology, I've dedicated my career to creating efficient and user-friendly solutions. I have a strong knack for problem-solving and enjoy the challenge of breaking down complex issues into manageable tasks.`}
+            </Text>
+          </MotionBox>
+
+          <MotionBox
+            maxWidth="100%"
+            ref={ref}
             variants={rightToLeft}
             animate={inView ? "show" : "hidden"}
           >
@@ -74,9 +88,10 @@ const AboutMe = () => {
               fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
               mt={10}
             >
-              {`Intrigued by the world of coding and technology, I've dedicated my career to creating efficient and user-friendly solutions. I have a strong knack for problem-solving and enjoy the challenge of breaking down complex issues into manageable tasks. From meticulously crafting user interfaces to structuring robust backend architectures, my goal is to continuously grow, learn, and push the boundaries of what I can achieve.`}
+              {`From meticulously crafting user interfaces to structuring robust backend architectures, my goal is to continuously grow, learn, and push the boundaries of what I can achieve.`}
             </Text>
           </MotionBox>
+
           <MotionBox
             maxWidth="100%"
             ref={ref}
