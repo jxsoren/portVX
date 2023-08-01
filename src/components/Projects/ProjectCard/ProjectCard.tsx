@@ -42,7 +42,7 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
     sm: "90vw",
     md: "80vw",
     lg: "70vw",
-    xl: "70vw",
+    xl: "60vw",
   });
 
   return (
