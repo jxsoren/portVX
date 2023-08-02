@@ -37,7 +37,7 @@ const ProjectCarousel = () => {
   return (
     <Box height="100%" width={width}>
       <Carousel {...carouselProps}>
-        {projectDB.map((project, index) => (
+        {projectDB.map((project) => (
           <Box key={project.name}>
             <ProjectCard
               name={project.name}
