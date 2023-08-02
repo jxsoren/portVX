@@ -2,8 +2,15 @@
 
 import React from "react";
 import { useAppColors } from "@/hooks/useAppColors";
-import { Box, Text, Flex, Icon, Heading, As } from "@chakra-ui/react";
-import { color } from "framer-motion";
+import {
+  Box,
+  Text,
+  Flex,
+  Icon,
+  Heading,
+  As,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 
 interface ProjectTechProps {
   name: string;
@@ -33,6 +40,15 @@ const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
 }) => {
   const { textColor } = useAppColors();
 
+  const headingFontSize = useBreakpointValue({
+    xs: "xs",
+    sm: "xm",
+    md: "sm",
+    lg: "sm",
+    xl: "md",
+    xxl: "md",
+  });
+
   return (
     <Flex
       direction="column"
@@ -40,7 +56,7 @@ const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
       justify="center"
       justifyContent="space-between"
     >
-      <Heading p={2} size="xs" textTransform="uppercase">
+      <Heading p={2} size={headingFontSize} textTransform="uppercase">
         Technologies
       </Heading>
       <Flex
@@ -52,13 +68,8 @@ const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
         gap={4}
         pt={2}
       >
-        {technologies.map(({ name, icon, color }, index) => (
-          <ProjectTech
-            key={`${name}-${index}`}
-            name={name}
-            icon={icon}
-            color={color}
-          />
+        {technologies.map(({ name, icon, color }) => (
+          <ProjectTech key={name} name={name} icon={icon} color={color} />
         ))}
       </Flex>
     </Flex>

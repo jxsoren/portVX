@@ -1,7 +1,16 @@
 "use client";
 
 import React from "react";
-import { Box, Heading, Text, Icon, Link, As, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  Icon,
+  Link,
+  As,
+  Flex,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 
 interface LinksProps {
   name: string;
@@ -31,9 +40,18 @@ const Links: React.FC<LinksProps> = ({ name, link, color, icon }) => {
 const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => {
   const { textColor } = useAppColors();
 
+  const headingFontSize = useBreakpointValue({
+    xs: "xs",
+    sm: "xm",
+    md: "sm",
+    lg: "sm",
+    xl: "md",
+    xxl: "md",
+  });
+
   return (
     <Flex direction="column" align="center" justify="center">
-      <Heading p={2} size="xs" textTransform="uppercase">
+      <Heading p={2} size={headingFontSize} textTransform="uppercase">
         Links
       </Heading>
       <Flex direction="row" color={textColor} pt={2} gap={4}>
