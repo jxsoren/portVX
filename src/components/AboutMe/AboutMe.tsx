@@ -61,7 +61,7 @@ const AboutMe = () => {
           justify="center"
           padding={4}
           color="#ffffff"
-          maxW={{ base: "90%", md: "70%" }}
+          maxW={{ sm: "80%", md: "80%", lg: "60%", xl: "50%" }}
           fontFamily={theme.fonts.body}
         >
           <MotionBox
@@ -70,10 +70,7 @@ const AboutMe = () => {
             variants={leftToRight}
             animate={inView ? "show" : "hidden"}
           >
-            <Text
-              fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
-              mt={10}
-            >
+            <Text fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}>
               {`Intrigued by the world of coding and technology, I've dedicated my career to creating efficient and user-friendly solutions. I have a strong knack for problem-solving and enjoy the challenge of breaking down complex issues into manageable tasks.`}
             </Text>
           </MotionBox>
