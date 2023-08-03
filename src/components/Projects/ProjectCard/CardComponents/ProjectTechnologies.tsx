@@ -25,10 +25,28 @@ interface ProjectTechnologiesProps {
 const ProjectTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
   const { textColor } = useAppColors();
 
+  const iconSize = useBreakpointValue({
+    xs: 8,
+    sm: 10,
+    md: 10,
+    lg: 10,
+    xl: 10,
+    xxl: 12,
+  });
+
+  const fontSize = useBreakpointValue({
+    xs: "10",
+    sm: "12",
+    md: "12",
+    lg: "12",
+    xl: "12",
+    xxl: "13",
+  });
+
   return (
     <Box textAlign="center">
-      <Icon as={icon} w={6} h={6} color={color} />
-      <Text fontSize={10} color={color}>
+      <Icon as={icon} w={iconSize} h={iconSize} color={color} fontWeight="bold" />
+      <Text fontSize={fontSize} color={color} fontWeight="bold">
         {name}
       </Text>
     </Box>
@@ -66,7 +84,7 @@ const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
         listStyleType="none"
         flexWrap="wrap"
         gap={4}
-        pt={2}
+        p={2}
       >
         {technologies.map(({ name, icon, color }) => (
           <ProjectTech key={name} name={name} icon={icon} color={color} />
