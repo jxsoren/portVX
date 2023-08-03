@@ -35,7 +35,7 @@ export const projectDB: ProjectRecipe[] = [
   {
     name: "Quickcipie",
     about:
-      "Quickcipe is a sleek and user-friendly recipe creation application that simplifies the recipe-making process by delivering concise and easy-to-follow instructions. With Quickcipe, users can create their own recipes with ease, using only the necessary ingredients and steps.",
+      "Quickcipe is a sleek and user-friendly recipe creation app that simplifies the recipe-making process by delivering concise and easy-to-follow instructions. With Quickcipe, users can create their own recipes with ease, using only the necessary ingredients and steps.",
     shortAbout:
       "Quickcipe simplifies recipe creation with concise instructions, enabling users to create their own recipes with ease.",
     technologies: [
@@ -104,12 +104,6 @@ export const projectDB: ProjectRecipe[] = [
     thumbnail: "./thumbnails/nodeRPG.png",
     links: [
       {
-        name: "Live",
-        link: "",
-        color: "#FF0000",
-        icon: CgWebsite,
-      },
-      {
         name: "Github",
         link: "https://github.com/jxsoren/terminal-rpg",
         color: "#181717",
@@ -133,13 +127,13 @@ export const projectDB: ProjectRecipe[] = [
     links: [
       {
         name: "Live",
-        link: "",
+        link: "https://jxsoren.com/",
         color: "#FF0000",
         icon: CgWebsite,
       },
       {
         name: "Github",
-        link: "",
+        link: "https://github.com/jxsoren/portVX",
         color: "#181717",
         icon: VscGithubAlt,
       },
