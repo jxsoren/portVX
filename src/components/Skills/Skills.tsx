@@ -289,9 +289,11 @@ const Skills: React.FC = () => {
           </Grid>
         ) : isSmallScreen ? (
           <VStack spacing={8} w="100%">
-            <AnimatedBox animation={leftToRight}>
-              <SectionTitle>Technologies</SectionTitle>
-            </AnimatedBox>
+            <Box width="100%">
+              <AnimatedBox animation={leftToRight}>
+                <SectionTitle>Technologies</SectionTitle>
+              </AnimatedBox>
+            </Box>
             <Grid
               templateColumns="repeat(1, 1fr)"
               gap={4}
@@ -312,9 +314,11 @@ const Skills: React.FC = () => {
               </GridItem>
             </Grid>
 
-            <AnimatedBox animation={leftToRight}>
-              <SectionTitle>Systems</SectionTitle>
-            </AnimatedBox>
+            <Box width="100%">
+              <AnimatedBox animation={leftToRight}>
+                <SectionTitle>Systems</SectionTitle>
+              </AnimatedBox>
+            </Box>
             <Grid
               templateColumns="repeat(1, 1fr)"
               gap={4}
