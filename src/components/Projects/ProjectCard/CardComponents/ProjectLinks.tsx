@@ -30,8 +30,8 @@ const Links: React.FC<LinksProps> = ({ name, link, color, icon }) => {
   return (
     <Box textAlign="center">
       <Link href={link} isExternal>
-        <Icon as={icon} w={8} h={8} color={color} />
-        <Text fontSize={10}>{name}</Text>
+        <Icon as={icon} w={10} h={10} color={color} />
+        <Text fontSize={12} fontWeight="bold">{name}</Text>
       </Link>
     </Box>
   );
