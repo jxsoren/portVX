@@ -43,8 +43,9 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
           color="white"
           mb={4}
           bg="blackAlpha.400"
-          borderRadius="2xl"
-          boxShadow="md"
+          borderRadius="xl"
+          boxShadow="xl"
+          px={4}
         >
           {title}
         </Heading>
