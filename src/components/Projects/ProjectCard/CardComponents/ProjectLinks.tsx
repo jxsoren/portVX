@@ -27,11 +27,22 @@ interface ProjectLinksProps {
 }
 
 const Links: React.FC<LinksProps> = ({ name, link, color, icon }) => {
+  const iconSize = useBreakpointValue({
+    xs: 8,
+    sm: 10,
+    md: 10,
+    lg: 8,
+    xl: 10,
+    xxl: 12,
+  });
+
   return (
     <Box textAlign="center">
       <Link href={link} isExternal>
-        <Icon as={icon} w={10} h={10} color={color} />
-        <Text fontSize={12} fontWeight="bold">{name}</Text>
+        <Icon as={icon} w={iconSize} h={iconSize} color={color} />
+        <Text fontSize={12} fontWeight="bold">
+          {name}
+        </Text>
       </Link>
     </Box>
   );
