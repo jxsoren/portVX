@@ -29,7 +29,7 @@ const ProjectTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
     xs: 8,
     sm: 10,
     md: 10,
-    lg: 10,
+    lg: 8,
     xl: 10,
     xxl: 12,
   });
