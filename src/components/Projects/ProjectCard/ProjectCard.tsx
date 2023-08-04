@@ -62,7 +62,9 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
         height="100%"
       >
         <CardHeader textAlign="center" width="100%">
-          <Heading size="lg">{name}</Heading>
+          <Heading size="lg" mb="-5">
+            {name}
+          </Heading>
         </CardHeader>
         <CardBody flex="1" h="100%">
           <Stack
