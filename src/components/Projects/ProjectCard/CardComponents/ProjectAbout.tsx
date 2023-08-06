@@ -15,7 +15,7 @@ const ProjectAbout: React.FC<ProjectAboutProps> = ({ about, shortAbout }) => {
     xs: "14",
     sm: "14",
     md: "16",
-    lg: "16",
+    lg: "15",
     xl: "16",
     xxl: "16",
   });
