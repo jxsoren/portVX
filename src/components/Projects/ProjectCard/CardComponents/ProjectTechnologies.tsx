@@ -26,12 +26,12 @@ const ProjectTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
   const { textColor } = useAppColors();
 
   const iconSize = useBreakpointValue({
-    xs: 8,
-    sm: 10,
-    md: 10,
+    xs: 7,
+    sm: 7,
+    md: 7,
     lg: 8,
-    xl: 10,
-    xxl: 12,
+    xl: 8,
+    xxl: 8,
   });
 
   const fontSize = useBreakpointValue({
