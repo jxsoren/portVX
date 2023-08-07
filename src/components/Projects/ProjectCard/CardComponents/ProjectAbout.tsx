@@ -14,9 +14,9 @@ const ProjectAbout: React.FC<ProjectAboutProps> = ({ about, shortAbout }) => {
   const fontSize = useBreakpointValue({
     xs: "14",
     sm: "14",
-    md: "16",
+    md: "14",
     lg: "15",
-    xl: "16",
+    xl: "15",
     xxl: "16",
   });
 
@@ -35,7 +35,7 @@ const ProjectAbout: React.FC<ProjectAboutProps> = ({ about, shortAbout }) => {
       direction="column"
       alignItems="center"
       justifyContent="center"
-      p={2}
+      
       minH={["10vh", "15vh", "20vh", "15vh"]}
     >
       <Heading
