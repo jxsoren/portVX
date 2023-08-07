@@ -29,11 +29,11 @@ interface ProjectLinksProps {
 const Links: React.FC<LinksProps> = ({ name, link, color, icon }) => {
   const iconSize = useBreakpointValue({
     xs: 8,
-    sm: 10,
-    md: 10,
+    sm: 8,
+    md: 8,
     lg: 8,
-    xl: 10,
-    xxl: 12,
+    xl: 8,
+    xxl: 8,
   });
 
   return (
@@ -62,7 +62,7 @@ const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => {
 
   return (
     <Flex direction="column" align="center" justify="center">
-      <Heading p={2} size={headingFontSize} textTransform="uppercase">
+      <Heading  size={headingFontSize} textTransform="uppercase">
         Links
       </Heading>
       <Flex direction="row" color={textColor} pt={2} gap={4}>
