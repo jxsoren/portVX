@@ -38,7 +38,7 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
 
   const maxW = useBreakpointValue({
     base: "60vw",
-    xs: "80vw",
+    xs: "90vw",
     sm: "90vw",
     md: "80vw",
     lg: "70vw",
