@@ -66,7 +66,7 @@ const Skills: React.FC = () => {
   return (
     <Box
       width="100%"
-      minHeight="100vh"
+      minHeight="70vh"
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
@@ -100,8 +100,8 @@ const Skills: React.FC = () => {
           <Grid
             templateColumns="repeat(2, 1fr)"
             gap={10}
-            w="80%"
-            h="70%"
+            w="90%"
+            h="80%"
             templateRows="auto"
           >
             <AnimatedBox animation={leftToRight}>
