@@ -35,7 +35,8 @@ const Projects = () => {
   return (
     <Container
       maxW={"100%"}
-      minH={"120vh"}
+      minH="100vh"
+      marginTop="-10"
       color={textColor}
       backgroundColor="#183664"
       centerContent
