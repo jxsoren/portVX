@@ -14,8 +14,6 @@ import { motion } from "framer-motion";
 import { useScrollAnimation, getAnimations } from "@/hooks/useScroll";
 const MotionBox = motion(Box);
 
-import Storybook from "./Storybook";
-
 const AboutMe = () => {
   const theme = useTheme();
 
@@ -24,8 +22,8 @@ const AboutMe = () => {
 
   return (
     <Box
-      aspectRatio={960 / 340}
       width="100%"
+      aspectRatio={960 / 300}
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
@@ -61,7 +59,7 @@ const AboutMe = () => {
           justify="center"
           padding={4}
           color="#ffffff"
-          maxW={{ sm: "80%", md: "80%", lg: "60%", xl: "50%" }}
+          maxW={{ sm: "80%", md: "80%", lg: "60%", xl: "70%" }}
           fontFamily={theme.fonts.body}
         >
           <MotionBox
