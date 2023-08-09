@@ -71,7 +71,7 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
             direction="column"
             justify="space-between"
             divider={<StackDivider />}
-            spacing="4"
+            spacing="3"
           >
             <ProjectThumbnail thumbnail={thumbnail} />
             <ProjectAbout about={about} shortAbout={shortAbout} />
