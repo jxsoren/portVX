@@ -25,7 +25,7 @@ const ProjectThumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
     md: "250px",
     lg: "200px",
     xl: "200px",
-    xxl: "250px",
+    xxl: "200px",
   });
 
   return (
