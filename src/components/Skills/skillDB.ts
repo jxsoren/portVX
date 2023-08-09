@@ -7,9 +7,7 @@ import {
   FaSass,
   FaUbuntu,
   FaAws,
-  FaTrello,
   FaGithubAlt,
-  FaGitlab,
 } from "react-icons/fa";
 import {
   SiExpress,
@@ -25,8 +23,8 @@ import { AiOutlineGitlab } from "react-icons/ai";
 
 import { DiJavascript1 } from "react-icons/di";
 import { DiScrum } from "react-icons/di";
-import { MdApi, MdOutlineViewKanban } from "react-icons/md";
-import { AiFillApple } from "react-icons/ai";
+import { MdOutlineViewKanban } from "react-icons/md";
+import { AiFillApple, AiOutlineApi } from "react-icons/ai";
 import { BsWindows } from "react-icons/bs";
 
 import { As } from "@chakra-ui/react";
@@ -49,8 +47,8 @@ interface Technologies {
 
 export const skillsDB: Technologies = {
   languages: [
-    { name: "Javascript", icon: DiJavascript1, color: "#f7df1e" },
-    { name: "Typescript", icon: SiTypescript, color: "#007acc" },
+    { name: "JS", icon: DiJavascript1, color: "#f7df1e" },
+    { name: "TS", icon: SiTypescript, color: "#007acc" },
   ],
   frontEnd: [
     { name: "HTML", icon: FaHtml5, color: "#e34f26" },
@@ -66,7 +64,7 @@ export const skillsDB: Technologies = {
     { name: "MongoDB", icon: SiMongodb, color: "#4db33d" },
     { name: "Express", icon: SiExpress, color: "#000000" },
     { name: "Node", icon: FaNodeJs, color: "#68a063" },
-    { name: "REST APIs", icon: MdApi, color: "#007acc" },
+    { name: "REST API", icon: AiOutlineApi, color: "#007acc" },
   ],
   platforms: [
     { name: "Linux", icon: FaLinux, color: "#000000" },
