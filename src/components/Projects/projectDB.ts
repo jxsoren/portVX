@@ -116,7 +116,7 @@ export const projectDB: ProjectRecipe[] = [
     about:
       "A testament to innovation and continuous learning, this project uses Chakra UI for user interaction, TypeScript for reliable coding, and Next.js for optimal performance. It reflects my journey in tech and commitment to expanding my capabilities.",
     shortAbout:
-      "A showcase of innovation and learning, using Chakra UI, TypeScript, and Next.js for optimal performance.",
+      "A modern representation of my skills and growth, leveraging Chakra UI for seamless user experience, TypeScript for robust development, and Next.js for enhanced web performance.",
     technologies: [
       { name: "Next", icon: SiNextdotjs, color: "#000000" },
       { name: "Typescript", icon: SiTypescript, color: "#007acc" },
