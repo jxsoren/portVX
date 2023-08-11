@@ -17,7 +17,7 @@ import { projectDB } from "./projectDB";
 
 import { AnimatedBox, getAnimations } from "@/hooks/useScroll";
 
-import ProjectCarousel from "./ProjectCarousel";
+import ProjectCarousel from "./ProjectCarousel/ProjectCarousel";
 
 const Projects = () => {
   const { textColor } = useAppColors();
@@ -58,7 +58,7 @@ const Projects = () => {
       {!isSmallScreen ? (
         <Box>
           {projectDB.map((project) => (
-            <Box key={project.name}>
+            <Box key={project.name} mb="4">
               <ProjectCard
                 name={project.name}
                 about={project.about}
