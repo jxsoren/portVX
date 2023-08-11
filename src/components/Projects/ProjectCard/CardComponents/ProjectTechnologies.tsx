@@ -45,7 +45,13 @@ const ProjectTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
 
   return (
     <Box textAlign="center">
-      <Icon as={icon} w={iconSize} h={iconSize} color={color} fontWeight="bold" />
+      <Icon
+        as={icon}
+        w={iconSize}
+        h={iconSize}
+        color={color}
+        fontWeight="bold"
+      />
       <Text fontSize={fontSize} color={color} fontWeight="bold">
         {name}
       </Text>
@@ -67,6 +73,8 @@ const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
     xxl: "md",
   });
 
+  const isExtraSmallScreen = useBreakpointValue({ base: false, xs: true });
+
   return (
     <Flex
       direction="column"
@@ -77,19 +85,33 @@ const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
       <Heading p={2} size={headingFontSize} textTransform="uppercase">
         Technologies
       </Heading>
-      <Flex
-        direction="row"
-        justifyContent="flex-start"
-        color={textColor}
-        listStyleType="none"
-        flexWrap="wrap"
-        gap={4}
-        p={2}
-      >
-        {technologies.map(({ name, icon, color }) => (
-          <ProjectTech key={name} name={name} icon={icon} color={color} />
-        ))}
-      </Flex>
+      {isExtraSmallScreen ? (
+        <Flex
+          direction="row"
+          justifyContent="flex-start"
+          color={textColor}
+          gap={4}
+          p={2}
+        >
+          {technologies.map(({ name, icon, color }) => (
+            <ProjectTech key={name} name={name} icon={icon} color={color} />
+          ))}
+        </Flex>
+      ) : (
+        <Flex
+          direction="row"
+          justifyContent="flex-start"
+          color={textColor}
+          listStyleType="none"
+          flexWrap="wrap"
+          gap={4}
+          p={2}
+        >
+          {technologies.map(({ name, icon, color }) => (
+            <ProjectTech key={name} name={name} icon={icon} color={color} />
+          ))}
+        </Flex>
+      )}
     </Flex>
   );
 };
