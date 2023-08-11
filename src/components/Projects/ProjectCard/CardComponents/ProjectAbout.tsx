@@ -12,7 +12,7 @@ const ProjectAbout: React.FC<ProjectAboutProps> = ({ about, shortAbout }) => {
   const isSmallScreen = useBreakpointValue({ base: true, sm: false });
 
   const fontSize = useBreakpointValue({
-    xs: "14",
+    xs: "13",
     sm: "14",
     md: "14",
     lg: "15",
