@@ -28,7 +28,7 @@ const fadeIn = keyframes`
 const SkillCategory: React.FC<SkillCategoryProps> = ({ title, skills }) => {
   return (
     <Box
-      backgroundColor="blackAlpha.400"
+      backgroundColor="blackAlpha.300"
       borderRadius="2xl"
       boxShadow="md"
       p={4}
