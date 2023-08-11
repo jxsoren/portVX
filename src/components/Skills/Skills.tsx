@@ -34,10 +34,11 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ children }) => (
     align="center"
     justify="center"
     height="100%"
-    backgroundColor="blackAlpha.400"
+    //backgroundColor="blackAlpha.600"
+    bg="gray.600"
     p={4}
     borderRadius="2xl"
-    boxShadow="md"
+    //boxShadow="md"
   >
     <Heading
       fontSize="xl"
@@ -287,98 +288,63 @@ const Skills: React.FC = () => {
               </Grid>
             </AnimatedBox>
           </Grid>
-        ) : isSmallScreen ? (
-          <VStack spacing={8} w="100%">
-            <Box width="100%">
-              <AnimatedBox animation={leftToRight}>
-                <SectionTitle>Technologies</SectionTitle>
-              </AnimatedBox>
-            </Box>
-            <Grid
-              templateColumns="repeat(1, 1fr)"
-              gap={4}
-              width="100%"
-              height="auto"
-            >
-              <GridItem rowSpan={1} colSpan={1}>
-                <SkillCategory title="Front-end" skills={frontEnd} />
-              </GridItem>
-              <GridItem rowSpan={1} colSpan={1}>
-                <SkillCategory title="Back-end" skills={backEnd} />
-              </GridItem>
-              <GridItem rowSpan={1} colSpan={1}>
-                <SkillCategory title="Languages" skills={languages} />
-              </GridItem>
-              <GridItem rowSpan={1} colSpan={1}>
-                <SkillCategory title="Frameworks" skills={frameworks} />
-              </GridItem>
-            </Grid>
-
-            <Box width="100%">
-              <AnimatedBox animation={leftToRight}>
-                <SectionTitle>Systems</SectionTitle>
-              </AnimatedBox>
-            </Box>
-            <Grid
-              templateColumns="repeat(1, 1fr)"
-              gap={4}
-              width="100%"
-              height="auto"
-            >
-              <GridItem rowSpan={1} colSpan={1}>
-                <SkillCategory title="Platforms" skills={platforms} />
-              </GridItem>
-              <GridItem rowSpan={1} colSpan={1}>
-                <SkillCategory title="CCID" skills={CCID} />
-              </GridItem>
-              <GridItem rowSpan={1} colSpan={1} mb={8}>
-                <SkillCategory title="Cloud" skills={cloud} />
-              </GridItem>
-            </Grid>
-          </VStack>
         ) : (
           <VStack spacing={8} w="100%">
-            <AnimatedBox animation={leftToRight}>
+            <Box width="100%">
               <SectionTitle>Technologies</SectionTitle>
-            </AnimatedBox>
+            </Box>
             <Grid
               templateColumns="repeat(1, 1fr)"
               gap={4}
               width="100%"
               height="auto"
             >
-              <GridItem rowSpan={1} colSpan={1}>
-                <SkillCategory title="Front-end" skills={frontEnd} />
-              </GridItem>
-              <GridItem rowSpan={1} colSpan={1}>
-                <SkillCategory title="Back-end" skills={backEnd} />
-              </GridItem>
-              <GridItem rowSpan={1} colSpan={1}>
-                <SkillCategory title="Languages" skills={languages} />
-              </GridItem>
-              <GridItem rowSpan={1} colSpan={1}>
-                <SkillCategory title="Frameworks" skills={frameworks} />
-              </GridItem>
+              <AnimatedBox animation={rightToLeft}>
+                <GridItem rowSpan={1} colSpan={1}>
+                  <SkillCategory title="Front-end" skills={frontEnd} />
+                </GridItem>
+              </AnimatedBox>
+              <AnimatedBox animation={leftToRight}>
+                <GridItem rowSpan={1} colSpan={1}>
+                  <SkillCategory title="Back-end" skills={backEnd} />
+                </GridItem>
+              </AnimatedBox>
+              <AnimatedBox animation={rightToLeft}>
+                <GridItem rowSpan={1} colSpan={1}>
+                  <SkillCategory title="Languages" skills={languages} />
+                </GridItem>
+              </AnimatedBox>
+              <AnimatedBox animation={leftToRight}>
+                <GridItem rowSpan={1} colSpan={1}>
+                  <SkillCategory title="Frameworks" skills={frameworks} />
+                </GridItem>
+              </AnimatedBox>
             </Grid>
 
-            <AnimatedBox animation={leftToRight}>
+            <Box width="100%">
               <SectionTitle>Systems</SectionTitle>
-            </AnimatedBox>
+            </Box>
             <Grid
               templateColumns="repeat(1, 1fr)"
               gap={4}
               width="100%"
               height="auto"
             >
-              <GridItem rowSpan={1} colSpan={1}>
-                <SkillCategory title="Platforms" skills={platforms} />
-              </GridItem>
-              <GridItem rowSpan={1} colSpan={1}>
-                <SkillCategory title="CCID" skills={CCID} />
-              </GridItem>
-              <GridItem rowSpan={1} colSpan={1} mb={8}>
-                <SkillCategory title="Cloud" skills={cloud} />
-              </GridItem>
+              <AnimatedBox animation={rightToLeft}>
+                <GridItem rowSpan={1} colSpan={1}>
+                  <SkillCategory title="Platforms" skills={platforms} />
+                </GridItem>
+              </AnimatedBox>
+              <AnimatedBox animation={leftToRight}>
+                <GridItem rowSpan={1} colSpan={1}>
+                  <SkillCategory title="CCID" skills={CCID} />
+                </GridItem>
+              </AnimatedBox>
+              <AnimatedBox animation={rightToLeft}>
+                <GridItem rowSpan={1} colSpan={1} mb={8}>
+                  <SkillCategory title="Cloud" skills={cloud} />
+                </GridItem>
+              </AnimatedBox>
             </Grid>
           </VStack>
         )}
