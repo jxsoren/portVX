@@ -1,0 +1,16 @@
+.rec.rec-arrow {
+    background-color: #007BFF !important;
+}
+
+.rec.rec-arrow:hover {
+    background-color: #0056b3 !important;
+}
+
+.rec.rec-dot_active {
+    background-color: #007BFF !important;
+    box-shadow: 0 0 1px 2px #007BFF !important;
+}
+
+.rec.rec-dot {
+    box-shadow: 0 0 1px 2px #007BFF !important;
+}

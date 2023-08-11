@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Box, useBreakpointValue } from "@chakra-ui/react";
 import Carousel, { ReactElasticCarouselProps } from "react-elastic-carousel";
 
-import ProjectCard from "./ProjectCard/ProjectCard";
-import { projectDB } from "./projectDB";
+import ProjectCard from "../ProjectCard/ProjectCard";
+import { projectDB } from "../projectDB";
+
+import "./carouselOverrides.css";
 
 interface Item {
   id: number;
