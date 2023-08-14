@@ -15,7 +15,6 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
-import { useAppColors } from "@/hooks/useAppColors";
 import { ProjectRecipe } from "../projectDB";
 import ProjectThumbnail from "./CardComponents/ProjectThumbnail";
 import ProjectTechnologies from "./CardComponents/ProjectTechnologies";
@@ -32,7 +31,6 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   thumbnail,
   links,
 }) => {
-  const { textColor } = useAppColors();
   const { rightToLeft, leftToRight, up, down, flip, slideFade, slideBlur } =
     getAnimations();
 
@@ -57,7 +55,7 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
         borderColor="#4A90E2"
         borderWidth={4}
         borderRadius={20}
-        color={textColor}
+        color="white"
         maxW={maxW}
         height="100%"
       >

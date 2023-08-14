@@ -1,7 +1,6 @@
 "use client;";
 
 import React from "react";
-import { useAppColors } from "@/hooks/useAppColors";
 import {
   Box,
   Text,
@@ -23,8 +22,6 @@ interface ProjectTechnologiesProps {
 }
 
 const ProjectTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
-  const { textColor } = useAppColors();
-
   const iconSize = useBreakpointValue({
     xs: 7,
     sm: 7,
@@ -62,8 +59,6 @@ const ProjectTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
 const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
   technologies,
 }) => {
-  const { textColor } = useAppColors();
-
   const headingFontSize = useBreakpointValue({
     xs: "xs",
     sm: "xm",
@@ -89,7 +84,7 @@ const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
         <Flex
           direction="row"
           justifyContent="flex-start"
-          color={textColor}
+          color="white"
           gap={4}
           p={2}
         >
@@ -101,7 +96,7 @@ const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
         <Flex
           direction="row"
           justifyContent="flex-start"
-          color={textColor}
+          color="white"
           listStyleType="none"
           flexWrap="wrap"
           gap={4}

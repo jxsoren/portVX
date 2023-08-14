@@ -1,6 +1,5 @@
 "use client";
 
-import { useAppColors } from "@/hooks/useAppColors";
 import {
   Text,
   Container,

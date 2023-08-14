@@ -10,7 +10,6 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
-import { useAppColors } from "@/hooks/useAppColors";
 
 import ProjectCard from "./ProjectCard/ProjectCard";
 import { projectDB } from "./projectDB";
@@ -20,7 +19,6 @@ import { AnimatedBox, getAnimations } from "@/hooks/useScroll";
 import ProjectCarousel from "./ProjectCarousel/ProjectCarousel";
 
 const Projects = () => {
-  const { textColor } = useAppColors();
   const { rightToLeft, leftToRight, up, down, flip, slideFade, slideBlur } =
     getAnimations();
 
@@ -37,7 +35,7 @@ const Projects = () => {
       maxW={"100%"}
       minH="100vh"
       marginTop="-10"
-      color={textColor}
+      color="white"
       backgroundColor="#183664"
       centerContent
     >

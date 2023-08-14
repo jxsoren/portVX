@@ -20,7 +20,6 @@ interface LinksProps {
 }
 [];
 
-import { useAppColors } from "@/hooks/useAppColors";
 
 interface ProjectLinksProps {
   links: LinksProps[];
@@ -49,7 +48,6 @@ const Links: React.FC<LinksProps> = ({ name, link, color, icon }) => {
 };
 
 const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => {
-  const { textColor } = useAppColors();
 
   const headingFontSize = useBreakpointValue({
     xs: "xs",
@@ -65,7 +63,7 @@ const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => {
       <Heading  size={headingFontSize} textTransform="uppercase">
         Links
       </Heading>
-      <Flex direction="row" color={textColor} pt={2} gap={4}>
+      <Flex direction="row" color="white" pt={2} gap={4}>
         {links.map(({ name, link, icon, color }) => (
           <Links key={name} name={name} link={link} color={color} icon={icon} />
         ))}

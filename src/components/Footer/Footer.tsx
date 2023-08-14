@@ -12,21 +12,18 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import { useAppColors } from "@/hooks/useAppColors";
 
 const Logo = () => {
   return <Image src="/name.png" alt="My Image" height={32} />;
 };
 
 const Footer = () => {
-  const { bgColor, textColor } = useAppColors();
-
   return (
     <Box as="footer" py="6" color="white" w="100%" backgroundColor="#01030b">
       <Box>
         <Flex
           align={"center"}
-          color={textColor}
+          color="white"
           _before={{
             content: '""',
             borderBottom: "1px solid",
@@ -55,8 +52,8 @@ const Footer = () => {
                 aria-label="Github"
                 icon={<FaGithub />}
                 mr="4"
-                bgColor={bgColor}
-                color={textColor}
+                bgColor="black"
+                color="white"
                 size="lg"
                 isRound
                 target="_blank"
@@ -69,8 +66,8 @@ const Footer = () => {
                 aria-label="LinkedIn"
                 icon={<FaLinkedin />}
                 mr="4"
-                bgColor={bgColor}
-                color={textColor}
+                bgColor="black"
+                color="white"
                 size="lg"
                 isRound
                 target="_blank"
@@ -82,15 +79,15 @@ const Footer = () => {
                 href="mailto:jxsoren@gmail.com"
                 aria-label="Email"
                 icon={<FaEnvelope />}
-                bgColor={bgColor}
-                color={textColor}
+                bgColor="black"
+                color="white"
                 size="lg"
                 isRound
                 target="_blank"
               />
             </Tooltip>
           </Container>
-          <Text pt={6} fontSize={"sm"} textAlign={"center"} color={textColor}>
+          <Text pt={6} fontSize={"sm"} textAlign={"center"} color="white">
             © Josh Sorensen 2023
           </Text>
         </Flex>
