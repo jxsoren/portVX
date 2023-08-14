@@ -6,9 +6,10 @@ import React from "react";
 interface ProjectAboutProps {
   about: string;
   shortAbout: string;
+  headingSize?: string;
 }
 
-const ProjectAbout: React.FC<ProjectAboutProps> = ({ about, shortAbout }) => {
+const ProjectAbout: React.FC<ProjectAboutProps> = ({ about, shortAbout, headingSize }) => {
   const isSmallScreen = useBreakpointValue({ base: true, sm: false });
 
   const fontSize = useBreakpointValue({
@@ -18,15 +19,6 @@ const ProjectAbout: React.FC<ProjectAboutProps> = ({ about, shortAbout }) => {
     lg: "15",
     xl: "15",
     xxl: "15",
-  });
-
-  const headingFontSize = useBreakpointValue({
-    xs: "xs",
-    sm: "xm",
-    md: "sm",
-    lg: "sm",
-    xl: "md",
-    xxl: "md",
   });
 
   return (
@@ -40,7 +32,7 @@ const ProjectAbout: React.FC<ProjectAboutProps> = ({ about, shortAbout }) => {
       minH={["15vh", "15vh", "15vh", "15vh"]}
     >
       <Heading
-        size={headingFontSize}
+        size={headingSize}
         textTransform="uppercase"
         textAlign="center"
       >

@@ -19,6 +19,7 @@ interface ProjectTechProps {
 
 interface ProjectTechnologiesProps {
   technologies: Array<ProjectTechProps>;
+  headingSize?: string;
 }
 
 const ProjectTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
@@ -58,16 +59,8 @@ const ProjectTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
 
 const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
   technologies,
+  headingSize,
 }) => {
-  const headingFontSize = useBreakpointValue({
-    xs: "xs",
-    sm: "xm",
-    md: "sm",
-    lg: "sm",
-    xl: "md",
-    xxl: "md",
-  });
-
   const isExtraSmallScreen = useBreakpointValue({ base: false, xs: true });
 
   return (
@@ -77,7 +70,7 @@ const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
       justify="center"
       justifyContent="space-between"
     >
-      <Heading p={2} size={headingFontSize} textTransform="uppercase">
+      <Heading p={2} size={headingSize} textTransform="uppercase">
         Technologies
       </Heading>
       {isExtraSmallScreen ? (

@@ -20,9 +20,9 @@ interface LinksProps {
 }
 [];
 
-
 interface ProjectLinksProps {
   links: LinksProps[];
+  headingSize?: string;
 }
 
 const Links: React.FC<LinksProps> = ({ name, link, color, icon }) => {
@@ -47,20 +47,10 @@ const Links: React.FC<LinksProps> = ({ name, link, color, icon }) => {
   );
 };
 
-const ProjectLinks: React.FC<ProjectLinksProps> = ({ links }) => {
-
-  const headingFontSize = useBreakpointValue({
-    xs: "xs",
-    sm: "xm",
-    md: "sm",
-    lg: "sm",
-    xl: "md",
-    xxl: "md",
-  });
-
+const ProjectLinks: React.FC<ProjectLinksProps> = ({ links, headingSize }) => {
   return (
     <Flex direction="column" align="center" justify="center">
-      <Heading  size={headingFontSize} textTransform="uppercase">
+      <Heading size={headingSize} textTransform="uppercase">
         Links
       </Heading>
       <Flex direction="row" color="white" pt={2} gap={4}>

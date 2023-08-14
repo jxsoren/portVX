@@ -43,6 +43,15 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
     xl: "60vw",
   });
 
+  const headingSize = useBreakpointValue({
+    xs: "xs",
+    sm: "xm",
+    md: "sm",
+    lg: "sm",
+    xl: "md",
+    xxl: "md",
+  });
+
   return (
     <AnimatedBox animation={leftToRight}>
       <Card
@@ -72,9 +81,16 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
             spacing="3"
           >
             <ProjectThumbnail thumbnail={thumbnail} />
-            <ProjectAbout about={about} shortAbout={shortAbout} />
-            <ProjectTechnologies technologies={technologies} />
-            <ProjectLinks links={links} />
+            <ProjectAbout
+              about={about}
+              shortAbout={shortAbout}
+              headingSize={headingSize}
+            />
+            <ProjectTechnologies
+              technologies={technologies}
+              headingSize={headingSize}
+            />
+            <ProjectLinks links={links} headingSize={headingSize} />
           </Stack>
         </CardBody>
       </Card>
