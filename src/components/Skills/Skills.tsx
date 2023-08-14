@@ -17,7 +17,6 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
-import { useAppColors } from "@/hooks/useAppColors";
 import { skillsDB } from "./skillDB";
 import SkillCategory from "./SkillCategory";
 
@@ -62,7 +61,6 @@ const Skills: React.FC = () => {
     base: false,
     md: true,
   });
-  const isSmallScreen = useBreakpointValue({ base: true, sm: true });
 
   return (
     <Box
