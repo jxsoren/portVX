@@ -10,12 +10,9 @@ import {
   useColorMode,
   Icon,
 } from "@chakra-ui/react";
-import { BsMoonStars, BsSun } from "react-icons/bs";
-import { useAppColors } from "@/hooks/useAppColors";
+
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as ScrollLink } from "react-scroll";
-
-const Links = ["Skills", "Projects", "About"];
 
 const NavLink = ({ to, children }: { to: string; children: ReactNode }) => {
   const [activeSection, setActiveSection] = useState("");
@@ -46,7 +43,7 @@ const NavLink = ({ to, children }: { to: string; children: ReactNode }) => {
       }}
       _hover={{
         textDecoration: "none",
-        bg: useAppColors().bgColor,
+        bg: "gray.700",
       }}
     >
       {children}
@@ -55,15 +52,14 @@ const NavLink = ({ to, children }: { to: string; children: ReactNode }) => {
 };
 
 export default function Nav() {
-  const { bgColor, textColor } = useAppColors();
-  const { colorMode, toggleColorMode } = useColorMode();
+  const Links = ["Skills", "Projects", "About"];
 
   return (
     <Box
-      bg={bgColor}
+      bg="black"
       px={4}
       boxShadow="dark-lg"
-      textColor={textColor}
+      textColor="white"
       position="sticky"
       top={0}
       zIndex={1}
@@ -91,15 +87,6 @@ export default function Nav() {
             ))}
           </HStack>
         </HStack>
-        <Flex alignItems={"center"}>
-          <Button variant="ghost" onClick={toggleColorMode}>
-            {colorMode === "light" ? (
-              <Icon as={BsMoonStars} />
-            ) : (
-              <Icon as={BsSun} />
-            )}
-          </Button>
-        </Flex>
       </Flex>
     </Box>
   );
