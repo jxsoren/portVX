@@ -1,12 +1,9 @@
 import {
   Box,
-  HStack,
   VStack,
-  SimpleGrid,
   Heading,
   GridItem,
   Grid,
-  useColorModeValue,
 } from "@chakra-ui/react";
 
 import React from "react";

@@ -1,9 +1,7 @@
 import {
   Text,
-  ListItem,
   Icon,
   Box,
-  SimpleGrid,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import React from "react";

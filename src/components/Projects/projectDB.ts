@@ -1,4 +1,3 @@
-// Icon Imports
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
   SiExpress,

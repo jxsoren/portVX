@@ -3,10 +3,7 @@
 import {
   Heading,
   Box,
-  Text,
-  Flex,
   Container,
-  SimpleGrid,
   useBreakpointValue,
 } from "@chakra-ui/react";
 

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Box, useBreakpointValue } from "@chakra-ui/react";
 import Carousel, { ReactElasticCarouselProps } from "react-elastic-carousel";
 

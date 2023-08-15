@@ -6,12 +6,9 @@ import {
   Card,
   CardHeader,
   CardBody,
-  Container,
   Stack,
   StackDivider,
   Heading,
-  Flex,
-  Icon,
   useBreakpointValue,
 } from "@chakra-ui/react";
 
