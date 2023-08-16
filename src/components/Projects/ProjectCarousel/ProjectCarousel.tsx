@@ -1,5 +1,4 @@
 import { Box, useBreakpointValue } from "@chakra-ui/react";
-import Carousel, { ReactElasticCarouselProps } from "react-elastic-carousel";
 
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { projectDB } from "../projectDB";
@@ -12,18 +11,6 @@ interface Item {
 }
 
 const ProjectCarousel = () => {
-  const carouselProps: ReactElasticCarouselProps = {
-    isRTL: false,
-    itemsToShow: 1,
-    enableMouseSwipe: false,
-    enableSwipe: true,
-    easing: "ease",
-    disableArrowsOnEnd: true,
-    focusOnSelect: false,
-    showArrows: true,
-    enableTilt: true,
-    outerSpacing: 0,
-  };
 
   const width = useBreakpointValue({
     base: "50vw",
@@ -37,7 +24,6 @@ const ProjectCarousel = () => {
 
   return (
     <Box height="100%" width={width}>
-      <Carousel {...carouselProps}>
         {projectDB.map((project) => (
           <Box key={project.name}>
             <ProjectCard
@@ -50,7 +36,6 @@ const ProjectCarousel = () => {
             />
           </Box>
         ))}
-      </Carousel>
     </Box>
   );
 };
