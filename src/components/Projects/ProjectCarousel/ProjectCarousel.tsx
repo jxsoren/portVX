@@ -3,13 +3,6 @@ import { Box, useBreakpointValue } from "@chakra-ui/react";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { projectDB } from "../projectDB";
 
-import "./carouselOverrides.css";
-
-interface Item {
-  id: number;
-  title: string;
-}
-
 const ProjectCarousel = () => {
 
   const width = useBreakpointValue({
