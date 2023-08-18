@@ -7,7 +7,6 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
-
 import ProjectCard from "./ProjectCard/ProjectCard";
 import { projectDB } from "./projectDB";
 
@@ -16,15 +15,9 @@ import { AnimatedBox, getAnimations } from "@/hooks/useScroll";
 import ProjectCarousel from "./ProjectCarousel/ProjectCarousel";
 
 const Projects = () => {
-  const { rightToLeft, leftToRight, up, down, flip, slideFade, slideBlur } =
+  const { rightToLeft } =
     getAnimations();
 
-  const isExtraLargeSreen = useBreakpointValue({ base: false, xl: true });
-  const isLargeScreen = useBreakpointValue({ base: false, lg: true });
-  const isMediumScreen = useBreakpointValue({
-    base: false,
-    md: true,
-  });
   const isSmallScreen = useBreakpointValue({ base: false, sm: true });
 
   return (
