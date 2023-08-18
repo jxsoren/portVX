@@ -5,15 +5,10 @@ import {
   Container,
   Heading,
   Box,
-  List,
   Flex,
-  Spacer,
   VStack,
   GridItem,
-  HStack,
   Grid,
-  SimpleGrid,
-  useColorModeValue,
   useBreakpointValue,
 } from "@chakra-ui/react";
 
