@@ -78,6 +78,7 @@ const ProjectTechnologies: React.FC<ProjectTechnologiesProps> = ({
           direction="row"
           justifyContent="flex-start"
           color="white"
+          flexWrap="wrap"
           gap={4}
           p={2}
         >
