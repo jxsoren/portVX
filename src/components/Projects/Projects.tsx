@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  Heading,
-  Box,
-  Container,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Heading, Box, Container, useBreakpointValue } from "@chakra-ui/react";
 
 import ProjectCard from "./ProjectCard/ProjectCard";
 import { projectDB } from "./projectDB";
@@ -15,8 +10,7 @@ import { AnimatedBox, getAnimations } from "@/hooks/useScroll";
 import ProjectCarousel from "./ProjectCarousel/ProjectCarousel";
 
 const Projects = () => {
-  const { rightToLeft } =
-    getAnimations();
+  const { rightToLeft } = getAnimations();
 
   const isSmallScreen = useBreakpointValue({ base: false, sm: true });
 
@@ -28,6 +22,7 @@ const Projects = () => {
       color="white"
       backgroundColor="#183664"
       overflowX="hidden"
+      overflowY="hidden"
       centerContent
     >
       <AnimatedBox animation={rightToLeft}>
