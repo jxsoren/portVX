@@ -62,7 +62,7 @@ export default function Nav() {
       textColor="white"
       position="sticky"
       top={0}
-      zIndex={1}
+      zIndex={100}
     >
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
         <HStack spacing={8} alignItems={"center"}>
