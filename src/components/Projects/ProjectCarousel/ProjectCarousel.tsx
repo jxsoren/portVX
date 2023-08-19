@@ -1,10 +1,14 @@
 import { Box, useBreakpointValue } from "@chakra-ui/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper/modules";
+
+import 'swiper/css';
+import 'swiper/css/effect-cards';
 
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { projectDB } from "../projectDB";
 
 const ProjectCarousel = () => {
-
   const width = useBreakpointValue({
     base: "50vw",
     xs: "90vw",
@@ -17,8 +21,14 @@ const ProjectCarousel = () => {
 
   return (
     <Box height="100%" width={width}>
+      <Swiper
+        effect={"cards"}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper"
+      >
         {projectDB.map((project) => (
-          <Box key={project.name}>
+          <SwiperSlide key={project.name}>
             <ProjectCard
               name={project.name}
               about={project.about}
@@ -27,8 +37,9 @@ const ProjectCarousel = () => {
               thumbnail={project.thumbnail}
               links={project.links}
             />
-          </Box>
+          </SwiperSlide>
         ))}
+      </Swiper>
     </Box>
   );
 };
