@@ -1,15 +1,7 @@
 "use client";
 
 import React, { ReactNode, useState } from "react";
-import {
-  Box,
-  Flex,
-  HStack,
-  Button,
-  Image,
-  useColorMode,
-  Icon,
-} from "@chakra-ui/react";
+import { Box, Flex, HStack, Image } from "@chakra-ui/react";
 
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as ScrollLink } from "react-scroll";
@@ -64,7 +56,11 @@ export default function Nav() {
       top={0}
       zIndex={100}
     >
-      <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+      <Flex
+        h={16}
+        alignItems={"center"}
+        justifyContent={{ base: "center", md: "space-between" }}
+      >
         <HStack spacing={8} alignItems={"center"}>
           <ChakraLink
             as={ScrollLink}
