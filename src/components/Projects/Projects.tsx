@@ -27,6 +27,7 @@ const Projects = () => {
       marginTop="-10"
       color="white"
       backgroundColor="#183664"
+      overflowX="hidden"
       centerContent
     >
       <AnimatedBox animation={rightToLeft}>
