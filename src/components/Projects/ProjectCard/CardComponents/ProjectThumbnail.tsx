@@ -1,6 +1,6 @@
 "use client;";
 
-import { Image, Container, useBreakpointValue, Center } from "@chakra-ui/react";
+import { Image, useBreakpointValue, Center } from "@chakra-ui/react";
 import React from "react";
 
 interface ThumbnailProps {
@@ -9,8 +9,7 @@ interface ThumbnailProps {
 
 const ProjectThumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
   const width = useBreakpointValue({
-    base: "100%",
-    xs: "100%",
+    xs: "80%",
     sm: "100%",
     md: "100%",
     lg: "100%",
@@ -19,8 +18,7 @@ const ProjectThumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
   });
 
   const height = useBreakpointValue({
-    base: "200px",
-    xs: "200px",
+    xs: "150px",
     sm: "200px",
     md: "200px",
     lg: "200px",
