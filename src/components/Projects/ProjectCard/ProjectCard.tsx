@@ -28,8 +28,7 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   thumbnail,
   links,
 }) => {
-  const { rightToLeft, leftToRight, up, down, flip, slideFade, slideBlur } =
-    getAnimations();
+  const { slideFade } = getAnimations();
 
   const maxW = useBreakpointValue({
     base: "60vw",
@@ -50,48 +49,46 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   });
 
   return (
-    <AnimatedBox animation={leftToRight}>
-      <Card
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        variant="outline"
-        boxShadow={"lg"}
-        bgColor="#2D3748"
-        borderColor="#4A90E2"
-        borderWidth={4}
-        borderRadius={20}
-        color="white"
-        maxW={maxW}
-        height="100%"
-      >
-        <CardHeader textAlign="center" width="100%">
-          <Heading size="lg" mb="-5">
-            {name}
-          </Heading>
-        </CardHeader>
-        <CardBody flex="1" h="100%">
-          <Stack
-            direction="column"
-            justify="space-between"
-            divider={<StackDivider />}
-            spacing="3"
-          >
-            <ProjectThumbnail thumbnail={thumbnail} />
-            <ProjectAbout
-              about={about}
-              shortAbout={shortAbout}
-              headingSize={headingSize}
-            />
-            <ProjectTechnologies
-              technologies={technologies}
-              headingSize={headingSize}
-            />
-            <ProjectLinks links={links} headingSize={headingSize} />
-          </Stack>
-        </CardBody>
-      </Card>
-    </AnimatedBox>
+    <Card
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      variant="outline"
+      boxShadow={"lg"}
+      bgColor="#2D3748"
+      borderColor="#4A90E2"
+      borderWidth={4}
+      borderRadius={20}
+      color="white"
+      maxW={maxW}
+      height="100%"
+    >
+      <CardHeader textAlign="center" width="100%">
+        <Heading size="lg" mb="-5">
+          {name}
+        </Heading>
+      </CardHeader>
+      <CardBody flex="1" h="100%">
+        <Stack
+          direction="column"
+          justify="space-between"
+          divider={<StackDivider />}
+          spacing="3"
+        >
+          <ProjectThumbnail thumbnail={thumbnail} />
+          <ProjectAbout
+            about={about}
+            shortAbout={shortAbout}
+            headingSize={headingSize}
+          />
+          <ProjectTechnologies
+            technologies={technologies}
+            headingSize={headingSize}
+          />
+          <ProjectLinks links={links} headingSize={headingSize} />
+        </Stack>
+      </CardBody>
+    </Card>
   );
 };
 
