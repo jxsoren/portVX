@@ -15,7 +15,6 @@ import {
 import { skillsDB } from "./skillDB";
 import SkillCategory from "./SkillCategory";
 
-import { motion } from "framer-motion";
 import { AnimatedBox, getAnimations } from "@/hooks/useScroll";
 
 interface SectionTitleProps {
@@ -64,7 +63,7 @@ const Skills: React.FC = () => {
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
-      background="linear-gradient(#16161d, #1f1f3a, #3b2f4a)"
+      background="linear-gradient(#16161e, #2a2a36, #3f3f4f)"
       overflowX="hidden"
       overflowY="auto"
     >
