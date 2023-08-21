@@ -7,6 +7,7 @@ import {
   Flex,
   Box,
   useTheme,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 
 import { motion } from "framer-motion";
@@ -18,6 +19,17 @@ const AboutMe = () => {
 
   const [ref, inView] = useScrollAnimation();
   const { rightToLeft, leftToRight, up } = getAnimations();
+
+  const breakpoint = useBreakpointValue({
+    base: "xs",
+    sm: "sm",
+    md: "md",
+    lg: "lg",
+    xl: "xl",
+    xxl: "xxl",
+  });
+
+  const shouldAnimate = breakpoint !== "xs" && breakpoint !== "sm";
 
   return (
     <Box
@@ -37,8 +49,8 @@ const AboutMe = () => {
         <MotionBox
           maxWidth="100%"
           ref={ref}
-          variants={up}
-          animate={inView ? "show" : "hidden"}
+          variants={shouldAnimate ? up : {}}
+          animate={shouldAnimate && inView ? "show" : "hidden"}
         >
           <Heading
             color="#ffffff"
@@ -64,8 +76,8 @@ const AboutMe = () => {
           <MotionBox
             maxWidth="100%"
             ref={ref}
-            variants={leftToRight}
-            animate={inView ? "show" : "hidden"}
+            variants={shouldAnimate ? up : {}}
+            animate={shouldAnimate && inView ? "show" : "hidden"}
           >
             <Text
               fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
@@ -82,8 +94,8 @@ const AboutMe = () => {
           <MotionBox
             maxWidth="100%"
             ref={ref}
-            variants={rightToLeft}
-            animate={inView ? "show" : "hidden"}
+            variants={shouldAnimate ? up : {}}
+            animate={shouldAnimate && inView ? "show" : "hidden"}
           >
             <Text
               fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
@@ -101,8 +113,8 @@ const AboutMe = () => {
           <MotionBox
             maxWidth="100%"
             ref={ref}
-            variants={leftToRight}
-            animate={inView ? "show" : "hidden"}
+            variants={shouldAnimate ? up : {}}
+            animate={shouldAnimate && inView ? "show" : "hidden"}
           >
             <Text
               fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
