@@ -67,18 +67,18 @@ export const skillsDB: Technologies = {
     { name: "REST API", icon: AiOutlineApi, color: "#007acc" },
   ],
   platforms: [
-    { name: "Linux", icon: FaLinux, color: "#000000" },
+    { name: "Linux", icon: FaLinux, color: "#F8F8FF" },
     { name: "Ubuntu", icon: FaUbuntu, color: "#e95420" },
-    { name: "macOS", icon: AiFillApple, color: "#fffff" },
+    { name: "macOS", icon: AiFillApple, color: "#ffff" },
     { name: "Windows", icon: BsWindows, color: "#0078d6" },
   ],
   cloud: [
     { name: "AWS", icon: FaAws, color: "#FF9900" },
-    { name: "Heroku", icon: SiHeroku, color: "#430098" },
+    { name: "Heroku", icon: SiHeroku, color: "#a762ff" },
   ],
   CCID: [
-    { name: "Kanban", icon: MdOutlineViewKanban, color: "#430098" },
-    { name: "Github", icon: FaGithubAlt, color: "#000000." },
+    { name: "Kanban", icon: MdOutlineViewKanban, color: "#a762ff" },
+    { name: "Github", icon: FaGithubAlt, color: "#000000" },
     { name: "Gitlab", icon: AiOutlineGitlab, color: "#fca121" },
     { name: "Scrum", icon: DiScrum, color: "#189ab6" },
     { name: "Perforce", icon: SiPerforce, color: "#000000" },
