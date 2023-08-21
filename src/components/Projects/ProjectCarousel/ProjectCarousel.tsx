@@ -15,7 +15,7 @@ const ProjectCarousel = () => {
     sm: "90vw",
     md: "80vw",
     lg: "70vw",
-    xl: "45vw",
+    xl: "60vw",
     xxl: "45vw",
   });
 
