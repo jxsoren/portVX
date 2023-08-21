@@ -1,9 +1,4 @@
-import {
-  Text,
-  Icon,
-  Box,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Text, Icon, Box, useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
 
 import { TechSkill } from "./skillDB";
