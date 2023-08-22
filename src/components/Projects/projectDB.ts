@@ -32,65 +32,6 @@ export interface ProjectRecipe {
 
 export const projectDB: ProjectRecipe[] = [
   {
-    name: "Quickcipie",
-    about:
-      "Quickcipe is a sleek and user-friendly recipe creation app that simplifies the recipe-making process by delivering concise and easy-to-follow instructions. With Quickcipe, users can create their own recipes with ease, using only the necessary ingredients and steps.",
-    shortAbout:
-      "Quickcipe simplifies recipe creation with concise instructions, enabling users to create their own recipes with ease.",
-    technologies: [
-      { name: "Javascript", icon: DiJavascript1, color: "#f7df1e" },
-      { name: "Mongo", icon: SiMongodb, color: "#4db33d" },
-      { name: "Express", icon: SiExpress, color: "#000000" },
-      { name: "React", icon: FaReact, color: "#61dafb" },
-      { name: "NodeJS", icon: FaNodeJs, color: "#68a063" },
-      { name: "Sass", icon: SiSass, color: "#c69" },
-    ],
-    thumbnail: "./thumbnails/quickcipie.png",
-    links: [
-      {
-        name: "Live",
-        link: "https://quickcipe.herokuapp.com/",
-        color: "#FF0000",
-        icon: CgWebsite,
-      },
-      {
-        name: "Github",
-        link: "https://github.com/jxsoren/quickcipe",
-        color: "#181717",
-        icon: VscGithubAlt,
-      },
-    ],
-  },
-  {
-    name: "Hot Take HQ",
-    about:
-      "Hot Take HQ is a dynamic online platform that offers a secure environment for users to share and contrast their viewpoints on a wide range of subjects. Users can engage in vibrant debates via its agree/disagree feature to cultivate fresh perspectives.",
-    shortAbout:
-      "Hot Take HQ is an online platform for users to share viewpoints and engage in debates to cultivate fresh perspectives.",
-    technologies: [
-      { name: "Javascript", icon: DiJavascript1, color: "#f7df1e" },
-      { name: "Mongo", icon: SiMongodb, color: "#4db33d" },
-      { name: "Express", icon: SiExpress, color: "#000000" },
-      { name: "React", icon: FaReact, color: "#61dafb" },
-      { name: "NodeJS", icon: FaNodeJs, color: "#68a063" },
-    ],
-    thumbnail: "./thumbnails/hotTakeHQ.png",
-    links: [
-      {
-        name: "Live",
-        link: "https://hot-take-app.herokuapp.com/",
-        color: "#FF0000",
-        icon: CgWebsite,
-      },
-      {
-        name: "Github",
-        link: "https://github.com/jxsoren/hot-take-app",
-        color: "#181717",
-        icon: VscGithubAlt,
-      },
-    ],
-  },
-  {
     name: "Retro Terminal RPG",
     about:
       "Text-based role-playing game based on the popular video game series, Bioshock. Designed to be run inside the terminal using Node.js and JavaScript, and features a variety of gameplay mechanics, including combat, inventory management, and character progression.",
@@ -133,6 +74,65 @@ export const projectDB: ProjectRecipe[] = [
       {
         name: "Github",
         link: "https://github.com/jxsoren/portVX",
+        color: "#181717",
+        icon: VscGithubAlt,
+      },
+    ],
+  },
+  {
+    name: "Hot Take HQ",
+    about:
+      "Hot Take HQ is a dynamic online platform that offers a secure environment for users to share and contrast their viewpoints on a wide range of subjects. Users can engage in vibrant debates via its agree/disagree feature to cultivate fresh perspectives.",
+    shortAbout:
+      "Hot Take HQ is an online platform for users to share viewpoints and engage in debates to cultivate fresh perspectives.",
+    technologies: [
+      { name: "Javascript", icon: DiJavascript1, color: "#f7df1e" },
+      { name: "Mongo", icon: SiMongodb, color: "#4db33d" },
+      { name: "Express", icon: SiExpress, color: "#000000" },
+      { name: "React", icon: FaReact, color: "#61dafb" },
+      { name: "NodeJS", icon: FaNodeJs, color: "#68a063" },
+    ],
+    thumbnail: "./thumbnails/hotTakeHQ.png",
+    links: [
+      {
+        name: "Live",
+        link: "https://hot-take-app.herokuapp.com/",
+        color: "#FF0000",
+        icon: CgWebsite,
+      },
+      {
+        name: "Github",
+        link: "https://github.com/jxsoren/hot-take-app",
+        color: "#181717",
+        icon: VscGithubAlt,
+      },
+    ],
+  },
+  {
+    name: "Quickcipie",
+    about:
+      "Quickcipe is a sleek and user-friendly recipe creation app that simplifies the recipe-making process by delivering concise and easy-to-follow instructions. With Quickcipe, users can create their own recipes with ease, using only the necessary ingredients and steps.",
+    shortAbout:
+      "Quickcipe simplifies recipe creation with concise instructions, enabling users to create their own recipes with ease.",
+    technologies: [
+      { name: "Javascript", icon: DiJavascript1, color: "#f7df1e" },
+      { name: "Mongo", icon: SiMongodb, color: "#4db33d" },
+      { name: "Express", icon: SiExpress, color: "#000000" },
+      { name: "React", icon: FaReact, color: "#61dafb" },
+      { name: "NodeJS", icon: FaNodeJs, color: "#68a063" },
+      { name: "Sass", icon: SiSass, color: "#c69" },
+    ],
+    thumbnail: "./thumbnails/quickcipie.png",
+    links: [
+      {
+        name: "Live",
+        link: "https://quickcipe.herokuapp.com/",
+        color: "#FF0000",
+        icon: CgWebsite,
+      },
+      {
+        name: "Github",
+        link: "https://github.com/jxsoren/quickcipe",
         color: "#181717",
         icon: VscGithubAlt,
       },
