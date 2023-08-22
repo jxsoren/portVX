@@ -10,15 +10,16 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
-import { motion } from "framer-motion";
-import { useScrollAnimation, getAnimations } from "@/hooks/useScroll";
-const MotionBox = motion(Box);
+import {
+  useScrollAnimation,
+  getAnimations,
+  AnimatedBox,
+} from "@/hooks/useScroll";
 
 const AboutMe = () => {
   const theme = useTheme();
 
-  const [ref, inView] = useScrollAnimation();
-  const { rightToLeft, leftToRight, up } = getAnimations();
+  const { up, rightToLeft, leftToRight } = getAnimations();
 
   const breakpoint = useBreakpointValue({
     base: "xs",
@@ -34,11 +35,12 @@ const AboutMe = () => {
   return (
     <Box
       width="100%"
+      height="100%"
       aspectRatio={960 / 300}
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
-      backgroundColor="#01030b"
+      background="linear-gradient(#01030b, #0a0a15, #1a1a2e)"
     >
       <Container
         maxW="2x1"
@@ -46,12 +48,7 @@ const AboutMe = () => {
         overflowX="hidden"
         position="relative"
       >
-        <MotionBox
-          maxWidth="100%"
-          ref={ref}
-          variants={shouldAnimate ? up : {}}
-          animate={shouldAnimate && inView ? "show" : "hidden"}
-        >
+        <AnimatedBox animation={shouldAnimate ? up : undefined}>
           <Heading
             color="#ffffff"
             fontSize="5xl"
@@ -63,7 +60,7 @@ const AboutMe = () => {
           >
             About Me
           </Heading>
-        </MotionBox>
+        </AnimatedBox>
         <Flex
           direction="column"
           align="center"
@@ -73,12 +70,7 @@ const AboutMe = () => {
           maxW={{ sm: "80%", md: "80%", lg: "60%", xl: "70%" }}
           fontFamily={theme.fonts.body}
         >
-          <MotionBox
-            maxWidth="100%"
-            ref={ref}
-            variants={shouldAnimate ? up : {}}
-            animate={shouldAnimate && inView ? "show" : "hidden"}
-          >
+          <AnimatedBox animation={shouldAnimate ? leftToRight : undefined}>
             <Text
               fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
               lineHeight="tall"
@@ -89,14 +81,9 @@ const AboutMe = () => {
             >
               {`Intrigued by the world of coding and technology, I've dedicated my career to creating efficient and user-friendly solutions. I have a strong knack for problem-solving and enjoy the challenge of breaking down complex issues into manageable tasks.`}
             </Text>
-          </MotionBox>
+          </AnimatedBox>
 
-          <MotionBox
-            maxWidth="100%"
-            ref={ref}
-            variants={shouldAnimate ? up : {}}
-            animate={shouldAnimate && inView ? "show" : "hidden"}
-          >
+          <AnimatedBox animation={shouldAnimate ? rightToLeft : undefined}>
             <Text
               fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
               mt={10}
@@ -108,14 +95,9 @@ const AboutMe = () => {
             >
               {`From meticulously crafting user interfaces to structuring robust backend architectures, my goal is to continuously grow, learn, and push the boundaries of what I can achieve.`}
             </Text>
-          </MotionBox>
+          </AnimatedBox>
 
-          <MotionBox
-            maxWidth="100%"
-            ref={ref}
-            variants={shouldAnimate ? up : {}}
-            animate={shouldAnimate && inView ? "show" : "hidden"}
-          >
+          <AnimatedBox animation={shouldAnimate ? leftToRight : undefined}>
             <Text
               fontSize={{ base: "md", md: "lg", lg: "xl", xl: "2xl" }}
               mt={10}
@@ -127,8 +109,8 @@ const AboutMe = () => {
             >
               {`Apart from developing software, my passions lie in exploring Utah's breathtaking landscapes, delving into literature and philosophy, and maintaining an active routine at the gym.`}
             </Text>
-          </MotionBox>
-        </Flex>{" "}
+          </AnimatedBox>
+        </Flex>
       </Container>
     </Box>
   );
