@@ -19,7 +19,7 @@ const Logo = () => {
 
 const Footer = () => {
   return (
-    <Box as="footer" py="6" color="white" w="100%" backgroundColor="#01030b">
+    <Box as="footer" py="6" color="white" w="100%" backgroundColor="#1a1a2e">
       <Box>
         <Flex
           align={"center"}
@@ -52,7 +52,7 @@ const Footer = () => {
                 aria-label="Github"
                 icon={<FaGithub />}
                 mr="4"
-                bgColor="black"
+                bgColor="#0a0a1a"
                 color="white"
                 size="lg"
                 isRound
@@ -66,7 +66,7 @@ const Footer = () => {
                 aria-label="LinkedIn"
                 icon={<FaLinkedin />}
                 mr="4"
-                bgColor="black"
+                bgColor="#0a0a1a"
                 color="white"
                 size="lg"
                 isRound
@@ -79,7 +79,7 @@ const Footer = () => {
                 href="mailto:jxsoren@gmail.com"
                 aria-label="Email"
                 icon={<FaEnvelope />}
-                bgColor="black"
+                bgColor="#0a0a1a"
                 color="white"
                 size="lg"
                 isRound
