@@ -6,6 +6,10 @@ const LayeredSVG = ({ bgI }: { bgI: string }) => {
 
   const aspectRatio = useBreakpointValue({
     base: 960 / 540,
+    xxl: 960 / 540,
+    xl: 960 / 540,
+    lg: 960 / 540,
+    md: 960 / 540,
     sm: 960 / 1200,
     xs: 960 / 1200,
   });
