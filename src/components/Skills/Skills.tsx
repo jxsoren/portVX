@@ -63,7 +63,7 @@ const Skills: React.FC = () => {
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
-      background="linear-gradient(#16161e, #2a2a36, #3f3f4f)"
+      background="linear-gradient(#16161e, #2a2a36, #3e3e4e)"
       overflowX="hidden"
       overflowY="auto"
     >
