@@ -28,8 +28,6 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   thumbnail,
   links,
 }) => {
-  const { slideFade } = getAnimations();
-
   const maxW = useBreakpointValue({
     base: "60vw",
     xs: "90vw",
