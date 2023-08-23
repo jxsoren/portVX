@@ -31,19 +31,13 @@ const AboutMe = () => {
   return (
     <Box
       width="100%"
-      height="100%"
       aspectRatio={960 / 300}
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
       background="linear-gradient(#01030b, #0a0a15, #1a1a2e)"
-      overflowX="hidden"
     >
-      <Container
-        maxW="2x1"
-        centerContent
-        position="relative"
-      >
+      <Container maxW="2x1" centerContent position="relative">
         <AnimatedBox animation={shouldAnimate ? up : undefined}>
           <Heading
             color="#ffffff"
