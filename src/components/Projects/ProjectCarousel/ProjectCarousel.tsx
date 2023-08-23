@@ -10,12 +10,11 @@ import { projectDB } from "../projectDB";
 
 const ProjectCarousel = () => {
   const width = useBreakpointValue({
-    base: "50vw",
     xs: "90vw",
     sm: "90vw",
     md: "80vw",
     lg: "70vw",
-    xl: "60vw",
+    xl: "55vw",
     xxl: "45vw",
   });
 
