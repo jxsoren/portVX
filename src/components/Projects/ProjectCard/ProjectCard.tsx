@@ -29,12 +29,12 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
   links,
 }) => {
   const maxW = useBreakpointValue({
-    base: "60vw",
     xs: "90vw",
     sm: "90vw",
     md: "80vw",
     lg: "70vw",
     xl: "60vw",
+    xxl: "60vw",
   });
 
   const headingSize = useBreakpointValue({
