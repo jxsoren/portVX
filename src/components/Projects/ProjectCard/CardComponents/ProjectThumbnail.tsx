@@ -9,20 +9,20 @@ interface ThumbnailProps {
 
 const ProjectThumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
   const width = useBreakpointValue({
-    xs: "80%",
+    xs: "100%",
     sm: "100%",
-    md: "100%",
-    lg: "100%",
-    xl: "100%",
-    xxl: "90%",
+    md: "80%",
+    lg: "80%",
+    xl: "80%",
+    xxl: "80%",
   });
 
   const height = useBreakpointValue({
     xs: "150px",
-    sm: "200px",
-    md: "200px",
-    lg: "200px",
-    xl: "200px",
+    sm: "150px",
+    md: "175px",
+    lg: "175px",
+    xl: "175px",
     xxl: "200px",
   });
 
