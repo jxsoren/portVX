@@ -10,11 +10,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
-import {
-  useScrollAnimation,
-  getAnimations,
-  AnimatedBox,
-} from "@/hooks/useScroll";
+import { getAnimations, AnimatedBox } from "@/hooks/useScroll";
 
 const AboutMe = () => {
   const theme = useTheme();
@@ -41,11 +37,11 @@ const AboutMe = () => {
       bgRepeat="no-repeat"
       bgSize="cover"
       background="linear-gradient(#01030b, #0a0a15, #1a1a2e)"
+      overflowX="hidden"
     >
       <Container
         maxW="2x1"
         centerContent
-        overflowX="hidden"
         position="relative"
       >
         <AnimatedBox animation={shouldAnimate ? up : undefined}>
