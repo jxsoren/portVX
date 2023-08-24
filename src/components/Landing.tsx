@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Box,
-  Heading,
-  Container,
-  Stack,
-  useColorModeValue,
-  useTheme,
-} from "@chakra-ui/react";
+import { Box, Heading, Container, Stack, useTheme } from "@chakra-ui/react";
 
 import Stars from "./Stars/Stars";
 
@@ -16,9 +9,6 @@ import { useScrollAnimation, getAnimations } from "@/hooks/useScroll";
 const MotionBox = motion(Box);
 
 export default function Landing() {
-  const bgColor = useColorModeValue("light.background", "dark.background");
-  const textColor = useColorModeValue("light.text", "dark.text");
-
   const theme = useTheme();
 
   const [ref, inView] = useScrollAnimation();
