@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
 import Landing from "./Landing";
 import Nav from "./Navbar/Nav";
@@ -11,10 +11,8 @@ import Projects from "./Projects/Projects";
 import LayeredSVG from "./LayeredSVG";
 
 export default function Home() {
-  const bgColor = useColorModeValue("light.background", "dark.background");
-
   return (
-    <Box bgColor={bgColor}>
+    <Box bgColor="#00000">
       <Nav />
       <Box id="landing">
         <Landing />
