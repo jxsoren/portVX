@@ -9,7 +9,6 @@ import {
   Text,
   Tooltip,
   Container,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
@@ -27,14 +26,14 @@ const Footer = () => {
           _before={{
             content: '""',
             borderBottom: "1px solid",
-            borderColor: useColorModeValue("white.200", "white.700"),
+            borderColor: "#ffffff",
             flexGrow: 1,
             mr: 8,
           }}
           _after={{
             content: '""',
             borderBottom: "1px solid",
-            borderColor: useColorModeValue("whiie.200", "white.700"),
+            borderColor: "#ffffff",
             flexGrow: 1,
             ml: 8,
           }}
