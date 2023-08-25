@@ -18,10 +18,6 @@ const theme = extendTheme({
     xxl: "96em",
   },
   colors: {
-    brand: {
-      100: "#f7fafc",
-      900: "#1a202c",
-    },
     light: {
       text: "#000000",
       background: "#ffffff",
