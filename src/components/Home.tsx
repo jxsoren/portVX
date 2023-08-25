@@ -8,6 +8,7 @@ import Footer from "./Footer/Footer";
 import AboutMe from "./AboutMe/AboutMe";
 import Skills from "./Skills/Skills";
 import Projects from "./Projects/Projects";
+import Resume from "./Resume/Resume";
 import LayeredSVG from "./LayeredSVG";
 
 export default function Home() {
@@ -24,6 +25,10 @@ export default function Home() {
       <LayeredSVG bgI="url('/SVG/skills-projects.svg')" />
       <Box id="projects">
         <Projects />
+      </Box>
+      <LayeredSVG bgI="url('/SVG/projects-resume.svg')" />
+      <Box id="resume">
+        <Resume />
       </Box>
       <LayeredSVG bgI="url('/SVG/projects-aboutMe.svg')" />
       <Box id="about">
