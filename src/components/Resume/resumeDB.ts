@@ -13,6 +13,7 @@ export interface JobRecipe {
     technologies: { name: string; icon: As; color: string }[];
     links: { name: string; link: string; color: string; icon: As }[];
   }[];
+  image: string;
 }
 
 export const jobDB: JobRecipe[] = [
@@ -20,13 +21,14 @@ export const jobDB: JobRecipe[] = [
     company: "Filevine",
     role: "Technical Support Engineer I & II",
     location: "Salt Lake City, UT",
-    duration: "Oct 2022 - Present",
+    duration: "Nov 2022 - Present",
     responsibilities: [
-      "Diagnosed and troubleshooted product defects using Developer Tools, AWS Cloud Watch, AWS Athena, and SQL.",
-      "Managed REST API inquiries with Postman and API testing tools.",
-      "Collaborated with product and engineering teams to address product defects.",
-      "Built and troubleshot client automations in Zapier and Workato.",
+      "Diagnosed and troubleshooted product defects using Developer Tools, AWS Cloud Watch, AWS Athena, and SQL, resulting in a streamlined reporting and resolution process with the engineering team by leveraging technical expertise.",
+      "Managed REST API inquiries with Postman and API testing tools, leading to enhanced product quality and customer satisfaction by efficiently crafting API defect write-ups.",
+      "Collaborated with product and engineering teams to address product defects, achieving improved product functionality and client satisfaction through joint efforts.",
+      "Built and troubleshot client automations in Zapier and Workato, leading to streamlined business processes and efficient workflows by understanding client needs.",
     ],
+    image: "/companyImages/filevine.jfif",
   },
   {
     company: "Impartner",
@@ -34,10 +36,11 @@ export const jobDB: JobRecipe[] = [
     location: "Salt Lake City, UT",
     duration: "Aug 2021 - Sep 2022",
     responsibilities: [
-      "Utilized HTML, CSS, JS, C# and the .Net framework to develop frontend components.",
-      "Applied developer tools in a Scrum environment to locate and fix issues in customer portals.",
-      "Addressed technical support requests efficiently.",
+      "Utilized HTML, CSS, JS, C# and the .Net framework to develop frontend components, enhancing user interface functionality and user experience for client websites.",
+      "Applied developer tools in a Scrum environment to locate and fix issues in customer portals, ensuring a seamless user experience through systematic debugging techniques.",
+      "Addressed technical support requests efficiently, contributing to a perfect satisfaction rate and stronger client relationships through dedicated assistance.",
     ],
+    image: "/companyImages/impartner.jfif",
   },
   {
     company: "V School",
@@ -45,10 +48,11 @@ export const jobDB: JobRecipe[] = [
     location: "Remote",
     duration: "May 2021 - Aug 2021",
     responsibilities: [
-      "Orchestrated daily stand-up meetings with students in an Agile environment.",
-      "Delivered technical assistance to students.",
-      "Worked with program directors to track and report student progress.",
+      "Orchestrated daily stand-up meetings with students in an Agile environment, ensuring tracking of progress and identification of support areas.",
+      "Delivered technical assistance to students, fostering their understanding and progression using a student-focused approach.",
+      "Worked with program directors to track and report student progress, aligning with program goals through accurate data analysis.",
     ],
+    image: "/companyImages/vschool.jfif",
   },
 ];
 
