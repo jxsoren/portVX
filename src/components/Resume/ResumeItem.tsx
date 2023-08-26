@@ -1,52 +1,70 @@
-"use client";
-
 import React from "react";
-
 import {
   Text,
-  Container,
   Heading,
-  Flex,
   Box,
-  useTheme,
-  useBreakpointValue,
+  UnorderedList,
+  ListItem,
+  Divider,
+  VStack,
+  Image
 } from "@chakra-ui/react";
-
-import { getAnimations, AnimatedBox } from "@/hooks/useScroll";
-
-interface ResumeItemProps {
-  title: string;
-  subtitle: string;
-  date: string;
-  children: string;
-}
-
 import { JobRecipe } from "./resumeDB";
 
-const ResumeItem: React.FC<JobRecipe> = ({
+interface ResumeItemProps extends JobRecipe {}
+
+const ResumeItem: React.FC<ResumeItemProps> = ({
   company,
   role,
   location,
   duration,
   responsibilities,
+  image
 }) => {
   return (
-    <Box>
-      <Heading as="h2">Company</Heading>
-      <Heading as="h3">{company}</Heading>
+    <VStack align="start" spacing={4} mt={10}>
+            <Image src={image} alt={company} width="100px" height="100px" mb="4" /> 
+      <Box>
+        <Heading as="h3" size="md">
+          Company
+        </Heading>
+        <Text>{company}</Text>
+      </Box>
 
-      <Heading as="h2">Role</Heading>
-      <Heading as="h3">{role}</Heading>
+      <Box>
+        <Heading as="h3" size="md">
+          Role
+        </Heading>
+        <Text>{role}</Text>
+      </Box>
 
-      <Heading as="h2">Location</Heading>
-      <Heading as="h3">{location}</Heading>
+      <Box>
+        <Heading as="h3" size="md">
+          Location
+        </Heading>
+        <Text>{location}</Text>
+      </Box>
 
-      <Heading as="h2">Duration</Heading>
-      <Heading as="h3">{duration}</Heading>
+      <Box>
+        <Heading as="h3" size="md">
+          Duration
+        </Heading>
+        <Text>{duration}</Text>
+      </Box>
 
-      <Heading as="h2">Responsibilities</Heading>
-      <Heading as="h3">{responsibilities}</Heading>
-    </Box>
+      <Box>
+        <Heading as="h3" size="md">
+          Responsibilities
+        </Heading>
+        <UnorderedList>
+          {responsibilities.map((responsibility, index) => (
+            <ListItem key={index}>{responsibility}</ListItem>
+          ))}
+        </UnorderedList>
+      </Box>
+
+      <Divider />
+    </VStack>
   );
 };
 
