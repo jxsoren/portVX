@@ -44,6 +44,7 @@ const Resume = () => {
             location={job.location}
             duration={job.duration}
             responsibilities={job.responsibilities}
+            image={job.image}
           />
         ))}
       </Flex>
