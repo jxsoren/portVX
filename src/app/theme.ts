@@ -38,12 +38,6 @@ const theme = extendTheme({
         bg:
           props?.colorMode === "light" ? "light.background" : "dark.background",
       },
-      h3: {
-        background: "linear-gradient(to right, #7928CA, #FF0080)",
-        "-webkit-background-clip": "text",
-        "-webkit-text-fill-color": "transparent",
-        textShadow: "1px 1px #FF0080",
-      },
     }),
   },
 });
