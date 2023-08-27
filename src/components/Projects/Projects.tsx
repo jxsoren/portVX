@@ -16,9 +16,9 @@ const Projects = () => {
 
   return (
     <Container
-      maxW={"100%"}
+      maxW="100%"
       minH="100vh"
-      marginTop="-10"
+      mt="-10"
       color="white"
       background="linear-gradient(#16161d, #1f1f3a, #173663)"
       overflowX="hidden"
