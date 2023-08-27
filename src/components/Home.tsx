@@ -30,7 +30,7 @@ export default function Home() {
       <Box id="resume">
         <Resume />
       </Box>
-      <LayeredSVG bgI="url('/SVG/projects-aboutMe.svg')" />
+      <LayeredSVG bgI="url('/SVG/resume-about.svg')" />
       <Box id="about">
         <AboutMe />
       </Box>
