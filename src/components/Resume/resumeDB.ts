@@ -1,38 +1,83 @@
 import { As } from "@chakra-ui/react";
 
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3,
+  FaLinux,
+  FaNodeJs,
+  FaSass,
+  FaUbuntu,
+  FaAws,
+  FaGithubAlt,
+} from "react-icons/fa";
+import {
+  SiExpress,
+  SiMongodb,
+  SiNextdotjs,
+  SiTypescript,
+  SiChakraui,
+  SiHeroku,
+  SiPerforce,
+} from "react-icons/si";
+
+import { AiOutlineGitlab } from "react-icons/ai";
+
+import { DiJavascript1 } from "react-icons/di";
+import { DiScrum } from "react-icons/di";
+import { MdOutlineViewKanban } from "react-icons/md";
+import { AiFillApple, AiOutlineApi } from "react-icons/ai";
+import { BsWindows } from "react-icons/bs";
+
+export interface TechSkill {
+  name: string;
+  icon: As;
+  color: string;
+}
+
 export interface JobRecipe {
   company: string;
   role: string;
   location: string;
   duration: string;
   responsibilities: string[];
-  technologies?: { name: string; icon: As; color: string }[];
-  projects?: {
-    name: string;
-    description: string;
-    technologies: { name: string; icon: As; color: string }[];
-    links: { name: string; link: string; color: string; icon: As }[];
-  }[];
+  technologies?: TechSkill[];
   image: string;
+  imageLong: string;
 }
 
 export const jobDB: JobRecipe[] = [
   {
     company: "Filevine",
-    role: "Technical Support Engineer I & II",
+    role: "Support Engineer II | API Support Engineer",
     location: "Salt Lake City, UT",
     duration: "Nov 2022 - Present",
     responsibilities: [
-      "Diagnosed and troubleshooted product defects using Developer Tools, AWS Cloud Watch, AWS Athena, and SQL, resulting in a streamlined reporting and resolution process with the engineering team by leveraging technical expertise.",
+      "Diagnosed and troubleshot product defects using Developer Tools, AWS Cloud Watch, AWS Athena, and SQL, resulting in a streamlined reporting and resolution process with the engineering team by leveraging technical expertise.",
       "Managed REST API inquiries with Postman and API testing tools, leading to enhanced product quality and customer satisfaction by efficiently crafting API defect write-ups.",
       "Collaborated with product and engineering teams to address product defects, achieving improved product functionality and client satisfaction through joint efforts.",
       "Built and troubleshot client automations in Zapier and Workato, leading to streamlined business processes and efficient workflows by understanding client needs.",
     ],
-    image: "/companyImages/filevine.jfif",
+    technologies: [
+      { name: "AWS", icon: FaAws, color: "#f90" },
+      { name: "Postman", icon: FaNodeJs, color: "#68a063" },
+      { name: "Zapier", icon: FaNodeJs, color: "#68a063" },
+      { name: "Workato", icon: FaNodeJs, color: "#68a063" },
+      { name: "SQL", icon: FaNodeJs, color: "#68a063" },
+      { name: "Athena", icon: FaNodeJs, color: "#68a063" },
+      { name: "CloudWatch", icon: FaNodeJs, color: "#68a063" },
+      { name: "Developer Tools", icon: FaNodeJs, color: "#68a063" },
+      { name: "GitLab", icon: AiOutlineGitlab, color: "#fca121" },
+      { name: "Scrum", icon: DiScrum, color: "#000" },
+      { name: "Apple", icon: AiFillApple, color: "#000" },
+      { name: "API", icon: AiOutlineApi, color: "#000" },
+    ],
+    image: "/companyImages/filevine.png",
+    imageLong: "/companyImages/filevineLong.png",
   },
   {
     company: "Impartner",
-    role: "Technical Support Developer",
+    role: "Support Web Developer",
     location: "Salt Lake City, UT",
     duration: "Aug 2021 - Sep 2022",
     responsibilities: [
@@ -40,7 +85,8 @@ export const jobDB: JobRecipe[] = [
       "Applied developer tools in a Scrum environment to locate and fix issues in customer portals, ensuring a seamless user experience through systematic debugging techniques.",
       "Addressed technical support requests efficiently, contributing to a perfect satisfaction rate and stronger client relationships through dedicated assistance.",
     ],
-    image: "/companyImages/impartner.jfif",
+    image: "/companyImages/impartner.png",
+    imageLong: "/companyImages/impartner.svg",
   },
   {
     company: "V School",
@@ -52,16 +98,33 @@ export const jobDB: JobRecipe[] = [
       "Delivered technical assistance to students, fostering their understanding and progression using a student-focused approach.",
       "Worked with program directors to track and report student progress, aligning with program goals through accurate data analysis.",
     ],
-    image: "/companyImages/vschool.jfif",
+    technologies: [
+      { name: "JavaScript", icon: DiJavascript1, color: "#f7df1e" },
+      { name: "HTML", icon: FaHtml5, color: "#e34f26" },
+      { name: "CSS", icon: FaCss3, color: "#264de4" },
+      { name: "Sass", icon: FaSass, color: "#c69" },
+      { name: "Node", icon: FaNodeJs, color: "#68a063" },
+      { name: "REST API", icon: AiOutlineApi, color: "#007acc" },
+      { name: "Perforce", icon: SiPerforce, color: "#000000" },
+      { name: "Git", icon: FaGithubAlt, color: "#000000" },
+    ],
+    image: "/companyImages/vschool.png",
+    imageLong: "/companyImages/vschoolLong.png",
   },
 ];
 
 export const educationDB = [
   {
-    institution: "V School Coding Bootcamp",
+    institution: "V School Software Engineering Immersive",
     location: "Remote",
     year: "2021",
     description:
       "Learned industry best practices and practical Front End and Back End (Full Stack) software development standards with a focus on HTML5, CSS3, JavaScript, Node.JS, React, REST APIs, and MongoDB. Created and deployed mobile-first applications while learning new languages and frameworks by collaborating every week with a senior web developer.",
+  },
+  {
+    institution: "Taylorsville High School",
+    location: "Taylorsville, UT",
+    year: "2019",
+    description: ".",
   },
 ];
