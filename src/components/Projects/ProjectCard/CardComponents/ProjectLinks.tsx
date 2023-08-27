@@ -27,12 +27,7 @@ interface ProjectLinksProps {
 
 const Links: React.FC<LinksProps> = ({ name, link, color, icon }) => {
   const iconSize = useBreakpointValue({
-    xs: 8,
-    sm: 8,
-    md: 8,
-    lg: 8,
-    xl: 8,
-    xxl: 8,
+    base: 8,
   });
 
   return (
