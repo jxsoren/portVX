@@ -15,7 +15,7 @@ import {
   Container,
 } from "@chakra-ui/react";
 
-import ResumeCard from "./ResumeCard";
+import ResumeCard from "./ResumeCard/ResumeCard";
 import { jobDB } from "./resumeDB";
 
 const Resume = () => {
@@ -62,6 +62,7 @@ const Resume = () => {
             location={job.location}
             duration={job.duration}
             responsibilities={job.responsibilities}
+            technologies={job.technologies}
             image={job.image}
             imageLong={job.imageLong}
           />
