@@ -50,7 +50,6 @@ export default function Nav() {
     <Box
       bg="black"
       px={4}
-      boxShadow="dark-lg"
       textColor="white"
       position="sticky"
       top={0}
