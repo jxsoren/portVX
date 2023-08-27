@@ -39,7 +39,7 @@ export const projectDB: ProjectRecipe[] = [
       "A text-based RPG based on Bioshock, designed for terminal use, featuring combat, inventory management, and character progression.",
     technologies: [
       { name: "Javascript", icon: DiJavascript1, color: "#f7df1e" },
-      { name: "NodeJS", icon: FaNodeJs, color: "#68a063" },
+      { name: "Node", icon: FaNodeJs, color: "#68a063" },
     ],
     thumbnail: "./thumbnails/nodeRPG.png",
     links: [
@@ -90,7 +90,7 @@ export const projectDB: ProjectRecipe[] = [
       { name: "Mongo", icon: SiMongodb, color: "#4db33d" },
       { name: "Express", icon: SiExpress, color: "#000000" },
       { name: "React", icon: FaReact, color: "#61dafb" },
-      { name: "NodeJS", icon: FaNodeJs, color: "#68a063" },
+      { name: "Node", icon: FaNodeJs, color: "#68a063" },
     ],
     thumbnail: "./thumbnails/hotTakeHQ.png",
     links: [
@@ -119,7 +119,7 @@ export const projectDB: ProjectRecipe[] = [
       { name: "Mongo", icon: SiMongodb, color: "#4db33d" },
       { name: "Express", icon: SiExpress, color: "#000000" },
       { name: "React", icon: FaReact, color: "#61dafb" },
-      { name: "NodeJS", icon: FaNodeJs, color: "#68a063" },
+      { name: "Node", icon: FaNodeJs, color: "#68a063" },
       { name: "Sass", icon: SiSass, color: "#c69" },
     ],
     thumbnail: "./thumbnails/quickcipie.png",
