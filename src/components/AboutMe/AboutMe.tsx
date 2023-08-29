@@ -38,7 +38,7 @@ const AboutMe = () => {
       background="linear-gradient(#01030b, #0a0a15, #1a1a2e)"
     >
       <Container maxW="2x1" centerContent position="relative">
-        <AnimatedBox animation={shouldAnimate ? up : undefined}>
+        <AnimatedBox animation={leftToRight}>
           <Heading
             color="#ffffff"
             fontSize="5xl"
