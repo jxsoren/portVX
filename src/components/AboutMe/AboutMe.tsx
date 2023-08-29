@@ -15,7 +15,7 @@ import { getAnimations, AnimatedBox } from "@/hooks/useScroll";
 const AboutMe = () => {
   const theme = useTheme();
 
-  const { up, rightToLeft, leftToRight } = getAnimations();
+  const { up, down, rightToLeft, leftToRight } = getAnimations();
 
   const breakpoint = useBreakpointValue({
     base: "xs",
@@ -38,7 +38,7 @@ const AboutMe = () => {
       background="linear-gradient(#01030b, #0a0a15, #1a1a2e)"
     >
       <Container maxW="2x1" centerContent position="relative">
-        <AnimatedBox animation={leftToRight}>
+        <AnimatedBox animation={down}>
           <Heading
             color="#ffffff"
             fontSize="5xl"
