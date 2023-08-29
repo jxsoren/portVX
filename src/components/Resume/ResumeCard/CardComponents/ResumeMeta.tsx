@@ -2,26 +2,7 @@
 
 import React from "react";
 
-import {
-  Heading,
-  UnorderedList,
-  ListItem,
-  Box,
-  Icon,
-  As,
-  useBreakpointValue,
-  Text,
-  Grid,
-  Flex,
-  Container,
-} from "@chakra-ui/react";
-
-import {
-  FaBuilding,
-  FaBriefcase,
-  FaMapMarkerAlt,
-  FaClock,
-} from "react-icons/fa";
+import { useBreakpointValue, Text, Grid, Flex } from "@chakra-ui/react";
 
 interface ResumeMeta {
   company: string;
@@ -38,30 +19,47 @@ const ResumeMeta: React.FC<ResumeMeta> = ({
 }) => {
   const isSmallScreen = useBreakpointValue({ base: false, sm: true });
 
+  const fontSize = useBreakpointValue({
+    xs: "10",
+    sm: "12",
+    md: "12",
+    lg: "12",
+    xl: "14",
+    xxl: "14",
+  });
+
   return (
-    <Flex alignItems="center" justifyContent="center">
+    <Flex alignItems="center" justifyContent="center" fontWeight="bold">
       {!isSmallScreen ? (
-        <>
+        <Flex direction="column" fontSize={fontSize}>
           <Flex alignItems="center">
-            <Box as={FaBuilding} mr="2" />
-            <Text fontWeight="bold">{company}</Text>
+            <Text fontSize="lg" mr="2">
+              🏢
+            </Text>
+            <Text>{company}</Text>
           </Flex>
 
           <Flex alignItems="center">
-            <Box as={FaBriefcase} mr="2" />
+            <Text fontSize="lg" mr="2">
+              💼
+            </Text>
             <Text>{role}</Text>
           </Flex>
 
           <Flex alignItems="center">
-            <Box as={FaMapMarkerAlt} mr="2" />
+            <Text fontSize="lg" mr="2">
+              📌
+            </Text>
             <Text>{location}</Text>
           </Flex>
 
           <Flex alignItems="center">
-            <Box as={FaClock} mr="2" />
+            <Text fontSize="lg" mr="2">
+              🕕
+            </Text>
             <Text>{duration}</Text>
           </Flex>
-        </>
+        </Flex>
       ) : (
         <Grid
           templateColumns="repeat(2, 1fr)"
@@ -69,22 +67,30 @@ const ResumeMeta: React.FC<ResumeMeta> = ({
           gap={4}
         >
           <Flex alignItems="center">
-            <Box as={FaBuilding} mr="2" />
-            <Text fontWeight="bold">{company}</Text>
+            <Text fontSize="lg" mr="2">
+              🏢
+            </Text>
+            <Text>{company}</Text>
           </Flex>
 
           <Flex alignItems="center">
-            <Box as={FaBriefcase} mr="2" />
+            <Text fontSize="lg" mr="2">
+              💼
+            </Text>
             <Text>{role}</Text>
           </Flex>
 
           <Flex alignItems="center">
-            <Box as={FaMapMarkerAlt} mr="2" />
+            <Text fontSize="lg" mr="2">
+              📌
+            </Text>
             <Text>{location}</Text>
           </Flex>
 
           <Flex alignItems="center">
-            <Box as={FaClock} mr="2" />
+            <Text fontSize="lg" mr="2">
+              🕕
+            </Text>
             <Text>{duration}</Text>
           </Flex>
         </Grid>
