@@ -18,7 +18,7 @@ const ProjectThumbnail: React.FC<ThumbnailProps> = ({ thumbnail }) => {
   });
 
   const height = useBreakpointValue({
-    xs: "250px",
+    xs: "225px",
     sm: "250px",
     md: "250px",
     lg: "250px",
