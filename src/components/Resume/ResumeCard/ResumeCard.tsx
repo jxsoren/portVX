@@ -28,10 +28,10 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
   const maxW = useBreakpointValue({
     xs: "90vw",
     sm: "90vw",
-    md: "80vw",
-    lg: "70vw",
-    xl: "60vw",
-    xxl: "60vw",
+    md: "60vw",
+    lg: "50vw",
+    xl: "50vw",
+    xxl: "50vw",
   });
 
   return (
