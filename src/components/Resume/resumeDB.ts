@@ -52,9 +52,9 @@ export interface JobRecipe {
 export const jobDB: JobRecipe[] = [
   {
     company: "Filevine",
-    role: "Support Engineer II | API Support Engineer",
+    role: "Support Engineer II",
     location: "Salt Lake City, UT",
-    duration: "Nov 2022 - Present",
+    duration: "Oct 2022 - Present",
     responsibilities: [
       "Managed REST API inquiries with Postman and API testing tools, leading to enhanced product quality and customer satisfaction by efficiently crafting API defect write-ups.",
       "Built and troubleshot client automations in Zapier and Workato, leading to streamlined business processes and efficient workflows by understanding client needs.",
@@ -85,8 +85,8 @@ export const jobDB: JobRecipe[] = [
       "Addressed technical support requests efficiently, contributing to a perfect satisfaction rate and stronger client relationships through dedicated assistance.",
     ],
     technologies: [
-      { name: "JavaScript", icon: DiJavascript1, color: "#f7df1e" },
-      { name: "TypeScript", icon: SiTypescript, color: "#007acc" },
+      { name: "JS", icon: DiJavascript1, color: "#f7df1e" },
+      { name: "TS", icon: SiTypescript, color: "#007acc" },
       { name: "HTML", icon: FaHtml5, color: "#e34f26" },
       { name: "CSS", icon: FaCss3, color: "#264de4" },
       { name: "Sass", icon: FaSass, color: "#c69" },
@@ -112,7 +112,7 @@ export const jobDB: JobRecipe[] = [
       "Worked with program directors to track and report student progress, aligning with program goals through accurate data analysis.",
     ],
     technologies: [
-      { name: "JavaScript", icon: DiJavascript1, color: "#f7df1e" },
+      { name: "JS", icon: DiJavascript1, color: "#f7df1e" },
       { name: "React", icon: FaReact, color: "#61dbfb" },
       { name: "HTML", icon: FaHtml5, color: "#e34f26" },
       { name: "CSS", icon: FaCss3, color: "#264de4" },
