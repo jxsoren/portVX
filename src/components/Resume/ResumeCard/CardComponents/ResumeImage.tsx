@@ -10,19 +10,26 @@ interface ResumeImage {
 }
 
 const ResumeImage: React.FC<ResumeImage> = ({ image, imageLong }) => {
-  const maxW = useBreakpointValue({
-    xs: "100vw",
-    sm: "100vw",
-    md: "100vw",
-    lg: "100vw",
-    xl: "100vw",
-    xxl: "100vw",
+  const imageChoice = useBreakpointValue({ base: image, md: imageLong });
+
+  const imageHeight = useBreakpointValue({
+    xs: "200px",
+    sm: "300px",
+    md: "100%",
   });
-  const isSmallScreen = useBreakpointValue({ base: false, sm: true });
+
+  const imageWidth = useBreakpointValue({
+    xs: "100%",
+    sm: "100%",
+    md: "100%",
+    lg: "100%",
+    xl: "100%",
+    xxl: "100%",
+  });
 
   return (
     <Box
-      maxW={maxW}
+      maxW="100%"
       display="flex"
       flexDirection="column"
       alignItems="center"
@@ -30,11 +37,11 @@ const ResumeImage: React.FC<ResumeImage> = ({ image, imageLong }) => {
       mb={2}
     >
       <Image
-        src={isSmallScreen ? imageLong : image}
+        src={imageChoice}
         alt="Resume"
-        objectFit="cover"
-        w="100%"
-        h="75%"
+        objectFit="contain"
+        w={imageWidth}
+        h={imageHeight}
       />
     </Box>
   );
