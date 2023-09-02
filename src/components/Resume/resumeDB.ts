@@ -41,6 +41,7 @@ export interface TechSkill {
 export interface JobRecipe {
   company: string;
   role: string;
+  secondaryRole?: string;
   location: string;
   duration: string;
   responsibilities: string[];
@@ -52,7 +53,8 @@ export interface JobRecipe {
 export const jobDB: JobRecipe[] = [
   {
     company: "Filevine",
-    role: "Support Engineer II",
+    role: "API Support Engineer",
+    secondaryRole: "",
     location: "Salt Lake City, UT",
     duration: "Oct 2022 - Present",
     responsibilities: [
@@ -103,7 +105,7 @@ export const jobDB: JobRecipe[] = [
   },
   {
     company: "V School",
-    role: "Teaching Assistant",
+    role: "Web Development TA",
     location: "Remote",
     duration: "May 2021 - Aug 2021",
     responsibilities: [
