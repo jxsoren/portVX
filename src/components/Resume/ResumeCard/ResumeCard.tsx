@@ -18,6 +18,7 @@ interface ResumeCardProps extends JobRecipe {}
 const ResumeCard: React.FC<ResumeCardProps> = ({
   company,
   role,
+  secondaryRole,
   location,
   duration,
   responsibilities,
@@ -42,7 +43,7 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
       variant="outline"
       boxShadow={"lg"}
       bgColor="#2A2F4A"
-      borderColor="#3A3F5A"
+      background="linear-gradient(#1a1f38, #101728, #0a101d)"
       borderWidth={4}
       borderRadius={20}
       color="white"
@@ -56,6 +57,7 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
           <ResumeMeta
             company={company}
             role={role}
+            secondaryRole={secondaryRole}
             location={location}
             duration={duration}
           />
