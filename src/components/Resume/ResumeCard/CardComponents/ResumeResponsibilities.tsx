@@ -18,8 +18,8 @@ const ResumeResponsibilites: React.FC<ResumeResponsibilites> = ({
   responsibilities,
 }) => {
   const fontSize = useBreakpointValue({
-    xs: "10",
-    sm: "12",
+    xs: "14",
+    sm: "14",
     md: "14",
     lg: "14",
     xl: "16",
