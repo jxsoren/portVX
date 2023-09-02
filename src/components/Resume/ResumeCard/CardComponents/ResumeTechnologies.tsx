@@ -9,7 +9,6 @@ import {
   As,
   useBreakpointValue,
   Text,
-  HStack,
   Flex,
   Grid,
 } from "@chakra-ui/react";
@@ -26,7 +25,7 @@ interface ResumeTechnologiesProps {
 
 const ResumeTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
   const iconSize = useBreakpointValue({
-    xs: 10,
+    xs: 8,
     sm: 10,
     md: 10,
     lg: 10,
@@ -35,7 +34,7 @@ const ResumeTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
   });
 
   const fontSize = useBreakpointValue({
-    xs: "10",
+    xs: "8",
     sm: "12",
     md: "12",
     lg: "12",
@@ -62,15 +61,16 @@ const ResumeTechnologies: React.FC<ResumeTechnologiesProps> = ({
       align="center"
       justify="center"
       justifyContent="space-between"
+      maxW="100%"
     >
       <Heading as="h2" textAlign="center" mb={4} fontSize={[10, 24, 30]}>
         Technologies
       </Heading>
       <Grid
-        templateColumns={{ base: "repeat(3, 1fr)", md: "repeat(5, 1fr)" }}
+        templateColumns={{ base: "repeat(4, 1fr)", md: "repeat(7, 1fr)" }}
         gap={4}
         p={2}
-        maxW={{ base: "85%", md: "100%" }}
+        maxW={"100%"}
       >
         {technologies.map(({ name, color, icon }) => (
           <ResumeTech key={name} name={name} color={color} icon={icon} />
