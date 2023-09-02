@@ -59,6 +59,7 @@ const Resume = () => {
             key={job.company}
             company={job.company}
             role={job.role}
+            secondaryRole={job.secondaryRole}
             location={job.location}
             duration={job.duration}
             responsibilities={job.responsibilities}
@@ -74,7 +75,7 @@ const Resume = () => {
 
         <Modal isOpen={isOpen} onClose={onClose} size="full">
           <ModalOverlay />
-          <ModalContent>
+          <ModalContent w="100vw" h="100vh">
             <ModalHeader fontSize="2xl" color="white">
               {"Josh Sorensen's Resume"}
             </ModalHeader>
@@ -87,12 +88,28 @@ const Resume = () => {
                 h="90vh"
                 p={2}
               >
-                <iframe
-                  src={pdfPath}
+                <object
+                  data={pdfPath}
+                  type="application/pdf"
                   width="100%"
                   height="100%"
-                  style={{ border: "none" }}
-                ></iframe>
+                >
+                  <p>
+                    It appears you do not have a PDF plugin for this browser.
+                    You can still{" "}
+                    <a
+                      href={pdfPath}
+                      style={{
+                        color: "blue",
+                        textDecoration: "none",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      click here{" "} 
+                    </a>
+                    to download the PDF file.
+                  </p>
+                </object>
               </Box>
             </ModalBody>
           </ModalContent>
