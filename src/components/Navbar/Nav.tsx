@@ -44,7 +44,7 @@ const NavLink = ({ to, children }: { to: string; children: ReactNode }) => {
 };
 
 export default function Nav() {
-  const Links = ["Skills", "Projects", "About"];
+  const Links = ["Skills", "Projects", "Resume", "About"];
 
   return (
     <Box
