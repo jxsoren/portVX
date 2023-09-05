@@ -25,7 +25,7 @@ interface ResumeTechnologiesProps {
 
 const ResumeTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
   const iconSize = useBreakpointValue({
-    xs: 8,
+    xs: 10,
     sm: 10,
     md: 10,
     lg: 10,
@@ -34,7 +34,7 @@ const ResumeTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
   });
 
   const fontSize = useBreakpointValue({
-    xs: "8",
+    xs: "10",
     sm: "12",
     md: "12",
     lg: "12",
@@ -45,7 +45,7 @@ const ResumeTech: React.FC<ProjectTechProps> = ({ name, icon, color }) => {
   return (
     <Box textAlign="center" fontWeight="bold">
       <Icon as={icon} w={iconSize} h={iconSize} color={color} />
-      <Text fontSize={fontSize} color={color}>
+      <Text fontSize={fontSize} color={color} fontWeight="bold">
         {name}
       </Text>
     </Box>
