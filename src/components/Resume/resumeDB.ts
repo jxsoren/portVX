@@ -65,7 +65,7 @@ export const jobDB: JobRecipe[] = [
     technologies: [
       { name: "Postman", icon: SiPostman, color: "#FF6C37" },
       { name: "REST API", icon: AiOutlineApi, color: "#007acc" },
-      { name: "JSON", icon: SiJson, color: "#000" },
+      { name: "JSON", icon: SiJson, color: "#fffff" },
       { name: "Zapier", icon: SiZapier, color: "#FF4A00" },
       { name: "Workato", icon: TbSettingsAutomation, color: "#00B4AB" },
       { name: "AWS", icon: FaAws, color: "#FF9900" },
@@ -95,7 +95,7 @@ export const jobDB: JobRecipe[] = [
       { name: "Node", icon: FaNodeJs, color: "#68a063" },
       { name: "C#", icon: SiCsharp, color: "#512BD4" },
       { name: ".Net", icon: SiDotnet, color: "#512BD4" },
-      { name: "Perforce", icon: SiPerforce, color: "#000000" },
+      { name: "Perforce", icon: SiPerforce, color: "#fffff" },
       { name: "Git", icon: BiGitMerge, color: "#F74E1A" },
       { name: "DevTools", icon: RiToolsFill, color: "#A9A9A9" },
       { name: "Scrum", icon: DiScrum, color: "#189ab6" },
@@ -120,31 +120,15 @@ export const jobDB: JobRecipe[] = [
       { name: "CSS", icon: FaCss3, color: "#264de4" },
       { name: "Node", icon: FaNodeJs, color: "#68a063" },
       { name: "MongoDB", icon: SiMongodb, color: "#4db33d" },
-      { name: "Express", icon: SiExpress, color: "#000000" },
+      { name: "Express", icon: SiExpress, color: "#fffff" },
       { name: "Git", icon: BiGitMerge, color: "#F74E1A" },
-      { name: "Github", icon: FaGithubAlt, color: "#000000" },
+      { name: "Github", icon: FaGithubAlt, color: "#fffff" },
       { name: "REST API", icon: AiOutlineApi, color: "#007acc" },
-      { name: "JSON", icon: SiJson, color: "#000000" },
+      { name: "JSON", icon: SiJson, color: "#fffff" },
       { name: "DevTools", icon: RiToolsFill, color: "#A9A9A9" },
       { name: "Scrum", icon: DiScrum, color: "#189ab6" },
     ],
     image: "/companyImages/vschool.png",
     imageLong: "/companyImages/vschoolLong.svg",
-  },
-];
-
-export const educationDB = [
-  {
-    institution: "V School Software Engineering Immersive",
-    location: "Remote",
-    year: "2021",
-    description:
-      "Learned industry best practices and practical Front End and Back End (Full Stack) software development standards with a focus on HTML5, CSS3, JavaScript, Node.JS, React, REST APIs, and MongoDB. Created and deployed mobile-first applications while learning new languages and frameworks by collaborating every week with a senior web developer.",
-  },
-  {
-    institution: "Taylorsville High School",
-    location: "Taylorsville, UT",
-    year: "2019",
-    description: ".",
   },
 ];
