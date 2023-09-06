@@ -46,7 +46,7 @@ export const projectDB: ProjectRecipe[] = [
       {
         name: "Github",
         link: "https://github.com/jxsoren/terminal-rpg",
-        color: "#181717",
+        color: "#ffffff",
         icon: VscGithubAlt,
       },
     ],
@@ -74,7 +74,7 @@ export const projectDB: ProjectRecipe[] = [
       {
         name: "Github",
         link: "https://github.com/jxsoren/portVX",
-        color: "#181717",
+        color: "#ffffff",
         icon: VscGithubAlt,
       },
     ],
@@ -103,7 +103,7 @@ export const projectDB: ProjectRecipe[] = [
       {
         name: "Github",
         link: "https://github.com/jxsoren/hot-take-app",
-        color: "#181717",
+        color: "#ffffff",
         icon: VscGithubAlt,
       },
     ],
@@ -133,7 +133,7 @@ export const projectDB: ProjectRecipe[] = [
       {
         name: "Github",
         link: "https://github.com/jxsoren/quickcipe",
-        color: "#181717",
+        color: "#ffffff",
         icon: VscGithubAlt,
       },
     ],
