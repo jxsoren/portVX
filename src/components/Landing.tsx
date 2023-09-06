@@ -1,6 +1,13 @@
 "use client";
 
-import { Box, Heading, Container, Stack, useTheme } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Container,
+  Stack,
+  useTheme,
+  Text,
+} from "@chakra-ui/react";
 
 import Stars from "./Stars/Stars";
 
@@ -13,6 +20,8 @@ export default function Landing() {
 
   const [ref, inView] = useScrollAnimation();
   const { down } = getAnimations();
+
+  const myName = "Josh";
 
   return (
     <Stars>
@@ -54,9 +63,19 @@ export default function Landing() {
               bgClip="text"
               fontSize={{ base: "4xl", md: "6xl" }}
               fontWeight="extrabold"
+              fontFamily={theme.fonts.heading}
               zIndex={2}
             >
-              {`I'm Josh.`}
+              {`I'm `}
+              <Text
+                as="span"
+                color="red"
+                display="inline"
+                fontFamily={theme.fonts.heading}
+              >
+                {myName}
+              </Text>
+              .
             </Heading>
           </MotionBox>
 
