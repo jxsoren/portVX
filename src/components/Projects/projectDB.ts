@@ -52,7 +52,7 @@ export const projectDB: ProjectRecipe[] = [
     ],
   },
   {
-    name: "Portfolio Site v2",
+    name: "Portfolio Site",
     about:
       "A testament to innovation and continuous learning, this project uses Chakra UI for user interaction, TypeScript for reliable coding, and Next.js for optimal performance. It reflects my journey in tech and commitment to expanding my capabilities.",
     shortAbout:
