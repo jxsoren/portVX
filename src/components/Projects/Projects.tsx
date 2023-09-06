@@ -20,7 +20,7 @@ const Projects = () => {
       minH="100vh"
       mt="-10"
       color="white"
-      background="linear-gradient(#16161d, #1f1f3a, #173663)"
+      background="linear-gradient(#16161e, #23234b, #173663)"
       overflowX="hidden"
       overflowY="hidden"
       centerContent
