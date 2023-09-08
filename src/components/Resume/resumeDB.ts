@@ -24,7 +24,7 @@ import {
   SiPostman,
 } from "react-icons/si";
 import { TbSettingsAutomation } from "react-icons/tb";
-import { BsFiletypeSql } from "react-icons/bs";
+import { BsFiletypeSql, BsBracesAsterisk } from "react-icons/bs";
 import { BiGitMerge } from "react-icons/bi";
 import { AiOutlineGitlab } from "react-icons/ai";
 import { DiJavascript1 } from "react-icons/di";
@@ -64,7 +64,7 @@ export const jobDB: JobRecipe[] = [
     ],
     technologies: [
       { name: "Postman", icon: SiPostman, color: "#FF6C37" },
-      { name: "REST API", icon: AiOutlineApi, color: "#007acc" },
+      { name: "REST", icon: BsBracesAsterisk, color: "#007acc" },
       { name: "JSON", icon: SiJson, color: "#fffff" },
       { name: "Zapier", icon: SiZapier, color: "#FF4A00" },
       { name: "Workato", icon: TbSettingsAutomation, color: "#00B4AB" },
@@ -123,7 +123,7 @@ export const jobDB: JobRecipe[] = [
       { name: "Express", icon: SiExpress, color: "#fffff" },
       { name: "Git", icon: BiGitMerge, color: "#F74E1A" },
       { name: "Github", icon: FaGithubAlt, color: "#fffff" },
-      { name: "REST API", icon: AiOutlineApi, color: "#007acc" },
+      { name: "REST", icon: BsBracesAsterisk, color: "#007acc" },
       { name: "JSON", icon: SiJson, color: "#fffff" },
       { name: "DevTools", icon: RiToolsFill, color: "#A9A9A9" },
       { name: "Scrum", icon: DiScrum, color: "#189ab6" },
