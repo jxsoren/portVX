@@ -49,11 +49,11 @@ export default function Nav() {
   return (
     <Box
       bg="black"
-      px={4}
+      px="4"
       textColor="white"
       position="sticky"
-      top={0}
-      zIndex={100}
+      top="0"
+      zIndex="100"
     >
       <Flex
         h={16}
