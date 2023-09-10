@@ -16,6 +16,9 @@ const ResumeImage: React.FC<ResumeImage> = ({ image, imageLong }) => {
     xs: "200px",
     sm: "300px",
     md: "100%",
+    lg: "150px",
+    xl: "150px",
+    xxl: "150px",
   });
 
   const imageWidth = useBreakpointValue({
@@ -30,11 +33,12 @@ const ResumeImage: React.FC<ResumeImage> = ({ image, imageLong }) => {
   return (
     <Box
       maxW="100%"
+      maxH={imageHeight}
       display="flex"
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      mb={2}
+      mb="2"
     >
       <Image
         src={imageChoice}
