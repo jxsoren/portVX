@@ -59,6 +59,7 @@ export const projectDB: ProjectRecipe[] = [
       "A modern representation of my skills and growth, leveraging Chakra UI for seamless user experience, TypeScript for robust development, and Next.js for enhanced web performance.",
     technologies: [
       { name: "Next", icon: SiNextdotjs, color: "#000000" },
+      { name: "React", icon: FaReact, color: "#61dafb" },
       { name: "Typescript", icon: SiTypescript, color: "#007acc" },
       { name: "Node", icon: FaNodeJs, color: "#68a063" },
       { name: "ChakraUI", icon: SiChakraui, color: "#319795" },
