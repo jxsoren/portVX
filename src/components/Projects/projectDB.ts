@@ -89,7 +89,7 @@ export const projectDB: ProjectRecipe[] = [
     technologies: [
       { name: "Javascript", icon: DiJavascript1, color: "#f7df1e" },
       { name: "Mongo", icon: SiMongodb, color: "#4db33d" },
-      { name: "Express", icon: SiExpress, color: "#000000" },
+      { name: "Express", icon: SiExpress, color: "#ffffff" },
       { name: "React", icon: FaReact, color: "#61dafb" },
       { name: "Node", icon: FaNodeJs, color: "#68a063" },
     ],
@@ -118,7 +118,7 @@ export const projectDB: ProjectRecipe[] = [
     technologies: [
       { name: "Javascript", icon: DiJavascript1, color: "#f7df1e" },
       { name: "Mongo", icon: SiMongodb, color: "#4db33d" },
-      { name: "Express", icon: SiExpress, color: "#000000" },
+      { name: "Express", icon: SiExpress, color: "#ffffff" },
       { name: "React", icon: FaReact, color: "#61dafb" },
       { name: "Node", icon: FaNodeJs, color: "#68a063" },
       { name: "Sass", icon: SiSass, color: "#c69" },
