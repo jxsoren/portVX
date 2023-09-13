@@ -25,7 +25,7 @@ import { DiJavascript1 } from "react-icons/di";
 import { DiScrum } from "react-icons/di";
 import { MdOutlineViewKanban } from "react-icons/md";
 import { AiFillApple, AiOutlineApi } from "react-icons/ai";
-import { BsWindows } from "react-icons/bs";
+import { BsWindows, BsBracesAsterisk } from "react-icons/bs";
 
 import { As } from "@chakra-ui/react";
 
@@ -62,9 +62,9 @@ export const skillsDB: Technologies = {
   ],
   backEnd: [
     { name: "MongoDB", icon: SiMongodb, color: "#4db33d" },
-    { name: "Express", icon: SiExpress, color: "#000000" },
+    { name: "Express", icon: SiExpress, color: "#ffffff" },
     { name: "Node", icon: FaNodeJs, color: "#68a063" },
-    { name: "REST API", icon: AiOutlineApi, color: "#007acc" },
+    { name: "REST API", icon: BsBracesAsterisk, color: "#007acc" },
   ],
   platforms: [
     { name: "Linux", icon: FaLinux, color: "#F8F8FF" },
