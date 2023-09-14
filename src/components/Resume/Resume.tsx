@@ -1,15 +1,7 @@
 "use client";
 
 import {
-  Box,
   Flex,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalCloseButton,
-  ModalBody,
-  Button,
   useDisclosure,
   Heading,
   Container,
@@ -21,9 +13,6 @@ import { jobDB } from "./resumeDB";
 import ResumeButton from "./ResumeButton";
 
 const Resume = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const pdfPath = "/resume/JoshSorensenResume.pdf";
-
   return (
     <Container
       maxW="100%"
