@@ -93,7 +93,6 @@ export const jobDB: JobRecipe[] = [
       { name: "C#", icon: SiCsharp, color: "#512BD4" },
       { name: ".Net", icon: SiDotnet, color: "#512BD4" },
       { name: "Perforce", icon: SiPerforce, color: "#fffff" },
-      { name: "Git", icon: BiGitMerge, color: "#F74E1A" },
       { name: "DevTools", icon: RiToolsFill, color: "#A9A9A9" },
       { name: "Scrum", icon: DiScrum, color: "#189ab6" },
     ],
