@@ -12,10 +12,7 @@ import {
 import {
   SiExpress,
   SiMongodb,
-  SiNextdotjs,
   SiTypescript,
-  SiChakraui,
-  SiHeroku,
   SiJson,
   SiPerforce,
   SiZapier,
@@ -29,7 +26,6 @@ import { BiGitMerge } from "react-icons/bi";
 import { AiOutlineGitlab } from "react-icons/ai";
 import { DiJavascript1 } from "react-icons/di";
 import { DiScrum } from "react-icons/di";
-import { AiOutlineApi } from "react-icons/ai";
 import { RiToolsFill } from "react-icons/ri";
 
 export interface TechSkill {
@@ -66,6 +62,7 @@ export const jobDB: JobRecipe[] = [
       { name: "Postman", icon: SiPostman, color: "#FF6C37" },
       { name: "REST", icon: BsBracesAsterisk, color: "#007acc" },
       { name: "JSON", icon: SiJson, color: "#fffff" },
+
       { name: "Zapier", icon: SiZapier, color: "#FF4A00" },
       { name: "Workato", icon: TbSettingsAutomation, color: "#00B4AB" },
       { name: "AWS", icon: FaAws, color: "#FF9900" },
