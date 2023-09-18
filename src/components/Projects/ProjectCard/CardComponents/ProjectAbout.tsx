@@ -9,7 +9,11 @@ interface ProjectAboutProps {
   headingSize?: string;
 }
 
-const ProjectAbout: React.FC<ProjectAboutProps> = ({ about, shortAbout, headingSize }) => {
+const ProjectAbout: React.FC<ProjectAboutProps> = ({
+  about,
+  shortAbout,
+  headingSize,
+}) => {
   const isSmallScreen = useBreakpointValue({ base: true, sm: false });
 
   const fontSize = useBreakpointValue({
@@ -29,13 +33,9 @@ const ProjectAbout: React.FC<ProjectAboutProps> = ({ about, shortAbout, headingS
       justifyContent="center"
       padding="4"
       marginTop="-4"
-      minH={["15vh", "15vh", "15vh", "15vh"]}
+      minH="15vh"
     >
-      <Heading
-        size={headingSize}
-        textTransform="uppercase"
-        textAlign="center"
-      >
+      <Heading size={headingSize} textTransform="uppercase" textAlign="center">
         About
       </Heading>
       <Text pt="2" fontSize={fontSize}>
