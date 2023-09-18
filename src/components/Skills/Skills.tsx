@@ -27,11 +27,9 @@ const SectionTitle: React.FC<SectionTitleProps> = ({ children }) => (
     align="center"
     justify="center"
     height="100%"
-    //backgroundColor="blackAlpha.600"
     bg="gray.600"
     p={4}
     borderRadius="2xl"
-    //boxShadow="md"
   >
     <Heading
       fontSize="xl"
@@ -66,6 +64,7 @@ const Skills: React.FC = () => {
       background="linear-gradient(#16161e, #2a2a36, #3e3e4e)"
       overflowX="hidden"
       overflowY="auto"
+      pb={4}
     >
       <Container
         maxW="80vw"
