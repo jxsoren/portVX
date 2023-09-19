@@ -62,8 +62,9 @@ const ResumeTechnologies: React.FC<ResumeTechnologiesProps> = ({
       justify="center"
       justifyContent="space-between"
       maxW="100%"
+      height="100%"
     >
-      <Heading as="h2" textAlign="center" mb={4} fontSize={[10, 24, 30]}>
+      <Heading as="h2" textAlign="center" mb={4} fontSize={[10, 20, 26]}>
         Technologies
       </Heading>
       <Grid
