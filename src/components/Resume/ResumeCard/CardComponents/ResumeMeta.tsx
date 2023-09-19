@@ -24,10 +24,10 @@ const ResumeMeta: React.FC<ResumeMeta> = ({
   const fontSize = useBreakpointValue({
     xs: "16",
     sm: "16",
-    md: "14",
+    md: "16",
     lg: "16",
-    xl: "18",
-    xxl: "20",
+    xl: "14",
+    xxl: "16",
   });
 
   return (
@@ -39,7 +39,7 @@ const ResumeMeta: React.FC<ResumeMeta> = ({
           gap={2}
           alignItems="center"
         >
-          <Flex alignItems="center" minHeight="2em">
+          <Flex alignItems="center" minHeight="2em" fontSize={fontSize}>
             <Text mr="2">🏢</Text>
             <Text>{company}</Text>
           </Flex>
