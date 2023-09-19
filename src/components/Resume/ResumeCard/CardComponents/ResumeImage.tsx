@@ -13,12 +13,12 @@ const ResumeImage: React.FC<ResumeImage> = ({ image, imageLong }) => {
   const imageChoice = useBreakpointValue({ base: image, md: imageLong });
 
   const imageHeight = useBreakpointValue({
-    xs: "200px",
-    sm: "300px",
+    xs: "150px",
+    sm: "250px",
     md: "100%",
-    lg: "150px",
-    xl: "150px",
-    xxl: "150px",
+    lg: "100px",
+    xl: "100px",
+    xxl: "100px",
   });
 
   const imageWidth = useBreakpointValue({
