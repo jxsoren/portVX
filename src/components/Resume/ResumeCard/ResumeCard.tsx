@@ -26,33 +26,24 @@ const ResumeCard: React.FC<ResumeCardProps> = ({
   image,
   imageLong,
 }) => {
-  const maxW = useBreakpointValue({
-    xs: "90vw",
-    sm: "90vw",
-    md: "60vw",
-    lg: "50vw",
-    xl: "50vw",
-    xxl: "50vw",
-  });
-
   return (
     <Card
       display="flex"
       flexDirection="column"
       alignItems="center"
       variant="outline"
-      boxShadow={"xl"}
       background="linear-gradient(#090e19, #101728, #090e19)"
-      borderWidth={4}
-      borderRadius={20}
-      borderColor={"#0d1118"}
+      borderWidth="4"
+      borderRadius="20"
+      borderColor="#0d1118"
       color="white"
-      maxW={maxW}
+      maxW={["90w", "90w", "60w", "50w", "30w", "30w"]}
       height="100%"
-      mb={4}
+      mb="4"
+      boxShadow="none"
     >
-      <CardBody>
-        <Stack divider={<StackDivider />} spacing="4">
+      <CardBody display="flex" flexDirection="column" height="100%">
+        <Stack divider={<StackDivider />} spacing="4" flexGrow={1}>
           <ResumeImage image={image} imageLong={imageLong} />
           <ResumeMeta
             company={company}
