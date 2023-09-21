@@ -18,8 +18,6 @@ import ProjectTechnologies from "./CardComponents/ProjectTechnologies";
 import ProjectAbout from "./CardComponents/ProjectAbout";
 import ProjectLinks from "./CardComponents/ProjectLinks";
 
-import { AnimatedBox, getAnimations } from "@/hooks/useScroll";
-
 const ProjectCard: React.FC<ProjectRecipe> = ({
   name,
   about,
@@ -54,8 +52,8 @@ const ProjectCard: React.FC<ProjectRecipe> = ({
       variant="outline"
       background="linear-gradient(#0d1118, #1f1f3a, #0d1118)"
       borderColor="#171c2a"
-      borderWidth={4}
-      borderRadius={20}
+      borderWidth="4"
+      borderRadius="20"
       color="white"
       maxW={maxW}
       height="100%"
